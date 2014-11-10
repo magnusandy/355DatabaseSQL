@@ -44,6 +44,12 @@ CREATE DOMAIN ns_ittype as
 CREATE DOMAIN ns_itdate as 
 CREATE DOMAIN ns_itgross as 
 
+CREATE DOMAIN ename as
+CREATE DOMAIN showdate as
+CREATE DOMAIN edescription as
+
+CREATE DOMAIN ns_exidate as 
+
 
 */
 
@@ -176,14 +182,52 @@ CREATE TABLE ns_t_item_locations(
 	FOREIGN KEY(ns_ilo_locname, ns_ilo_museumid_location) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumid)
 );
 
+
 --LOCATION DOORS
+CREATE TABLE ns_t_location_doors(
+	ns_lodor_locname_entrance ns_locname NOT NULL,
+	ns_lodor_museumid_entrance ns_museumid NOT NULL,
+	ns_lodor_locname_exit ns_locname NOT NULL,
+	ns_lodor_museumid_exit ns_museumid NOT NULL,
+	PRIMARY KEY(ns_lodor_locname_entrance, ns_lodor_museumid_entrance, ns_lodor_locname_exit, ns_lodor_museumid_exit),
+	FOREIGN KEY(ns_lodor_locname_entrance, ns_lodor_museumid_entrance) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumid),
+	FOREIGN KEY(ns_lodor_locname_exit, ns_lodor_museumid_exit) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumid)
+);
 
 --EXHIBITIONS 
+CREATE TABLE ns_t_exhibitions(
+	ns_ex_ename ename NOT NULL,
+	ns_ex_showdate_start ns_showdate NOT NULL,
+	ns_ex_showdate_end ns_showdate NOT NULL,
+	ns_ex_edescription ns_edescription NOT NULL,
+	PRIMARY KEY(ns_ex_ename)
+);
 
---EXHIBITION LOCATIONS
 
 --EXHIBITION ITEMS
+CREATE TABLE ns_t_exhibition_items(
+	ns_exi_inumkey ns_numkey NOT NULL,
+	ns_exi_ialphakey ns_alphakey NOT NULL,
+	ns_exi_museumid ns_museumid NOT NULL,
+	ns_exi_ename ns_ename NOT NULL,
+	ns_exi_exidate_start ns_exidate NOT NULL,
+	ns_exi_exidate_end ns_exidate NOT NULL,
+	PRIMARY KEY(ns_exi_inumkey, ns_exi_ialphakey, ns_exi_museumid, ns_exi_ename, s_exi_exidate_start),
+	FOREIGN KEY(ns_exi_ename) REFERENCES ns_t_exhibitions(ns_ex_ename),
+	FOREIGN KEY(ns_exi_inumkey, ns_exi_ialphakey, ns_exi_museumid) REFERENCES ns_t_items(ns_i_numkey, ns_i_alphakey, ns_i_museumid)
+);
 
+--EXHIBITION ITEMS
+CREATE TABLE ns_t_exhibition_locations(
+	ns_exl_ename ns_ename NOT NULL,
+	ns_exl_locname ns_locname NOT NULL,
+	ns_exl_museumid ns_museumid NOT NULL,
+	ns_exl_exldate_start ns_exldate NOT NULL,
+	ns_exl_exldate_end ns_exldate NOT NULL,
+	PRIMARY KEY(ns_exl_ename, ns_exl_locname, nS_exl_museumid, ns_exl_exldate_start),
+	FOREIGN KEY(ns_exl_ename) REFERENCES ns_t_exhibitions(ns_ex_ename),
+	FOREIGN KEY(ns_exl_locname, ns_exl_museumid) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumid)
+);
 
 --VIEWS GO HERE
 
