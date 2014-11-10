@@ -1,0 +1,69 @@
+-- created by Andrew Magnus 
+-- Nov 10, 2014
+--Database File for creation of Domains and the master database
+
+--DOMAINS GO HERE
+/*
+CREATE DOMAIN ns_numkey as
+CREATE DOMAIN ns_alphakey as 
+CREATE DOMAIN ns_museumid as 
+CREATE DOMAIN ns_iname as 
+CREATE DOMAIN ns_icreator as 
+CREATE DOMAIN ns_iorigin as 
+--TODO main/sub domains
+CREATE DOMAIN ns_iinsurance as 
+CREATE DOMAIN ns_iacquisitiondate as
+CREATE DOMAIN ns_icreationyear as
+CREATE DOMAIN ns_clname as
+CREATE DOMAIN ns_idescription as text;
+CREATE DOMAIN ns_email as 
+CREATE DOMAIN ns_phonenum as 
+
+--address domains
+CREATE DOMAIN ns_buildingnum as 
+CREATE DOMAIN ns_buildingname as 
+CREATE DOMAIN ns_streetname as 
+CREATE DOMAIN ns_city as 
+CREATE DOMAIN ns_country as 
+CREATE DOMAIN ns_region as
+CREATE DOMAIN ns_postalcode as 
+*/
+
+
+--TABLES GO HERE
+
+--CLIENTS
+CREATE TABLE ns_t_clients (
+	ns_cl_clname ns_clname NOT NULL,
+	ns_cl_email ns_email,
+	ns_cl_phonenum ns_phonenum,	
+	--address
+	ns_cl_buildingnum ns_buildingnum,
+	ns_cl_buildingname ns_buildingname,
+	ns_cl_streetname ns_streetname,
+	ns_cl_city ns_city,
+	ns_cl_country ns_country,
+	ns_cl_region ns_region,
+	ns_cl_postalcode ns_postalcode,
+	PRIMARY KEY (ns_cl_clname)
+);
+
+--ITEMS
+CREATE TABLE ns_t_items (
+	ns_i_inumkey ns_numkey NOT NULL,
+	ns_i_ialphakey ns_alphakey NOT NULL,
+	ns_i_museumid ns_museumid NOT NULL,
+	ns_i_iname ns_iname NOT NULL,
+	ns_i_icreator ns_icreator, -- can be null, cause my items dont have it mwahaha
+	ns_i_iorigin ns_iorigin, 
+	--TODO everything about main/subtypes
+	ns_i_iinsurance ns_iinsurance NOT NULL,
+	ns_i_iacquisitiondate ns_iacquisitiondate NOT NULL,
+	ns_i_icreationyear ns_icreationyear NOT NULL,
+	ns_i_clname ns_clname NOT NULL,
+	ns_i_idescription ns_idescription NOT NULL,
+	PRIMARY KEY (ns_i_numkey, ns_i_alphakey, ns_i_museumid),
+	FOREIGN KEY (ns_i_clname) REFERENCES ns_t_clients (ns_cl_clname)
+	);
+--VIEWS GO HERE
+
