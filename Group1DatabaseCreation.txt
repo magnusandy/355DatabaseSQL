@@ -27,10 +27,30 @@ CREATE DOMAIN ns_city as
 CREATE DOMAIN ns_country as 
 CREATE DOMAIN ns_region as
 CREATE DOMAIN ns_postalcode as 
+
+CREATE DOMAIN ns_locname as
+CREATE DOMAIN ns_loctype as
+CREATE DOMAIN ns_numitems as
+CREATE DOMAIN ns_dimensions as 
+CREATE DOMAIN ns_loccreationdate as 
+CREATE DOMAIN ns_sponsor as 
+CREATE DOMAIN ns_security as
+CREATE DOMAIN ns_elocdate as 
+CREATE DOMAIN ns_elocinsurance as
+
+CREATE DOMAIN ns_ilodate as
+
+CREATE DOMAIN ns_ittype as
+CREATE DOMAIN ns_itdate as 
+CREATE DOMAIN ns_itgross as 
+
+
 */
 
 
 --TABLES GO HERE
+
+
 
 --CLIENTS
 CREATE TABLE ns_t_clients (
@@ -64,6 +84,106 @@ CREATE TABLE ns_t_items (
 	ns_i_idescription ns_idescription NOT NULL,
 	PRIMARY KEY (ns_i_numkey, ns_i_alphakey, ns_i_museumid),
 	FOREIGN KEY (ns_i_clname) REFERENCES ns_t_clients (ns_cl_clname)
-	);
+);
+
+--MATERIALS
+CREATE TABLE ns_t_materials(
+	ns_mat_matname ns_matname NOT NULL,
+	PRIMARY KEY(ns_mat_matname)
+);
+
+--ITEM MATERIALS
+CREATE TABLE ns_t_item_materials(
+	ns_imat_inumkey ns_numkey NOT NULL,
+	ns_imat_ialphakey ns_alphakey NOT NULL,
+	ns_imat_museumid ns_museumid NOT NULL,
+	ns_imat_matname ns_matname NOT NULL,
+	PRIMARY KEY(ns_imat_inumkey, ns_imat_ialphakey, ns_imat_museumid, ns_imat_matname),
+	FOREIGN KEY(ns_imat_inumkey, ns_imat_ialphakey, ns_imat_museumid_item) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumid),
+	FOREIGN KEY(ns_imat_matname) REFERENCES ns_t_materials(ns_mat_matname)
+);
+
+--ITEM TRANSACTIONS
+CREATE TABLE ns_t_transactions(
+	ns_it_inumkey ns_numkey NOT NULL,
+	ns_it_ialphakey ns_alphakey NOT NULL,
+	ns_it_museumid ns_museumid NOT NULL,
+	ns_it_clname ns_clname NOT NULL,
+	ns_it_ittype ns_ittype NOT NULL,
+	ns_it_itdate_start ns_itdate NOT NULL,
+	ns_it_itdate_end ns_itdate, --NULL IF ITS A SALE
+	ns_it_itdate_returnby ns_itdate, --null if its not a loan
+	ns_it_itgross ns_itgross NOT NULL,
+	PRIMARY KEY(ns_it_numkey, ns_it_alphakey, ns_it_museumid, ns_it_itdate_start),--TODO is this right?
+	FOREIGN KEY(ns_it_inumkey, ns_it_ialphakey, ns_it_museumid_item) REFERENCES ns_t_items(ns_i_numkey, ns_i_alphakey, ns_i_museumid),
+	FOREIGN KEY(ns_it_clname) REFERENCES ns_t_clients(ns_cl_clname)
+);
+
+--LOCATIONS MAIN
+CREATE TABLE ns_t_locations (
+	ns_loc_locname ns_locname NOT NULL,
+	ns_loc_museumid ns_museumid NOT NULL,
+	ns_loc_loctype ns_loctype NOT NULL,
+	PRIMARY KEY (ns_loc_locname, ns_loc_museumid)
+);
+
+--INTERNAL LOCATIONS
+CREATE TABLE ns_t_internallocations (
+	ns_iloc_locname ns_locname NOT NULL,
+	ns_iloc_museumid ns_museumid NOT NULL,
+	ns_iloc_numitems_min ns_numitems NOT NULL,
+	ns_iloc_numitems_max ns_numitems NOT NULL,
+	ns_iloc_dimension_height ns_dimension NOT NULL,
+	ns_iloc_dimension_length ns_dimension NOT NULL,
+	ns_iloc_dimension_width ns_dimension NOT NULL,
+	ns_iloc_loccreationdate ns_loccreationdate,
+	PRIMARY KEY(ns_iloc_locname, ns_iloc_museumid),
+	FOREIGN KEY(ns_iloc_locname, ns_iloc_museumid) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumid)
+);
+
+--EXTERNAL LOCATIONS
+CREATE TABLES ns_t_externallocations (
+	ns_eloc_locname ns_locname NOT NULL,
+	ns_eloc_museumid ns_museumid NOT NULL,
+	ns_eloc_sponsor ns_sponsor NOT NULL,
+	ns_eloc_security ns_security NOT NULL,
+	ns_eloc_elocdate_start ns_elocdate NOT NULL,
+	ns_eloc_elocdate_end ns_elocdate NOT NULL,
+	ns_eloc_elocinsurance ns_elocinsurance, -- NOT SURE IF THIS SHOULD BE HERE OR MAYBE IN EXHIBITIONS? IDK its all calculatable anyway right?
+	--address NOT SURE IF THESE SHOULD BE ALL NOT NULL OR MAYBE JUST SOME
+	ns_cl_buildingnum ns_buildingnum,
+	ns_eloc_buildingname ns_buildingname,
+	ns_eloc_streetname ns_streetname,
+	ns_eloc_city ns_city,
+	ns_eloc_country ns_country,
+	ns_eloc_region ns_region,
+	ns_eloc_postalcode ns_postalcode,
+	PRIMARY KEY(ns_eloc_locname, ns_eloc_museumid),
+	FOREIGN KEY(ns_eloc_locname, ns_eloc_museumid) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumid)
+);
+
+--ITEM LOCATIONS
+CREATE TABLE ns_t_item_locations(
+	ns_ilo_inumkey ns_numkey NOT NULL,
+	ns_ilo_ialphakey ns_alphakey NOT NULL,
+	ns_ilo_museumid_item ns_museumid NOT NULL,
+	ns_ilo_locname ns_locname NOT NULL,
+	ns_ilo_museumid_location ns_museumid NOT NULL,
+	ns_ilo_ilodate_start ns_ilodate NOT NULL,
+	ns_ilo_ilodate_end ns_ilodate, 
+	PRIMARY KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumid_item, ns_ilo_ilodate_start), --THIS SHOULD BE GOOD RIGHT? DONT NEED LOCATION FOR PRIMARY KEY
+	FOREIGN KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumid_item) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumid),
+	FOREIGN KEY(ns_ilo_locname, ns_ilo_museumid_location) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumid)
+);
+
+--LOCATION DOORS
+
+--EXHIBITIONS 
+
+--EXHIBITION LOCATIONS
+
+--EXHIBITION ITEMS
+
+
 --VIEWS GO HERE
 
