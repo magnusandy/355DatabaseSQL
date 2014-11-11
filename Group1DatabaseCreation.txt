@@ -8,7 +8,7 @@ CREATE DOMAIN ns_numkey as
 CREATE DOMAIN ns_alphakey as 
 CREATE DOMAIN ns_museumid as 
 CREATE DOMAIN ns_iname as 
-CREATE DOMAIN ns_icreator as 
+CREATE DOMAIN ns_crname as 
 CREATE DOMAIN ns_iorigin as 
 --TODO main/sub domains
 CREATE DOMAIN ns_iinsurance as 
@@ -80,7 +80,6 @@ CREATE TABLE ns_t_items (
 	ns_i_ialphakey ns_alphakey NOT NULL,
 	ns_i_museumid ns_museumid NOT NULL,
 	ns_i_iname ns_iname NOT NULL,
-	ns_i_icreator ns_icreator, -- can be null, cause my items dont have it mwahaha
 	ns_i_iorigin ns_iorigin, 
 	--TODO everything about main/subtypes
 	ns_i_iinsurance ns_iinsurance NOT NULL,
@@ -90,6 +89,20 @@ CREATE TABLE ns_t_items (
 	ns_i_idescription ns_idescription NOT NULL,
 	PRIMARY KEY (ns_i_numkey, ns_i_alphakey, ns_i_museumid),
 	FOREIGN KEY (ns_i_clname) REFERENCES ns_t_clients (ns_cl_clname)
+);
+
+-- ITEM CREATORS
+CREATE TABLE ns_t_itemcreators (
+	ns_cr_inumkey ns_numkey NOT NULL,
+	ns_cr_ialphakey ns_alphakey NOT NULL,
+	ns_cr_crname ns_crname NOT NULL,
+	UNIQUE (ns_cr_inumkey, ns_cr_ialphakey, ns_cr_crname),
+	CONSTRAINT
+		0toNcreators_created_1work
+		FOREIGN KEY (ns_cr_inumkey, ns_cr_ialphakey)
+		REFERENCES ns_t_items (ns_i_inumkey, ns_i_ialphakey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT
 );
 
 --MATERIALS
