@@ -14,7 +14,7 @@ CREATE DOMAIN ns_iorigin as varchar(40); --TODO
 --SUBTYPES
 CREATE DOMAIN ns_iformat as varchar(50);
 CREATE DOMAIN ns_isubformat as varchar(50);
-CREATE DOMAIN ns_igenre as varchar(50);
+CREATE DOMAIN ns_ischool as varchar(50);
 CREATE DOMAIN ns_isubject as varchar(50);
 
 CREATE DOMAIN ns_iinsurance as numeric;
@@ -84,10 +84,7 @@ CREATE TABLE ns_t_clients (
 	PRIMARY KEY (ns_cl_clname)
 );
 
-CREATE DOMAIN ns_iformat as varchar(50);
-CREATE DOMAIN ns_isubformat as varchar(50);
-CREATE DOMAIN ns_igenre as varchar(50);
-CREATE DOMAIN ns_isubject as varchar(50);
+
 --ITEMS
 CREATE TABLE ns_t_items (
 	ns_i_inumkey ns_numkey NOT NULL,
@@ -97,7 +94,7 @@ CREATE TABLE ns_t_items (
 	ns_i_iorigin ns_iorigin, 
 	ns_i_iformat ns_iformat,
 	ns_i_isubformat ns_isubformat,
-	ns_i_igenre ns_igenre,
+	ns_i_ischool ns_ischool,
 	ns_i_isubject ns_isubject,
 	ns_i_iinsurance ns_iinsurance NOT NULL,
 	ns_i_iacquisitiondate ns_iacquisitiondate NOT NULL,
