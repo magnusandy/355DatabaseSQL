@@ -10,7 +10,13 @@ CREATE DOMAIN ns_museumkey as varchar(10) CHECK (VALUE IN('Iain', 'Andrew', 'Rya
 CREATE DOMAIN ns_iname as as varchar(400); --longest painting name ever
 CREATE DOMAIN ns_crname as varchar(75);
 CREATE DOMAIN ns_iorigin as varchar(40); --TODO
---TODO main/sub domains 
+
+--SUBTYPES
+CREATE DOMAIN ns_iformat as varchar(50);
+CREATE DOMAIN ns_isubformat as varchar(50);
+CREATE DOMAIN ns_igenre as varchar(50);
+CREATE DOMAIN ns_isubject as varchar(50);
+
 CREATE DOMAIN ns_iinsurance as numeric;
 CREATE DOMAIN ns_iacquisitiondate as date;
 CREATE DOMAIN ns_icreationyear as bigint;
@@ -51,6 +57,10 @@ CREATE DOMAIN ns_exidate as timestamp;
 CREATE DOMAIN ns_matname as varchar(200);
 CREATE DOMAIN ns_exldate as timestamp;
 
+CREATE DOMAIN ns_subcomponent as varchar(50);
+
+CREATE DOMAIN ns_itsvector as tsvector;
+
 */
 
 
@@ -74,6 +84,10 @@ CREATE TABLE ns_t_clients (
 	PRIMARY KEY (ns_cl_clname)
 );
 
+CREATE DOMAIN ns_iformat as varchar(50);
+CREATE DOMAIN ns_isubformat as varchar(50);
+CREATE DOMAIN ns_igenre as varchar(50);
+CREATE DOMAIN ns_isubject as varchar(50);
 --ITEMS
 CREATE TABLE ns_t_items (
 	ns_i_inumkey ns_numkey NOT NULL,
@@ -81,12 +95,16 @@ CREATE TABLE ns_t_items (
 	ns_i_museumkey ns_museumkey NOT NULL,
 	ns_i_iname ns_iname NOT NULL,
 	ns_i_iorigin ns_iorigin, 
-	--TODO everything about main/subtypes
+	ns_i_iformat ns_iformat,
+	ns_i_isubformat ns_isubformat,
+	ns_i_igenre ns_igenre,
+	ns_i_isubject ns_isubject,
 	ns_i_iinsurance ns_iinsurance NOT NULL,
 	ns_i_iacquisitiondate ns_iacquisitiondate NOT NULL,
 	ns_i_icreationyear ns_icreationyear NOT NULL,
 	ns_i_clname ns_clname NOT NULL,
 	ns_i_idescription ns_idescription NOT NULL,
+	ns_i_itsvector ns_itsvector,
 	PRIMARY KEY (ns_i_numkey, ns_i_alphakey, ns_i_museumkey),
 	FOREIGN KEY (ns_i_clname) REFERENCES ns_t_clients (ns_cl_clname)
 );
@@ -109,6 +127,14 @@ CREATE TABLE ns_t_itemcreators (
 CREATE TABLE ns_t_materials(
 	ns_mat_matname ns_matname NOT NULL,
 	PRIMARY KEY(ns_mat_matname)
+);
+
+--SUB COMPONENTS
+CREATE TABLE ns_t_materials_subcomponenets(
+	ns_matsub_matname ns_matname NOT NULL,
+	ns_matsub_subcomponent ns_subcomponent,
+	PRIMARY KEY(ns_matsub_matname, ns_matsub_subcomponent),
+	FOREIGN KEY(ns_matsub_matname) REFERENCES ns_t_materials(ns_mat_matname)
 );
 
 --ITEM MATERIALS
