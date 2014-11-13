@@ -235,7 +235,7 @@ CREATE TABLE ns_t_exhibitions(
 	ns_ex_showdate_start ns_showdate NOT NULL,
 	ns_ex_showdate_end ns_showdate NOT NULL,
 	ns_ex_edescription ns_edescription NOT NULL,
-	PRIMARY KEY(ns_ex_ename)
+	PRIMARY KEY(ns_ex_ename, ns_ex_showdate_start)
 );
 
 
@@ -245,22 +245,24 @@ CREATE TABLE ns_t_exhibition_items(
 	ns_exi_ialphakey ns_ialphakey NOT NULL,
 	ns_exi_museumkey ns_museumkey NOT NULL,
 	ns_exi_ename ns_ename NOT NULL,
+	ns_exi_showdate_start ns_showdate NOT NULL,
 	ns_exi_exidate_start ns_exidate NOT NULL,
 	ns_exi_exidate_end ns_exidate NOT NULL,
 	PRIMARY KEY(ns_exi_inumkey, ns_exi_ialphakey, ns_exi_museumkey, ns_exi_ename, ns_exi_exidate_start),
-	FOREIGN KEY(ns_exi_ename) REFERENCES ns_t_exhibitions(ns_ex_ename),
+	FOREIGN KEY(ns_exi_ename, ns_exi_showdate_start) REFERENCES ns_t_exhibitions(ns_ex_ename, ns_ex_showdate_start),
 	FOREIGN KEY(ns_exi_inumkey, ns_exi_ialphakey, ns_exi_museumkey) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey)
 );
 
 --EXHIBITION LOCATIONS
 CREATE TABLE ns_t_exhibition_locations(
 	ns_exl_ename ns_ename NOT NULL,
+	ns_exl_showdate_start ns_showdate NOT NULL,
 	ns_exl_locname ns_locname NOT NULL,
 	ns_exl_museumkey ns_museumkey NOT NULL,
 	ns_exl_exldate_start ns_exldate NOT NULL,
 	ns_exl_exldate_end ns_exldate NOT NULL,
 	PRIMARY KEY(ns_exl_ename, ns_exl_locname, ns_exl_museumkey, ns_exl_exldate_start),
-	FOREIGN KEY(ns_exl_ename) REFERENCES ns_t_exhibitions(ns_ex_ename),
+	FOREIGN KEY(ns_exl_ename, ns_exl_showdate_start) REFERENCES ns_t_exhibitions(ns_ex_ename, ns_ex_showdate_start),
 	FOREIGN KEY(ns_exl_locname, ns_exl_museumkey) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
 );
 
