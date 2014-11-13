@@ -192,7 +192,7 @@ CREATE TABLE ns_t_external_locations (
 	ns_eloc_elocdate_end ns_elocdate NOT NULL,
 	ns_eloc_iinsurance_total ns_iinsurance, -- NOT SURE IF THIS SHOULD BE HERE OR MAYBE IN EXHIBITIONS? IDK its all calculatable anyway right?
 	--address NOT SURE IF THESE SHOULD BE ALL NOT NULL OR MAYBE JUST SOME
-	ns_cl_buildingnum ns_buildingnum,
+	ns_eloc_buildingnum ns_buildingnum,
 	ns_eloc_buildingname ns_buildingname,
 	ns_eloc_streetname ns_streetname,
 	ns_eloc_city ns_city,
