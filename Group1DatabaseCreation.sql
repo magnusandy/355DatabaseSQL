@@ -183,7 +183,7 @@ CREATE TABLE ns_t_internal_locations (
 );
 
 --EXTERNAL LOCATIONS
-CREATE TABLE ns_t_externallocations (
+CREATE TABLE ns_t_external_locations (
 	ns_eloc_locname ns_locname NOT NULL,
 	ns_eloc_museumkey ns_museumkey NOT NULL,
 	ns_eloc_sponsor ns_sponsor NOT NULL,
