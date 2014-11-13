@@ -102,15 +102,15 @@ CREATE TABLE ns_t_items (
 	ns_i_iinsurance ns_iinsurance NOT NULL,
 	ns_i_iacquisitiondate ns_iacquisitiondate NOT NULL,
 	ns_i_icreationyear ns_icreationyear NOT NULL,
-	ns_i_clname ns_clname NOT NULL,
+	ns_i_clname_owner ns_clname NOT NULL,
 	ns_i_idescription ns_idescription NOT NULL,
 	ns_i_itsvector ns_itsvector,
 	PRIMARY KEY (ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
-	FOREIGN KEY (ns_i_clname) REFERENCES ns_t_clients (ns_cl_clname)
+	FOREIGN KEY (ns_i_clname_owner) REFERENCES ns_t_clients (ns_cl_clname)
 );
 
 -- ITEM CREATORS
-CREATE TABLE ns_t_itemcreators (
+CREATE TABLE ns_t_item_creators (
 	ns_cr_inumkey ns_inumkey NOT NULL,
 	ns_cr_ialphakey ns_ialphakey NOT NULL,
 	ns_cr_museumkey ns_museumkey NOT NULL,
@@ -126,7 +126,7 @@ CREATE TABLE ns_t_materials(
 );
 
 --SUB COMPONENTS
-CREATE TABLE ns_t_materials_subcomponenets(
+CREATE TABLE ns_t_materials_subcomponents(
 	ns_matsub_matname ns_matname NOT NULL,
 	ns_matsub_subcomponent ns_subcomponent,
 	PRIMARY KEY(ns_matsub_matname, ns_matsub_subcomponent),
@@ -145,7 +145,7 @@ CREATE TABLE ns_t_item_materials(
 );
 
 --ITEM TRANSACTIONS
-CREATE TABLE ns_t_transactions(
+CREATE TABLE ns_t_item_transactions(
 	ns_it_inumkey ns_inumkey NOT NULL,
 	ns_it_ialphakey ns_ialphakey NOT NULL,
 	ns_it_museumkey ns_museumkey NOT NULL,
@@ -169,7 +169,7 @@ CREATE TABLE ns_t_locations (
 );
 
 --INTERNAL LOCATIONS
-CREATE TABLE ns_t_internallocations (
+CREATE TABLE ns_t_internal_locations (
 	ns_iloc_locname ns_locname NOT NULL,
 	ns_iloc_museumkey ns_museumkey NOT NULL,
 	ns_iloc_numitems_min ns_numitems NOT NULL,
@@ -199,7 +199,7 @@ CREATE TABLE ns_t_externallocations (
 	ns_eloc_country ns_country,
 	ns_eloc_region ns_region,
 	ns_eloc_postalcode ns_postalcode,
-	PRIMARY KEY(ns_eloc_locname, ns_eloc_museumkey),
+	PRIMARY KEY(ns_eloc_locname, ns_eloc_museumkey, ns_eloc_elocdate_start),
 	FOREIGN KEY(ns_eloc_locname, ns_eloc_museumkey) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
 );
 
