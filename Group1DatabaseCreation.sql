@@ -100,7 +100,7 @@ CREATE TABLE ns_t_items (
 	ns_i_isubject ns_isubject,
 	ns_i_icolor ns_icolor,
 	ns_i_iinsurance ns_iinsurance NOT NULL,
-	ns_i_iacquisitiondate ns_iacquisitiondate NOT NULL,
+	ns_i_iacquisitiondate ns_iacquisitiondate, --changed to be able to be null for potential works
 	ns_i_icreationyear ns_icreationyear NOT NULL,
 	ns_i_clname_owner ns_clname NOT NULL,
 	ns_i_idescription ns_idescription NOT NULL,
