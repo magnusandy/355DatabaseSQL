@@ -17,7 +17,7 @@ CREATE DOMAIN ns_isubformat as varchar(50);
 CREATE DOMAIN ns_ischool as varchar(50);
 CREATE DOMAIN ns_isubject as varchar(50);
 
-CREATE DOMAIN ns_iinsurance as numeric;
+CREATE DOMAIN ns_iinsurance as numeric CHECK (VALUE >= 0);
 CREATE DOMAIN ns_iacquisitiondate as date;
 CREATE DOMAIN ns_icreationyear as bigint;
 CREATE DOMAIN ns_clname as varchar(75);
@@ -35,16 +35,16 @@ CREATE DOMAIN ns_region as varchar(60);
 CREATE DOMAIN ns_postalcode as varchar(20);
 
 CREATE DOMAIN ns_locname as varchar(30);
-CREATE DOMAIN ns_loctype as varchar(13)CHECK (VALUE IN('External', 'Internal'));
-CREATE DOMAIN ns_numitems as smallint;
-CREATE DOMAIN ns_dimension as real;
+CREATE DOMAIN ns_loctype as varchar(13) CHECK (VALUE IN('External', 'Internal'));
+CREATE DOMAIN ns_numitems as smallint CHECK (VALUE >= 0); 
+CREATE DOMAIN ns_dimension as real CHECK (VALUE > 0);
 CREATE DOMAIN ns_loccreationdate as date;
 CREATE DOMAIN ns_sponsor as varchar(75);
 CREATE DOMAIN ns_security as varchar(75); 
 
 CREATE DOMAIN ns_ilodate as timestamp;
 
-CREATE DOMAIN ns_ittype as varchar(15) CHECK (VALUE IN ('borrow', 'loan', 'purchase', 'sale'));
+CREATE DOMAIN ns_ittype as varchar(15) CHECK (VALUE IN ('Borrow', 'Loan', 'Purchase', 'Sale'));
 CREATE DOMAIN ns_itdate as timestamp;
 CREATE DOMAIN ns_itgross as numeric;
 
