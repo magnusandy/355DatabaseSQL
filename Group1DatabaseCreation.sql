@@ -23,7 +23,7 @@ CREATE DOMAIN ns_icreationyear as bigint;
 CREATE DOMAIN ns_clname as varchar(75);
 CREATE DOMAIN ns_idescription as text;
 CREATE DOMAIN ns_email as varchar(100);
-CREATE DOMAIN ns_phonenum as varchar(20);
+CREATE DOMAIN ns_phonenum as varchar(30); --Expanded to 30 for international plus extension +00 (0)0000 000 000 ext.00
 
 --address domains
 CREATE DOMAIN ns_buildingnum as varchar(10);
