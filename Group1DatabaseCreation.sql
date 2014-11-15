@@ -17,13 +17,13 @@ CREATE DOMAIN ns_isubformat as varchar(50);
 CREATE DOMAIN ns_ischool as varchar(50);
 CREATE DOMAIN ns_isubject as varchar(50);
 
-CREATE DOMAIN ns_iinsurance as numeric;
+CREATE DOMAIN ns_iinsurance as numeric CHECK (VALUE >= 0);
 CREATE DOMAIN ns_iacquisitiondate as date;
 CREATE DOMAIN ns_icreationyear as bigint;
 CREATE DOMAIN ns_clname as varchar(75);
 CREATE DOMAIN ns_idescription as text;
 CREATE DOMAIN ns_email as varchar(100);
-CREATE DOMAIN ns_phonenum as varchar(20);
+CREATE DOMAIN ns_phonenum as varchar(30); --Expanded to 30 for international plus extension +00 (0)0000 000 000 ext.00
 
 --address domains
 CREATE DOMAIN ns_buildingnum as varchar(10);
@@ -34,18 +34,18 @@ CREATE DOMAIN ns_country as varchar(60);
 CREATE DOMAIN ns_region as varchar(60);
 CREATE DOMAIN ns_postalcode as varchar(20);
 
-CREATE DOMAIN ns_locname as varchar(30);
-CREATE DOMAIN ns_loctype as varchar(13)CHECK (VALUE IN('External', 'Internal'));
-CREATE DOMAIN ns_numitems as smallint;
-CREATE DOMAIN ns_dimension as real;
+CREATE DOMAIN ns_locname as varchar(35);
+CREATE DOMAIN ns_loctype as varchar(13) CHECK (VALUE IN('External', 'Internal'));
+CREATE DOMAIN ns_numitems as smallint CHECK (VALUE >= 0); 
+CREATE DOMAIN ns_locdimensionmetres as real CHECK (VALUE > 0);
 CREATE DOMAIN ns_loccreationdate as date;
 CREATE DOMAIN ns_sponsor as varchar(75);
 CREATE DOMAIN ns_security as varchar(75); 
 
-CREATE DOMAIN ns_ilodate as timestamp;
+CREATE DOMAIN ns_ilodatetime as timestamp;
 
-CREATE DOMAIN ns_ittype as varchar(15) CHECK (VALUE IN ('borrow', 'loan', 'purchase', 'sale'));
-CREATE DOMAIN ns_itdate as timestamp;
+CREATE DOMAIN ns_ittype as varchar(15) CHECK (VALUE IN ('Borrow', 'Loan', 'Purchase', 'Sale'));
+CREATE DOMAIN ns_itdatetime as timestamp;
 CREATE DOMAIN ns_itgross as numeric;
 
 CREATE DOMAIN ns_ename as varchar(200);
@@ -55,12 +55,12 @@ CREATE DOMAIN ns_edescription as text;
 CREATE DOMAIN ns_exidate as timestamp;
 
 CREATE DOMAIN ns_matname as varchar(200);
-CREATE DOMAIN ns_exldate as timestamp;
+CREATE DOMAIN ns_elocdate as date;
+CREATE DOMAIN ns_exldate as date;
 
 CREATE DOMAIN ns_subcomponent as varchar(50);
 
 CREATE DOMAIN ns_itsvector as tsvector;
-CREATE DOMAIN ns_elocdate as timestamp;
 
 CREATE DOMAIN ns_icolor as varchar(50);
 
@@ -107,6 +107,8 @@ CREATE TABLE ns_t_items (
 	ns_i_itsvector ns_itsvector,
 	PRIMARY KEY (ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
 	FOREIGN KEY (ns_i_clname_owner) REFERENCES ns_t_clients (ns_cl_clname)
+		ON UPDATE CASCASE
+		ON DELETE RESTRICT
 );
 
 -- ITEM CREATORS
@@ -116,7 +118,10 @@ CREATE TABLE ns_t_item_creators (
 	ns_cr_museumkey ns_museumkey NOT NULL,
 	ns_cr_crname ns_crname NOT NULL,
 	PRIMARY KEY(ns_cr_inumkey, ns_cr_ialphakey, ns_cr_museumkey, ns_cr_crname),
-	FOREIGN KEY (ns_cr_inumkey, ns_cr_ialphakey, ns_cr_museumkey) REFERENCES ns_t_items (ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey) ON UPDATE CASCADE ON DELETE RESTRICT
+	FOREIGN KEY (ns_cr_inumkey, ns_cr_ialphakey, ns_cr_museumkey) 
+		REFERENCES ns_t_items (ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey) 
+		ON UPDATE CASCADE 
+		ON DELETE RESTRICT
 );
 
 --MATERIALS
@@ -128,8 +133,8 @@ CREATE TABLE ns_t_materials(
 --SUB COMPONENTS
 CREATE TABLE ns_t_materials_subcomponents(
 	ns_matsub_matname ns_matname NOT NULL,
-	ns_matsub_subcomponent ns_subcomponent,
-	PRIMARY KEY(ns_matsub_matname, ns_matsub_subcomponent),
+	ns_matsub_subcomponent ns_subcomponent NOT NULL,
+	PRIMARY KEY(ns_matname, ns_matsub_subcomponent),
 	FOREIGN KEY(ns_matsub_matname) REFERENCES ns_t_materials(ns_mat_matname)
 );
 
@@ -151,11 +156,11 @@ CREATE TABLE ns_t_item_transactions(
 	ns_it_museumkey ns_museumkey NOT NULL,
 	ns_it_clname ns_clname NOT NULL,
 	ns_it_ittype ns_ittype NOT NULL,
-	ns_it_itdate_start ns_itdate NOT NULL,
-	ns_it_itdate_end ns_itdate, --NULL IF ITS A SALE
-	ns_it_itdate_returnby ns_itdate, --null if its not a loan
+	ns_it_itdatetime_start ns_itdatetime NOT NULL,
+	ns_it_itdatetime_end ns_itdatetime, --NULL IF ITS A SALE
+	ns_it_itdatetime_returnby ns_itdatetime, --null if its not a loan
 	ns_it_itgross ns_itgross NOT NULL,
-	PRIMARY KEY(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_itdate_start),--TODO is this right?
+	PRIMARY KEY(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_itdatetime_start),--TODO is this right?
 	FOREIGN KEY(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
 	FOREIGN KEY(ns_it_clname) REFERENCES ns_t_clients(ns_cl_clname)
 );
@@ -174,9 +179,9 @@ CREATE TABLE ns_t_internal_locations (
 	ns_iloc_museumkey ns_museumkey NOT NULL,
 	ns_iloc_numitems_min ns_numitems NOT NULL,
 	ns_iloc_numitems_max ns_numitems NOT NULL,
-	ns_iloc_dimension_height ns_dimension NOT NULL,
-	ns_iloc_dimension_length ns_dimension NOT NULL,
-	ns_iloc_dimension_width ns_dimension NOT NULL,
+	ns_iloc_locdimensionmetres_height ns_locdimensionmetres NOT NULL,
+	ns_iloc_locdimensionmetres_length ns_locdimensionmetres NOT NULL,
+	ns_iloc_locdimensionmetres_width ns_locdimensionmetres NOT NULL,
 	ns_iloc_loccreationdate ns_loccreationdate,
 	PRIMARY KEY(ns_iloc_locname, ns_iloc_museumkey),
 	FOREIGN KEY(ns_iloc_locname, ns_iloc_museumkey) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
@@ -210,9 +215,9 @@ CREATE TABLE ns_t_item_locations(
 	ns_ilo_museumkey_item ns_museumkey NOT NULL,
 	ns_ilo_locname ns_locname NOT NULL,
 	ns_ilo_museumkey_location ns_museumkey NOT NULL,
-	ns_ilo_ilodate_start ns_ilodate NOT NULL,
-	ns_ilo_ilodate_end ns_ilodate, 
-	PRIMARY KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item, ns_ilo_ilodate_start), --THIS SHOULD BE GOOD RIGHT? DONT NEED LOCATION FOR PRIMARY KEY
+	ns_ilo_ilodatetime_start ns_ilodatetime NOT NULL,
+	ns_ilo_ilodatetime_end ns_ilodatetime, 
+	PRIMARY KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item, ns_ilo_ilodatetime_start), --THIS SHOULD BE GOOD RIGHT? DONT NEED LOCATION FOR PRIMARY KEY
 	FOREIGN KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
 	FOREIGN KEY(ns_ilo_locname, ns_ilo_museumkey_location) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
 );
