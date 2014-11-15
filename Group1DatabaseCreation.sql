@@ -55,6 +55,7 @@ CREATE DOMAIN ns_edescription as text;
 CREATE DOMAIN ns_exidate as timestamp;
 
 CREATE DOMAIN ns_matname as varchar(200);
+CREATE DOMAIN ns_elocdate as date;
 CREATE DOMAIN ns_exldate as date;
 
 CREATE DOMAIN ns_subcomponent as varchar(50);
@@ -152,9 +153,9 @@ CREATE TABLE ns_t_item_transactions(
 	ns_it_ittype ns_ittype NOT NULL,
 	ns_it_itdatetime_start ns_itdatetime NOT NULL,
 	ns_it_itdatetime_end ns_itdatetime, --NULL IF ITS A SALE
-	ns_it_itdate_returnby ns_itdate, --null if its not a loan
+	ns_it_itdatetime_returnby ns_itdatetime, --null if its not a loan
 	ns_it_itgross ns_itgross NOT NULL,
-	PRIMARY KEY(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_itdate_start),--TODO is this right?
+	PRIMARY KEY(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_itdatetime_start),--TODO is this right?
 	FOREIGN KEY(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
 	FOREIGN KEY(ns_it_clname) REFERENCES ns_t_clients(ns_cl_clname)
 );
@@ -173,9 +174,9 @@ CREATE TABLE ns_t_internal_locations (
 	ns_iloc_museumkey ns_museumkey NOT NULL,
 	ns_iloc_numitems_min ns_numitems NOT NULL,
 	ns_iloc_numitems_max ns_numitems NOT NULL,
-	ns_iloc_dimension_height ns_dimension NOT NULL,
-	ns_iloc_dimension_length ns_dimension NOT NULL,
-	ns_iloc_dimension_width ns_dimension NOT NULL,
+	ns_iloc_locdimensionmetres_height ns_locdimensionmetres NOT NULL,
+	ns_iloc_locdimensionmetres_length ns_locdimensionmetres NOT NULL,
+	ns_iloc_locdimensionmetres_width ns_locdimensionmetres NOT NULL,
 	ns_iloc_loccreationdate ns_loccreationdate,
 	PRIMARY KEY(ns_iloc_locname, ns_iloc_museumkey),
 	FOREIGN KEY(ns_iloc_locname, ns_iloc_museumkey) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
