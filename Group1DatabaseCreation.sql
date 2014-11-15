@@ -132,7 +132,7 @@ CREATE TABLE ns_t_materials(
 
 --SUB COMPONENTS
 CREATE TABLE ns_t_materials_subcomponents(
-	ns_matname ns_matname NOT NULL,
+	ns_matsub_matname ns_matname NOT NULL,
 	ns_matsub_subcomponent ns_subcomponent,
 	PRIMARY KEY(ns_matname, ns_matsub_subcomponent),
 	FOREIGN KEY(ns_matsub_matname) REFERENCES ns_t_materials(ns_mat_matname)
