@@ -136,6 +136,8 @@ CREATE TABLE ns_t_materials_subcomponents(
 	ns_matsub_subcomponent ns_subcomponent NOT NULL,
 	PRIMARY KEY(ns_matname, ns_matsub_subcomponent),
 	FOREIGN KEY(ns_matsub_matname) REFERENCES ns_t_materials(ns_mat_matname)
+	ON UPDATE CASCASE
+	ON DELETE RESTRICT
 );
 
 --ITEM MATERIALS
@@ -145,8 +147,14 @@ CREATE TABLE ns_t_item_materials(
 	ns_imat_museumkey ns_museumkey NOT NULL,
 	ns_imat_matname ns_matname NOT NULL,
 	PRIMARY KEY(ns_imat_inumkey, ns_imat_ialphakey, ns_imat_museumkey, ns_imat_matname),
-	FOREIGN KEY(ns_imat_inumkey, ns_imat_ialphakey, ns_imat_museumkey) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
-	FOREIGN KEY(ns_imat_matname) REFERENCES ns_t_materials(ns_mat_matname)
+	FOREIGN KEY(ns_imat_inumkey, ns_imat_ialphakey, ns_imat_museumkey) 
+		REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT,
+	FOREIGN KEY(ns_imat_matname) 
+		REFERENCES ns_t_materials(ns_mat_matname)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT
 );
 
 --ITEM TRANSACTIONS
@@ -161,8 +169,14 @@ CREATE TABLE ns_t_item_transactions(
 	ns_it_itdatetime_returnby ns_itdatetime, --null if its not a loan
 	ns_it_itgross ns_itgross NOT NULL,
 	PRIMARY KEY(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_itdatetime_start),--TODO is this right?
-	FOREIGN KEY(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
-	FOREIGN KEY(ns_it_clname) REFERENCES ns_t_clients(ns_cl_clname)
+	FOREIGN KEY(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey) 
+		REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT,
+	FOREIGN KEY(ns_it_clname) 
+		REFERENCES ns_t_clients(ns_cl_clname)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT
 );
 
 --LOCATIONS MAIN
@@ -184,7 +198,10 @@ CREATE TABLE ns_t_internal_locations (
 	ns_iloc_locdimensionmetres_width ns_locdimensionmetres NOT NULL,
 	ns_iloc_loccreationdate ns_loccreationdate,
 	PRIMARY KEY(ns_iloc_locname, ns_iloc_museumkey),
-	FOREIGN KEY(ns_iloc_locname, ns_iloc_museumkey) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+	FOREIGN KEY(ns_iloc_locname, ns_iloc_museumkey) 
+		REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT
 );
 
 --EXTERNAL LOCATIONS
