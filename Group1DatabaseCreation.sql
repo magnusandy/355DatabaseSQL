@@ -34,7 +34,7 @@ CREATE DOMAIN ns_country as varchar(60);
 CREATE DOMAIN ns_region as varchar(60);
 CREATE DOMAIN ns_postalcode as varchar(20);
 
-CREATE DOMAIN ns_locname as varchar(30);
+CREATE DOMAIN ns_locname as varchar(35);
 CREATE DOMAIN ns_loctype as varchar(13) CHECK (VALUE IN('External', 'Internal'));
 CREATE DOMAIN ns_numitems as smallint CHECK (VALUE >= 0); 
 CREATE DOMAIN ns_locdimensionmetres as real CHECK (VALUE > 0);
