@@ -42,7 +42,7 @@ CREATE DOMAIN ns_loccreationdate as date;
 CREATE DOMAIN ns_sponsor as varchar(75);
 CREATE DOMAIN ns_security as varchar(75); 
 
-CREATE DOMAIN ns_ilodate as timestamp;
+CREATE DOMAIN ns_ilodatetime as timestamp;
 
 CREATE DOMAIN ns_ittype as varchar(15) CHECK (VALUE IN ('Borrow', 'Loan', 'Purchase', 'Sale'));
 CREATE DOMAIN ns_itdatetime as timestamp;
@@ -107,6 +107,8 @@ CREATE TABLE ns_t_items (
 	ns_i_itsvector ns_itsvector,
 	PRIMARY KEY (ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
 	FOREIGN KEY (ns_i_clname_owner) REFERENCES ns_t_clients (ns_cl_clname)
+		ON UPDATE CASCASE
+		ON DELETE RESTRICT
 );
 
 -- ITEM CREATORS
@@ -116,7 +118,10 @@ CREATE TABLE ns_t_item_creators (
 	ns_cr_museumkey ns_museumkey NOT NULL,
 	ns_cr_crname ns_crname NOT NULL,
 	PRIMARY KEY(ns_cr_inumkey, ns_cr_ialphakey, ns_cr_museumkey, ns_cr_crname),
-	FOREIGN KEY (ns_cr_inumkey, ns_cr_ialphakey, ns_cr_museumkey) REFERENCES ns_t_items (ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey) ON UPDATE CASCADE ON DELETE RESTRICT
+	FOREIGN KEY (ns_cr_inumkey, ns_cr_ialphakey, ns_cr_museumkey) 
+		REFERENCES ns_t_items (ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey) 
+		ON UPDATE CASCADE 
+		ON DELETE RESTRICT
 );
 
 --MATERIALS
@@ -127,9 +132,9 @@ CREATE TABLE ns_t_materials(
 
 --SUB COMPONENTS
 CREATE TABLE ns_t_materials_subcomponents(
-	ns_matsub_matname ns_matname NOT NULL,
+	ns_matname ns_matname NOT NULL,
 	ns_matsub_subcomponent ns_subcomponent,
-	PRIMARY KEY(ns_matsub_matname, ns_matsub_subcomponent),
+	PRIMARY KEY(ns_matname, ns_matsub_subcomponent),
 	FOREIGN KEY(ns_matsub_matname) REFERENCES ns_t_materials(ns_mat_matname)
 );
 
@@ -210,9 +215,9 @@ CREATE TABLE ns_t_item_locations(
 	ns_ilo_museumkey_item ns_museumkey NOT NULL,
 	ns_ilo_locname ns_locname NOT NULL,
 	ns_ilo_museumkey_location ns_museumkey NOT NULL,
-	ns_ilo_ilodate_start ns_ilodate NOT NULL,
-	ns_ilo_ilodate_end ns_ilodate, 
-	PRIMARY KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item, ns_ilo_ilodate_start), --THIS SHOULD BE GOOD RIGHT? DONT NEED LOCATION FOR PRIMARY KEY
+	ns_ilo_ilodatetime_start ns_ilodatetime NOT NULL,
+	ns_ilo_ilodatetime_end ns_ilodatetime, 
+	PRIMARY KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item, ns_ilo_ilodatetime_start), --THIS SHOULD BE GOOD RIGHT? DONT NEED LOCATION FOR PRIMARY KEY
 	FOREIGN KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
 	FOREIGN KEY(ns_ilo_locname, ns_ilo_museumkey_location) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
 );
