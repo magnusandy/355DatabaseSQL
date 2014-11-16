@@ -54,43 +54,48 @@ DROP DOMAIN ns_email;
 DROP DOMAIN ns_phonenum;
 
 --address domains
-DROP DOMAIN ns_buildingnum ;
-DROP DOMAIN ns_buildingname;
-DROP DOMAIN ns_streetname;
-DROP DOMAIN ns_city;
-DROP DOMAIN ns_country;
-DROP DOMAIN ns_region;
-DROP DOMAIN ns_postalcode;
+DROP DOMAIN ns_buildingnum CASCADE;
+DROP DOMAIN ns_buildingname CASCADE;
+DROP DOMAIN ns_streetname CASCADE;
+DROP DOMAIN ns_city CASCADE;
+DROP DOMAIN ns_country CASCADE;
+DROP DOMAIN ns_region Cascade;
+DROP DOMAIN ns_postalcode Cascade;
 
-DROP DOMAIN ns_locname;
-DROP DOMAIN ns_loctype;
-DROP DOMAIN ns_numitems;
-DROP DOMAIN ns_dimension;
-DROP DOMAIN ns_loccreationdate;
-DROP DOMAIN ns_sponsor;
-DROP DOMAIN ns_security;
+DROP DOMAIN ns_locname Cascade;
+DROP DOMAIN ns_loctype Cascade;
+DROP DOMAIN ns_numitems Cascade;
+DROP DOMAIN ns_dimension Cascade;
+DROP DOMAIN ns_loccreationdate Cascade;
+DROP DOMAIN ns_sponsor Cascade;
+DROP DOMAIN ns_security Cascade;
 
-DROP DOMAIN ns_ilodate;
+DROP DOMAIN ns_ilodate Cascade;
 
-DROP DOMAIN ns_ittype;
-DROP DOMAIN ns_itdate;
-DROP DOMAIN ns_itgross;
+DROP DOMAIN ns_ittype Cascade;
+DROP DOMAIN ns_itdate Cascade;
+DROP DOMAIN ns_itgross Cascade;
 
-DROP DOMAIN ns_ename;
-DROP DOMAIN ns_showdate;
-DROP DOMAIN ns_edescription;
+DROP DOMAIN ns_ename Cascade;
+DROP DOMAIN ns_showdate Cascade;
+DROP DOMAIN ns_edescription Cascade;
 
-DROP DOMAIN ns_exidate;
+DROP DOMAIN ns_exidate Cascade;
 
-DROP DOMAIN ns_matname;
-DROP DOMAIN ns_exldate;
+DROP DOMAIN ns_matname Cascade;
+DROP DOMAIN ns_exldate Cascade;
 
-DROP DOMAIN ns_subcomponent;
+DROP DOMAIN ns_subcomponent Cascade;
 
-DROP DOMAIN ns_itsvector;
-DROP DOMAIN ns_elocdate;
+DROP DOMAIN ns_itsvector Cascade;
+DROP DOMAIN ns_elocdate Cascade;
 
-DROP DOMAIN ns_icolor;
+DROP DOMAIN ns_icolor Cascade;
+DROP DOMAIN if exists ns_locdimensionmetres cascade;
+DROP DOMAIN if exists ns_ilodatetime cascade;
+DROP DOMAIN IF EXISTS ns_ildatetime cascade;
+DROP DOMAIN if exists ns_locdimensionmetres cascade;
+drop domain if exists ns_itdatetime cascade;
 INSERT INTO itemowners (onroname) VALUES ('Our Museum');
 UPDATE itemcollection SET coloname = 'Our Museum' WHERE coloname = 'Andrew Museum';
 DELETE FROM itemowners WHERE onroname = 'Andrew Museum';
