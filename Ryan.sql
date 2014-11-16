@@ -112,28 +112,28 @@ insert into ns_t_locations(ns_loc_locname, ns_loc_museumkey, ns_loc_loctype)
 alter table t_internallocations drop column if exists il_dimension_height cascade;
 alter table t_internallocations drop column if exists il_dimension_length cascade;
 alter table t_internallocations drop column if exists il_dimension_width cascade;
-alter table t_internallocations add column il_dimension_height ns_dimension;
-alter table t_internallocations add column il_dimension_length ns_dimension;
-alter table t_internallocations add column il_dimension_width ns_dimension;
+alter table t_internallocations add column il_dimension_height ns_locdimensionmetres;
+alter table t_internallocations add column il_dimension_length ns_locdimensionmetres;
+alter table t_internallocations add column il_dimension_width ns_locdimensionmetres;
 
-update t_internallocations set il_dimension_height = 500 where il_locationname in ('Gallery B', 'Gallery A', 'Gallery C');
-update t_internallocations set il_dimension_height = 600 where il_locationname = 'Storage';
-update t_internallocations set il_dimension_height = 355 where il_locationname = 'Lobby';
-update t_internallocations set il_dimension_height = 800 where il_locationname = 'Large Gallery';
+update t_internallocations set il_dimension_height = 50 where il_locationname in ('Gallery B', 'Gallery A', 'Gallery C');
+update t_internallocations set il_dimension_height = 60 where il_locationname = 'Storage';
+update t_internallocations set il_dimension_height = 35 where il_locationname = 'Lobby';
+update t_internallocations set il_dimension_height = 80 where il_locationname = 'Large Gallery';
 
-update t_internallocations set il_dimension_length = 600 where il_locationname in ('Gallery B', 'Gallery A');
-update t_internallocations set il_dimension_length = 1200 where il_locationname in ('Lobby', 'Gallery C');
-update t_internallocations set il_dimension_length = 750 where il_locationname = 'Storage';
-update t_internallocations set il_dimension_length = 1400 where il_locationname = 'Large Gallery';
+update t_internallocations set il_dimension_length = 60 where il_locationname in ('Gallery B', 'Gallery A');
+update t_internallocations set il_dimension_length = 120 where il_locationname in ('Lobby', 'Gallery C');
+update t_internallocations set il_dimension_length = 75 where il_locationname = 'Storage';
+update t_internallocations set il_dimension_length = 140 where il_locationname = 'Large Gallery';
 
-update t_internallocations set il_dimension_width = 450 where il_locationname in ('Gallery A', 'Gallery B');
-update t_internallocations set il_dimension_width = 500 where il_locationname = 'Gallery C';
-update t_internallocations set il_dimension_width = 1400 where il_locationname = 'Storage';
-update t_internallocations set il_dimension_width = 350 where il_locationname = 'Lobby';
-update t_internallocations set il_dimension_width = 750 where il_locationname = 'Large Gallery';
+update t_internallocations set il_dimension_width = 45 where il_locationname in ('Gallery A', 'Gallery B');
+update t_internallocations set il_dimension_width = 50 where il_locationname = 'Gallery C';
+update t_internallocations set il_dimension_width = 140 where il_locationname = 'Storage';
+update t_internallocations set il_dimension_width = 35 where il_locationname = 'Lobby';
+update t_internallocations set il_dimension_width = 75 where il_locationname = 'Large Gallery';
 
 insert into ns_t_internal_locations
-(ns_iloc_locname, ns_iloc_museumkey, ns_iloc_numitems_min, ns_iloc_numitems_max, ns_iloc_dimension_height, ns_iloc_dimension_length, ns_iloc_dimension_width, ns_iloc_loccreationdate)
+(ns_iloc_locname, ns_iloc_museumkey, ns_iloc_numitems_min, ns_iloc_numitems_max, ns_iloc_locdimensionmetres_height, ns_iloc_locdimensionmetres_length, ns_iloc_locdimensionmetres_width, ns_iloc_loccreationdate)
 (select il_locationname, 'Ryan', il_suggestedmin, il_suggestedmax, il_dimension_height, il_dimension_length, il_dimension_width, il_availabledate from t_internallocations
 where il_locationname not in ('Possessed By Lender', 'Sold', 'On-Loan'));
 
@@ -191,7 +191,7 @@ insert into ns_t_exhibitions(ns_ex_ename, ns_ex_showdate_start, ns_ex_showdate_e
 
 
 --ITEM LOCATIONS*************
-insert into ns_t_item_locations(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item,ns_ilo_locname,ns_ilo_museumkey_location,ns_ilo_ilodate_start,ns_ilo_ilodate_end)
+insert into ns_t_item_locations(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item,ns_ilo_locname,ns_ilo_museumkey_location,ns_ilo_ilodatetime_start,ns_ilo_ilodatetime_end)
 (select il_numkey, il_alphakey, 'Ryan', il_locationname, 'Ryan', il_startDate, il_enddate from t_itemlocations);
 
 
@@ -200,11 +200,11 @@ alter table t_itemtransactions drop constraint t_itemtransactions_it_transaction
 update t_itemtransactions set it_transactiontype = 'Loan' where it_transactiontype = 'Lend';
 
 insert into ns_t_item_transactions
-(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdate_start, ns_it_itdate_end, ns_it_itdate_returnBy, ns_it_itgross)
+(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdatetime_start, ns_it_itdatetime_end, ns_it_itdatetime_returnBy, ns_it_itgross)
 (select it_numkey, it_alphakey, 'Ryan', it_clientname, it_transactiontype, it_date_start, it_date_end, it_date_returnby, it_costOftransaction from t_itemtransactions where it_transactiontype in ('Purchase', 'Sale'));
 
 insert into ns_t_item_transactions
-(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdate_start, ns_it_itdate_end, ns_it_itdate_returnBy, ns_it_itgross)
+(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdatetime_start, ns_it_itdatetime_end, ns_it_itdatetime_returnBy, ns_it_itgross)
 (select it_numkey, it_alphakey, 'Ryan', it_clientname, it_transactiontype, it_date_start, it_date_end, it_date_returnby, 0 from t_itemtransactions where it_transactiontype in ('Borrow', 'Loan'));
 
 --TRANSFERRRING EXHIBITION LOCATIONS*************
