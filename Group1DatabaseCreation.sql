@@ -107,7 +107,7 @@ CREATE TABLE ns_t_items (
 	ns_i_itsvector ns_itsvector,
 	PRIMARY KEY (ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
 	FOREIGN KEY (ns_i_clname_owner) REFERENCES ns_t_clients (ns_cl_clname)
-		ON UPDATE CASCASE
+		ON UPDATE CASCADE
 		ON DELETE RESTRICT
 );
 
@@ -134,9 +134,9 @@ CREATE TABLE ns_t_materials(
 CREATE TABLE ns_t_materials_subcomponents(
 	ns_matsub_matname ns_matname NOT NULL,
 	ns_matsub_subcomponent ns_subcomponent NOT NULL,
-	PRIMARY KEY(ns_matname, ns_matsub_subcomponent),
+	PRIMARY KEY(ns_matsub_matname, ns_matsub_subcomponent),
 	FOREIGN KEY(ns_matsub_matname) REFERENCES ns_t_materials(ns_mat_matname)
-	ON UPDATE CASCASE
+	ON UPDATE CASCADE
 	ON DELETE RESTRICT
 );
 

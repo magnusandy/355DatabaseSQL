@@ -151,7 +151,7 @@ INSERT INTO ns_t_locations (ns_loc_locname, ns_loc_museumkey, ns_loc_loctype)
 SELECT locrmname, 'Andrew', 'External' FROM locations WHERE locdimentionlength IS NULL;
 
 --INTERNAL LOCATIONS
-INSERT INTO ns_t_internal_locations (ns_iloc_locname, ns_iloc_museumkey, ns_iloc_numitems_min, ns_iloc_numitems_max, ns_iloc_dimension_height, ns_iloc_dimension_length, ns_iloc_dimension_width)
+INSERT INTO ns_t_internal_locations (ns_iloc_locname, ns_iloc_museumkey, ns_iloc_numitems_min, ns_iloc_numitems_max, ns_iloc_locdimensionmetres_height, ns_iloc_locdimensionmetres_length, ns_iloc_locdimensionmetres_width)
 SELECT locrmname, 'Andrew', locnumitemsmin, locnumitemsmax, locdimentionheight, locdimentionlength, locdimentionwidth FROM locations WHERE locdimentionlength IS NOT NULL;
 
 --EXTERNAL LOCATIONS
@@ -248,23 +248,23 @@ SELECT matnumid, matalphaid, 'Andrew', matmedium FROM itemMaterials;
 UPDATE itemcollection SET colaquisitiondate = '2014-10-20' WHERE ((colnumid = '1978400415') OR (colnumid = '1972118101') OR (colnumid = '1998544354'));
 
 --borrowed items
-INSERT INTO ns_t_item_transactions (ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdate_start, ns_it_itdate_returnby, ns_it_itgross)
-	SELECT colnumid, colalphaid, 'Andrew', coloname, 'borrow', colaquisitiondate, colitemdatedeparture, colinsuranceval FROM itemcollection WHERE colborrowedstatus = 'B';
+INSERT INTO ns_t_item_transactions (ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdatetime_start, ns_it_itdatetime_returnby, ns_it_itgross)
+	SELECT colnumid, colalphaid, 'Andrew', coloname, 'Borrow', colaquisitiondate, colitemdatedeparture, colinsuranceval FROM itemcollection WHERE colborrowedstatus = 'B';
 	
-INSERT INTO ns_t_item_transactions (ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdate_start, ns_it_itdate_returnby, ns_it_itgross)
-	SELECT colnumid, colalphaid, 'Andrew', coloname, 'loan', colaquisitiondate, '2017-06-01 00:00:00', colinsuranceval FROM itemcollection WHERE colborrowedstatus = 'L';
+INSERT INTO ns_t_item_transactions (ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdatetime_start, ns_it_itdatetime_returnby, ns_it_itgross)
+	SELECT colnumid, colalphaid, 'Andrew', coloname, 'Loan', colaquisitiondate, '2017-06-01 00:00:00', colinsuranceval FROM itemcollection WHERE colborrowedstatus = 'L';
 
-INSERT INTO ns_t_item_transactions (ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdate_start, ns_it_itgross)
-	SELECT colnumid, colalphaid, 'Andrew', coloname, 'sale', colitemdatedeparture, colinsuranceval FROM itemcollection WHERE colborrowedstatus = 'S';
+INSERT INTO ns_t_item_transactions (ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdatetime_start, ns_it_itgross)
+	SELECT colnumid, colalphaid, 'Andrew', coloname, 'Sale', colitemdatedeparture, colinsuranceval FROM itemcollection WHERE colborrowedstatus = 'S';
 
 	--fixed these dates, didnt get changed last time
 UPDATE itemcollection SET colaquisitiondate = '2014-10-20' WHERE ((colnumid = '1978400415') OR (colnumid = '1972118101') OR (colnumid = '1998544354'));
 	
-INSERT INTO ns_t_item_transactions (ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdate_start, ns_it_itgross)
-	SELECT colnumid, colalphaid, 'Andrew', coloname, 'purchase', colaquisitiondate, colinsuranceval FROM itemcollection WHERE colaquisitiondate = '2014-10-20';
+INSERT INTO ns_t_item_transactions (ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdatetime_start, ns_it_itgross)
+	SELECT colnumid, colalphaid, 'Andrew', coloname, 'Purchase', colaquisitiondate, colinsuranceval FROM itemcollection WHERE colaquisitiondate = '2014-10-20';
 
 --ITEM LOCATIONS;
-INSERT INTO ns_t_item_locations( ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item, ns_ilo_locname, ns_ilo_museumkey_location, ns_ilo_ilodate_start, ns_ilo_ilodate_end)
+INSERT INTO ns_t_item_locations( ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item, ns_ilo_locname, ns_ilo_museumkey_location, ns_ilo_ilodatetime_start, ns_ilo_ilodatetime_end)
 SELECT ilonumid, iloalphaid, 'Andrew', ilormname, 'Andrew', ilolocdatestart, ilolocdateend from itemlocations; 
 
 --EXHIBITION ITEMS
