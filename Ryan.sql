@@ -35,6 +35,9 @@ and it_numkey = ns_i_inumkey;
 alter table ns_t_items add FOREIGN KEY(ns_i_clname_owner) references ns_t_clients(ns_cl_clname);
 alter table ns_t_items alter column ns_i_clname_owner set not null;
 
+--Updating my terms.
+update ns_t_items set ns_i_isubject = 'Military' where ns_i_isubject = 'War-related';
+update ns_t_items set ns_i_iformat = 'Jewelry' where ns_i_iformat = 'Jewlery';
 
 --Put my tsvector in. 
 update ns_t_items set ns_i_itsvector = to_tsvector(ns_i_idescription);
