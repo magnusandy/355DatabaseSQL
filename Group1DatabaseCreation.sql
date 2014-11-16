@@ -288,8 +288,14 @@ CREATE TABLE ns_t_exhibition_items(
 	ns_exi_exidate_start ns_exidate NOT NULL,
 	ns_exi_exidate_end ns_exidate NOT NULL,
 	PRIMARY KEY(ns_exi_inumkey, ns_exi_ialphakey, ns_exi_museumkey, ns_exi_ename, ns_exi_exidate_start),
-	FOREIGN KEY(ns_exi_ename, ns_exi_showdate_start) REFERENCES ns_t_exhibitions(ns_ex_ename, ns_ex_showdate_start),
-	FOREIGN KEY(ns_exi_inumkey, ns_exi_ialphakey, ns_exi_museumkey) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey)
+	FOREIGN KEY(ns_exi_ename, ns_exi_showdate_start) 
+		REFERENCES ns_t_exhibitions(ns_ex_ename, ns_ex_showdate_start)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT,
+	FOREIGN KEY(ns_exi_inumkey, ns_exi_ialphakey, ns_exi_museumkey) 
+		REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT
 );
 
 --EXHIBITION LOCATIONS
