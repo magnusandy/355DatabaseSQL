@@ -126,10 +126,10 @@ update t_internallocations set il_dimension_length = 120 where il_locationname i
 update t_internallocations set il_dimension_length = 75 where il_locationname = 'Storage';
 update t_internallocations set il_dimension_length = 140 where il_locationname = 'Large Gallery';
 
-update t_internallocations set il_dimension_width = 45 where il_locationname in ('Gallery A', 'Gallery B');
+update t_internallocations set il_dimension_width = 50 where il_locationname in ('Gallery A', 'Gallery B');
 update t_internallocations set il_dimension_width = 50 where il_locationname = 'Gallery C';
 update t_internallocations set il_dimension_width = 140 where il_locationname = 'Storage';
-update t_internallocations set il_dimension_width = 35 where il_locationname = 'Lobby';
+update t_internallocations set il_dimension_width = 40 where il_locationname = 'Lobby';
 update t_internallocations set il_dimension_width = 75 where il_locationname = 'Large Gallery';
 
 insert into ns_t_internal_locations
