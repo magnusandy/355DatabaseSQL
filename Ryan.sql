@@ -60,6 +60,7 @@ update ns_t_items set ns_i_iformat = 'Attire' where ns_i_isubformat in ('Headdre
 
 
 --TRANSFERRING THE ITEM AUTHORS
+--TRANSFERRING THE ITEM AUTHORS
 alter table t_itemauthors drop column if exists ia_author;
 alter table t_itemauthors add column ia_author ns_crname;
 
@@ -67,16 +68,19 @@ update t_itemauthors set ia_author = ia_authorlastname
 where ia_authorfirstname = '' and ia_authormiddlename = '' and ia_authorlastname <> '';
 
 update t_itemauthors set ia_author = ia_authorFirstName 
-where ia_authorlastname = '' and ia_authormiddlename = '' and ia_authorfirstname <> '';
+where ia_authorlastname = '' and (ia_authormiddlename = '' or ia_authormiddlename = 'null' or ia_authormiddlename is null) and ia_authorfirstname <> '';
 
 update t_itemauthors set ia_author = ia_authorFirstName || ' ' || ia_authorLastname 
-where ia_authormiddlename = '' and ia_authorfirstname <> '' and ia_authorlastname <> '';
+where (ia_authormiddlename = '' or ia_authormiddlename = 'null' or ia_authormiddlename is null) and ia_authorfirstname <> '' and ia_authorlastname <> '';
 
 update t_itemauthors set ia_author = ia_authorFirstName || ' ' || ia_authormiddlename || ' ' || ia_authorlastname
-where ia_authorfirstname <> '' and ia_authormiddlename <> '' and ia_authorlastname <> '';
+where ia_authorfirstname <> '' and (ia_authormiddlename <> '' and ia_authormiddlename <> 'null' and ia_authormiddlename is not null) and ia_authorlastname <> '';
 
 insert into ns_t_item_creators(ns_cr_inumkey, ns_cr_ialphakey, ns_cr_museumkey, ns_cr_crname)
 (select ia_numkey, ia_alphakey, 'Ryan', ia_author from t_itemauthors);
+
+alter table t_itemauthors drop column if exists ia_author;
+
 
 alter table t_itemauthors drop column if exists ia_author;
 
