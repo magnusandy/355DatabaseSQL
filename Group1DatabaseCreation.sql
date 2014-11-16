@@ -222,7 +222,10 @@ CREATE TABLE ns_t_external_locations (
 	ns_eloc_region ns_region,
 	ns_eloc_postalcode ns_postalcode,
 	PRIMARY KEY(ns_eloc_locname, ns_eloc_museumkey, ns_eloc_elocdate_start),
-	FOREIGN KEY(ns_eloc_locname, ns_eloc_museumkey) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+	FOREIGN KEY(ns_eloc_locname, ns_eloc_museumkey) 
+		REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT
 );
 
 --ITEM LOCATIONS
@@ -235,8 +238,14 @@ CREATE TABLE ns_t_item_locations(
 	ns_ilo_ilodatetime_start ns_ilodatetime NOT NULL,
 	ns_ilo_ilodatetime_end ns_ilodatetime, 
 	PRIMARY KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item, ns_ilo_ilodatetime_start), --THIS SHOULD BE GOOD RIGHT? DONT NEED LOCATION FOR PRIMARY KEY
-	FOREIGN KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item) REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey),
-	FOREIGN KEY(ns_ilo_locname, ns_ilo_museumkey_location) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+	FOREIGN KEY(ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item) 
+		REFERENCES ns_t_items(ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT,
+	FOREIGN KEY(ns_ilo_locname, ns_ilo_museumkey_location) 
+		REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT
 );
 
 
@@ -247,8 +256,16 @@ CREATE TABLE ns_t_location_doors(
 	ns_lodor_locname_exit ns_locname NOT NULL,
 	ns_lodor_museumkey_exit ns_museumkey NOT NULL,
 	PRIMARY KEY(ns_lodor_locname_entrance, ns_lodor_museumkey_entrance, ns_lodor_locname_exit, ns_lodor_museumkey_exit),
-	FOREIGN KEY(ns_lodor_locname_entrance, ns_lodor_museumkey_entrance) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey),
-	FOREIGN KEY(ns_lodor_locname_exit, ns_lodor_museumkey_exit) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+	FOREIGN KEY(ns_lodor_locname_entrance, ns_lodor_museumkey_entrance) 
+		REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT,
+	FOREIGN KEY(ns_lodor_locname_exit, ns_lodor_museumkey_exit) 
+		REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT
+	
+	
 );
 
 --EXHIBITIONS 
@@ -284,8 +301,14 @@ CREATE TABLE ns_t_exhibition_locations(
 	ns_exl_exldate_start ns_exldate NOT NULL,
 	ns_exl_exldate_end ns_exldate NOT NULL,
 	PRIMARY KEY(ns_exl_ename, ns_exl_locname, ns_exl_museumkey, ns_exl_exldate_start),
-	FOREIGN KEY(ns_exl_ename, ns_exl_showdate_start) REFERENCES ns_t_exhibitions(ns_ex_ename, ns_ex_showdate_start),
-	FOREIGN KEY(ns_exl_locname, ns_exl_museumkey) REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+	FOREIGN KEY(ns_exl_ename, ns_exl_showdate_start) 
+		REFERENCES ns_t_exhibitions(ns_ex_ename, ns_ex_showdate_start)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT,
+	FOREIGN KEY(ns_exl_locname, ns_exl_museumkey) 
+		REFERENCES ns_t_locations(ns_loc_locname, ns_loc_museumkey)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT
 );
 
 --VIEWS GO HERE
