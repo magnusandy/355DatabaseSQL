@@ -1,0 +1,4 @@
+yorkton museum	Iain	Joe Bloggs	Harold Pinter	2014-11-23	2014-12-14	531089074.88516	168	Yorkton Museum	Broadway Street	Yorkton	Canada	Saskatchewan	S3N 3K4
+estevan town hall	Iain	Jane Dow	Albert Camus	2014-12-21	2015-01-11	531089074.88516	554	Town Hall	Roger Drive	Estevan	Canada	Saskatchewan	S4T 7F2
+regina gallery	Iain	The City of Regina	Samuel Beckett	2015-01-18	2015-02-08	531089074.88516	2241	McMarsters Building	Central Drive	Regina	Canada	Saskatchewan	S8G 8Y9
+moose jaw city hall	Iain	Alan Smithee	Securitron Ltd.	2015-02-15	2015-03-08	531089074.88516	322	City Hall	Saskatchewan Road	Moose Jaw	Canada	Saskatchewan	S5E 6P2
