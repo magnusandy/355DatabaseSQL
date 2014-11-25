@@ -1,0 +1,8 @@
+Owner	\N	4165868000	100	\N	Queens	\N	\N	\N	\N
+Wile E. Coyote	\N	18002263267	15	\N	Grand	\N	\N	\N	\N
+Homer Simpson	\N	5555553223 	742	\N	Evergreen	\N	\N	\N	\N
+Evan Closson	\N	3068215342	318	\N	Kucey	\N	\N	\N	\N
+Redpath Museum	\N	5143984086	859	\N	Sherbrooke	\N	\N	\N	\N
+Clark Kent	\N	6529381234	344	\N	Clinton	\N	\N	\N	\N
+Ontario Science Centre	\N	4166961000	770	\N	Don	\N	\N	\N	\N
+Royal BC Museum	\N	2503567226	675	\N	Belleville	\N	\N	\N	\N

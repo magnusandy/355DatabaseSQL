@@ -1,0 +1,12 @@
+storage	Iain	Internal
+lobby	Iain	Internal
+gallery a	Iain	Internal
+gallery b	Iain	Internal
+gallery c	Iain	Internal
+gallery d	Iain	Internal
+on loan	Iain	Internal
+yorkton museum	Iain	External
+estevan town hall	Iain	External
+regina gallery	Iain	External
+moose jaw city hall	Iain	External
+prince albert civic centre	Iain	External

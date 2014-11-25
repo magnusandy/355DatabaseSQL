@@ -1,0 +1,6 @@
+Storage	Evan	0	600	40	180	160	\N
+Lobby	Evan	2	5	25	180	53	\N
+Gallery D	Evan	15	25	25	120	53	\N
+Gallery C	Evan	14	24	25	180	53	\N
+Gallery A	Evan	7	14	25	90	50	\N
+Gallery B	Evan	7	14	25	90	53	\N

@@ -1,0 +1,230 @@
+\i masterdatabase.sql
+\i mastertemps.sql
+\cd Evan
+\i kenfile2DB.sql
+\cd ..
+\cd Andrew
+\i kenfile2DB.sql
+\cd ..
+\cd Ryan
+\i kenfile2DB.sql
+\cd ..
+\cd Ken
+\i kenfile2DB.sql
+\cd ..
+\cd Iain
+\i kenfile2DB.sql
+\cd ..
+
+--capitalize the first letter of every word
+UPDATE ns_t_materials_temp SET ns_mat_matname=initcap(lower(ns_mat_matname));
+
+UPDATE ns_t_item_materials_temp SET ns_imat_matname=initcap(lower(ns_imat_matname));
+
+UPDATE ns_t_materials_subcomponents_temp SET ns_matsub_matname=initcap(lower(ns_matsub_matname));
+
+--micky
+
+DELETE FROM ns_t_clients_temp WHERE ns_cl_clname = 'Popeye'; 
+UPDATE ns_t_clients_temp SET ns_cl_clname = 'Popeye' WHERE ns_cl_clname = 'popeye';
+UPDATE ns_t_item_transactions_temp SET ns_it_clname = 'Popeye' WHERE ns_it_clname = 'popeye';
+UPDATE ns_t_items_temp SET ns_i_clname_owner = 'Popeye' WHERE ns_i_clname_owner = 'popeye';
+
+DELETE FROM ns_t_clients_temp WHERE ns_cl_clname = 'Buggs Bunny'; 
+UPDATE ns_t_clients_temp SET ns_cl_clname = 'Bugs Bunny' WHERE ns_cl_clname = 'bugs bunny';
+UPDATE ns_t_item_transactions_temp SET ns_it_clname = 'Bugs Bunny' WHERE ns_it_clname = 'bugs bunny';
+UPDATE ns_t_items_temp SET ns_i_clname_owner = 'Bugs Bunny' WHERE ns_i_clname_owner = 'bugs bunny';
+UPDATE ns_t_item_transactions_temp SET ns_it_clname = 'Bugs Bunny' WHERE ns_it_clname = 'Buggs Bunny';
+UPDATE ns_t_items_temp SET ns_i_clname_owner = 'Bugs Bunny' WHERE ns_i_clname_owner = 'Buggs Bunny';
+
+DELETE FROM ns_t_clients_temp WHERE ns_cl_clname = 'Mickey Mouse'; 
+UPDATE ns_t_clients_temp SET ns_cl_clname = 'Mickey Mouse' WHERE ns_cl_clname = 'mickey mouse';
+UPDATE ns_t_item_transactions_temp SET ns_it_clname = 'Mickey Mouse' WHERE ns_it_clname = 'mickey mouse';
+UPDATE ns_t_items_temp SET ns_i_clname_owner = 'Mickey Mouse' WHERE ns_i_clname_owner = 'mickey mouse';
+
+
+
+DELETE FROM ns_t_materials_temp WHERE ns_mat_matname = 'Acrlyic';
+UPDATE ns_t_item_materials_temp SET ns_imat_matname = 'Acrylic' WHERE ns_imat_matname = 'Acrlyic';
+UPDATE ns_t_materials_subcomponents_temp SET ns_matsub_matname = 'Acrylic' WHERE ns_matsub_matname = 'Acrlyic';
+
+DELETE FROM ns_t_materials_temp WHERE ns_mat_matname = 'Diamonds';
+UPDATE ns_t_item_materials_temp SET ns_imat_matname = 'Diamond' WHERE ns_imat_matname = 'Diamonds';
+UPDATE ns_t_materials_subcomponents_temp SET ns_matsub_matname = 'Diamond' WHERE ns_matsub_matname = 'Diamonds';
+
+DELETE FROM ns_t_materials_temp WHERE ns_mat_matname = 'Etchings';
+UPDATE ns_t_item_materials_temp SET ns_imat_matname = 'Etching' WHERE ns_imat_matname = 'Etchings';
+UPDATE ns_t_materials_subcomponents_temp SET ns_matsub_matname = 'Etching' WHERE ns_matsub_matname = 'Etchings';
+
+DELETE FROM ns_t_materials_temp WHERE ns_mat_matname = 'Garnets';
+UPDATE ns_t_item_materials_temp SET ns_imat_matname = 'Garnet' WHERE ns_imat_matname = 'Garnets';
+UPDATE ns_t_materials_subcomponents_temp SET ns_matsub_matname = 'Garnet' WHERE ns_matsub_matname = 'Garnets';
+
+DELETE FROM ns_t_materials_temp WHERE ns_mat_matname = 'Prints';
+UPDATE ns_t_item_materials_temp SET ns_imat_matname = 'Print' WHERE ns_imat_matname = 'Prints';
+UPDATE ns_t_materials_subcomponents_temp SET ns_matsub_matname = 'Print' WHERE ns_matsub_matname = 'Prints';
+
+DELETE FROM ns_t_materials_temp WHERE ns_mat_matname = 'Vellum ';
+UPDATE ns_t_item_materials_temp SET ns_imat_matname = 'Vellum' WHERE ns_imat_matname = 'Vellum ';
+UPDATE ns_t_materials_subcomponents_temp SET ns_matsub_matname = 'Vellum' WHERE ns_matsub_matname = 'Vellum ';
+
+DELETE FROM ns_t_materials_temp WHERE ns_mat_matname = 'Wood  ';
+UPDATE ns_t_item_materials_temp SET ns_imat_matname = 'Wood' WHERE ns_imat_matname = 'Wood  ';
+UPDATE ns_t_materials_subcomponents_temp SET ns_matsub_matname = 'Wood' WHERE ns_matsub_matname = 'Wood  ';
+
+
+--CLIENTS
+INSERT INTO ns_t_clients ( ns_cl_clname, ns_cl_email, ns_cl_phonenum, ns_cl_buildingnum, ns_cl_buildingname, ns_cl_streetname, ns_cl_city, ns_cl_country, ns_cl_region, ns_cl_postalcode)
+SELECT  ns_cl_clname, ns_cl_email, ns_cl_phonenum, ns_cl_buildingnum, ns_cl_buildingname, ns_cl_streetname, ns_cl_city, ns_cl_country, ns_cl_region, ns_cl_postalcode FROM ns_t_clients_temp;
+
+--ITEMS
+INSERT INTO ns_t_items ( ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey, ns_i_iname, ns_i_iorigin, ns_i_iformat, ns_i_isubformat, ns_i_ischool, ns_i_isubject, ns_i_icolor, ns_i_iinsurance, ns_i_iacquisitiondate, ns_i_icreationyear, ns_i_clname_owner, ns_i_idescription, ns_i_itsvector)
+SELECT  ns_i_inumkey, ns_i_ialphakey, ns_i_museumkey, ns_i_iname, ns_i_iorigin, ns_i_iformat, ns_i_isubformat, ns_i_ischool, ns_i_isubject, ns_i_icolor, ns_i_iinsurance, ns_i_iacquisitiondate, ns_i_icreationyear, ns_i_clname_owner, ns_i_idescription, ns_i_itsvector FROM ns_t_items_temp;
+
+--materials
+insert into ns_t_materials
+(select distinct ns_mat_matname from ns_t_materials_temp);
+
+--item materials
+insert into ns_t_item_materials(ns_imat_inumkey, ns_imat_ialphakey, ns_imat_museumkey, ns_imat_matname)
+(select distinct ns_imat_inumkey, ns_imat_ialphakey, ns_imat_museumkey, ns_imat_matname from ns_t_item_materials_temp);
+
+--subcompoenents
+insert into ns_t_materials_subcomponents(ns_matsub_matname, ns_matsub_subcomponent)
+(select distinct ns_matsub_matname, ns_matsub_subcomponent from ns_t_materials_subcomponents_temp);
+
+
+--locations
+INSERT INTO ns_t_locations (ns_loc_locname, ns_loc_museumkey, ns_loc_loctype)
+SELECT ns_loc_locname, ns_loc_museumkey, ns_loc_loctype FROM ns_t_locations_temp;
+
+--internal locations
+INSERT INTO ns_t_internal_locations ( ns_iloc_locname, ns_iloc_museumkey, ns_iloc_numitems_min, ns_iloc_numitems_max, ns_iloc_locdimensionmetres_height, ns_iloc_locdimensionmetres_length, ns_iloc_locdimensionmetres_width, ns_iloc_loccreationdate)
+SELECT  ns_iloc_locname, ns_iloc_museumkey, ns_iloc_numitems_min, ns_iloc_numitems_max, ns_iloc_locdimensionmetres_height, ns_iloc_locdimensionmetres_length, ns_iloc_locdimensionmetres_width, ns_iloc_loccreationdate FROM ns_t_internal_locations_temp;
+
+--external locations
+INSERT INTO ns_t_external_locations( ns_eloc_locname, ns_eloc_museumkey, ns_eloc_sponsor, ns_eloc_security, ns_eloc_elocdate_start, ns_eloc_elocdate_end, ns_eloc_iinsurance_total, ns_eloc_buildingnum, ns_eloc_buildingname, ns_eloc_streetname, ns_eloc_city, ns_eloc_country, ns_eloc_region, ns_eloc_postalcode)
+SELECT ns_eloc_locname, ns_eloc_museumkey, ns_eloc_sponsor, ns_eloc_security, ns_eloc_elocdate_start, ns_eloc_elocdate_end, ns_eloc_iinsurance_total, ns_eloc_buildingnum, ns_eloc_buildingname, ns_eloc_streetname, ns_eloc_city, ns_eloc_country, ns_eloc_region, ns_eloc_postalcode FROM ns_t_external_locations_temp;
+
+--doors
+INSERT INTO ns_t_location_doors ( ns_lodor_locname_entrance, ns_lodor_museumkey_entrance, ns_lodor_locname_exit, ns_lodor_museumkey_exit)
+SELECT  ns_lodor_locname_entrance, ns_lodor_museumkey_entrance, ns_lodor_locname_exit, ns_lodor_museumkey_exit FROM ns_t_location_doors_temp;
+
+--item locations 
+INSERT INTO ns_t_item_locations (ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item, ns_ilo_locname, ns_ilo_museumkey_location, ns_ilo_ilodatetime_start, ns_ilo_ilodatetime_end)
+SELECT ns_ilo_inumkey, ns_ilo_ialphakey, ns_ilo_museumkey_item, ns_ilo_locname, ns_ilo_museumkey_location, ns_ilo_ilodatetime_start, ns_ilo_ilodatetime_end FROM ns_t_item_locations_temp;
+
+--exibs
+insert into ns_t_exhibitions(ns_ex_ename, ns_ex_showdate_start, ns_ex_showdate_end, ns_ex_edescription)
+(select distinct ns_ex_ename, ns_ex_showdate_start, ns_ex_showdate_end, ns_ex_edescription from ns_t_exhibitions_temp);
+
+--exib items
+insert into ns_t_exhibition_items(ns_exi_inumkey, ns_exi_ialphakey, ns_exi_museumkey, ns_exi_ename, ns_exi_showdate_start, ns_exi_exidate_start, ns_exi_exidate_end)
+(select distinct ns_exi_inumkey, ns_exi_ialphakey, ns_exi_museumkey, ns_exi_ename, ns_exi_showdate_start, ns_exi_exidate_start, ns_exi_exidate_end from ns_t_exhibition_items_temp);
+
+--exib locs
+insert into ns_t_exhibition_locations(ns_exl_ename, ns_exl_showdate_start, ns_exl_locname, ns_exl_museumkey, ns_exl_exldate_start, ns_exl_exldate_end)
+(select distinct ns_exl_ename, ns_exl_showdate_start, ns_exl_locname, ns_exl_museumkey, ns_exl_exldate_start, ns_exl_exldate_end from ns_t_exhibition_locations_temp);
+
+--itemcreators
+insert into ns_t_item_creators(ns_cr_inumkey, ns_cr_ialphakey, ns_cr_museumkey, ns_cr_crname)
+(select distinct ns_cr_inumkey, ns_cr_ialphakey, ns_cr_museumkey, ns_cr_crname from ns_t_item_creators_temp);
+
+--transactions
+insert into ns_t_item_transactions(ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdatetime_start, ns_it_itdatetime_end, ns_it_itdatetime_returnby, ns_it_itgross)
+(select distinct ns_it_inumkey, ns_it_ialphakey, ns_it_museumkey, ns_it_clname, ns_it_ittype, ns_it_itdatetime_start, ns_it_itdatetime_end, ns_it_itdatetime_returnby, ns_it_itgross from ns_t_item_transactions_temp);
+
+
+
+DROP TABLE ns_t_clients_temp CASCADE;
+DROP TABLE ns_t_items_temp CASCADE;
+DROP TABLE ns_t_item_creators_temp CASCADE;
+DROP TABLE ns_t_materials_temp CASCADE;
+DROP TABLE ns_t_materials_subcomponents_temp CASCADE;
+DROP TABLE ns_t_item_materials_temp CASCADE;
+DROP TABLE ns_t_item_transactions_temp CASCADE;
+DROP TABLE ns_t_locations_temp CASCADE;
+DROP TABLE ns_t_internal_locations_temp CASCADE;
+DROP TABLE ns_t_external_locations_temp CASCADE;
+DROP TABLE ns_t_item_locations_temp CASCADE;
+DROP TABLE ns_t_location_doors_temp CASCADE;
+DROP TABLE ns_t_exhibitions_temp CASCADE;
+DROP TABLE ns_t_exhibition_items_temp CASCADE;
+DROP TABLE ns_t_exhibition_locations_temp CASCADE;
+--Run alteration file
+\i alter.sql
+/*
+DROP TABLE ns_t_clients CASCADE;
+DROP TABLE ns_t_items CASCADE;
+DROP TABLE ns_t_item_creators CASCADE;
+DROP TABLE ns_t_materials CASCADE;
+DROP TABLE ns_t_materials_subcomponents CASCADE;
+DROP TABLE ns_t_item_materials CASCADE;
+DROP TABLE ns_t_item_transactions CASCADE;
+DROP TABLE ns_t_locations CASCADE;
+--DROP TABLE ns_t_internal_locations CASCADE;
+--DROP TABLE ns_t_external_locations CASCADE;
+DROP TABLE ns_t_item_locations CASCADE;
+DROP TABLE ns_t_location_doors CASCADE;
+DROP TABLE ns_t_exhibitions CASCADE;
+DROP TABLE ns_t_exhibition_items CASCADE;
+DROP TABLE ns_t_exhibition_locations CASCADE;
+DROP TABLE ns_t_item_colors CASCADE;
+
+DROP DOMAIN ns_inumkey;
+DROP DOMAIN ns_ialphakey;
+DROP DOMAIN ns_museumkey;
+DROP DOMAIN ns_iname;
+DROP DOMAIN ns_crname;
+DROP DOMAIN ns_iorigin;
+--SUBTYPES
+DROP DOMAIN ns_iformat;
+DROP DOMAIN ns_isubformat;
+DROP DOMAIN ns_ischool;
+DROP DOMAIN ns_isubject;
+DROP DOMAIN ns_iinsurance;
+DROP DOMAIN ns_iacquisitiondate;
+DROP DOMAIN ns_icreationyear;
+DROP DOMAIN ns_clname;
+DROP DOMAIN ns_idescription;
+DROP DOMAIN ns_email;
+DROP DOMAIN ns_phonenum;
+--address domains
+DROP DOMAIN ns_buildingnum CASCADE;
+DROP DOMAIN ns_buildingname CASCADE;
+DROP DOMAIN ns_streetname CASCADE;
+DROP DOMAIN ns_city CASCADE;
+DROP DOMAIN ns_country CASCADE;
+DROP DOMAIN ns_region Cascade;
+DROP DOMAIN ns_postalcode Cascade;
+DROP DOMAIN ns_locname Cascade;
+DROP DOMAIN ns_loctype Cascade;
+DROP DOMAIN ns_numitems Cascade;
+--DROP DOMAIN ns_dimension Cascade;
+DROP DOMAIN ns_loccreationdate Cascade;
+DROP DOMAIN ns_sponsor Cascade;
+DROP DOMAIN ns_security Cascade;
+--DROP DOMAIN ns_ilodate Cascade;
+DROP DOMAIN ns_ittype Cascade;
+--DROP DOMAIN ns_itdate Cascade;
+DROP DOMAIN ns_itgross Cascade;
+DROP DOMAIN ns_ename Cascade;
+DROP DOMAIN ns_showdate Cascade;
+DROP DOMAIN ns_edescription Cascade;
+DROP DOMAIN ns_exidate Cascade;
+DROP DOMAIN ns_matname Cascade;
+DROP DOMAIN ns_exldate Cascade;
+DROP DOMAIN ns_subcomponent Cascade;
+DROP DOMAIN ns_itsvector Cascade;
+DROP DOMAIN ns_elocdate Cascade;
+DROP DOMAIN ns_icolor Cascade;
+DROP DOMAIN if exists ns_locdimensionmetres cascade;
+DROP DOMAIN if exists ns_ilodatetime cascade;
+DROP DOMAIN IF EXISTS ns_ildatetime cascade;
+DROP DOMAIN if exists ns_locdimensionmetres cascade;
+drop domain if exists ns_itdatetime cascade;
+*/
+
+
+
+

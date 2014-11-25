@@ -1,0 +1,117 @@
+1949.3	WHI	Ken	Storage	Ken	2014-10-27	\N
+1953.12	DHI	Ken	Storage	Ken	2014-10-27	\N
+1957.14	PHI	Ken	Storage	Ken	2014-10-27	\N
+1957.22	DHI	Ken	Storage	Ken	2014-10-27	\N
+1958.27	DHI	Ken	Storage	Ken	2014-10-27	\N
+1958.3	DHI	Ken	Storage	Ken	2014-10-27	\N
+1958.31	DHI	Ken	Storage	Ken	2014-10-27	\N
+1959.23	PHI	Ken	Storage	Ken	2014-10-27	\N
+1959.24	PHI	Ken	Storage	Ken	2014-10-27	\N
+1962.1	WBI	Ken	Storage	Ken	2014-10-27	\N
+1975.23	PHP	Ken	Storage	Ken	2014-10-27	\N
+1988.14	DAP	Ken	Storage	Ken	2007-11-05	\N
+1988.16	PLPA	Ken	Gallery B	Ken	2014-10-26	\N
+1988.19	PSPA	Ken	Gallery C	Ken	2013-05-10	\N
+1988.2	PLPA	Ken	Gallery B	Ken	2014-10-26	\N
+1988.21	PSPA	Ken	Gallery C	Ken	2013-05-10	\N
+1988.22	PLPA	Ken	Storage	Ken	2014-09-10	\N
+1988.5	PSP	Ken	Storage	Ken	2000-12-01	\N
+1991.13	DHP	Ken	Gallery C	Ken	2014-09-26	\N
+1994.127	MAS	Ken	Gallery C	Ken	2014-10-26	\N
+1995.67	PHI	Ken	Storage	Ken	2014-10-27	\N
+1996.123	GLGO	Ken	Gallery B	Ken	2014-10-26	\N
+1996.124	GSGO	Ken	Storage	Ken	2006-07-26	\N
+1996.125	GSGO	Ken	Storage	Ken	1996-09-08	\N
+1996.127	GLGO	Ken	Gallery B	Ken	2014-10-26	\N
+1996.172	DWP	Ken	Storage	Ken	1996-04-18	\N
+1996.61	DWI	Ken	Storage	Ken	2010-02-08	\N
+1996.64	DHI	Ken	Gallery C	Ken	2014-10-29	\N
+1996.66	DHI	Ken	Gallery C	Ken	2014-09-26	\N
+1996.67	DHI	Ken	Gallery C	Ken	2014-10-29	\N
+1996.68	DHI	Ken	Gallery C	Ken	2014-09-26	\N
+1996.7	DWI	Ken	Storage	Ken	1997-11-21	\N
+1996.72	DHI	Ken	Gallery C	Ken	2014-10-29	\N
+1996.74	DHI	Ken	Gallery C	Ken	2014-10-29	\N
+1997.83	DAA	Ken	Storage	Ken	2012-01-07	\N
+1998.1	GAGO	Ken	Storage	Ken	2005-02-13	\N
+1998.2	DHI	Ken	Gallery C	Ken	2014-10-29	\N
+1998.3	DHI	Ken	Gallery C	Ken	2014-10-29	\N
+1998.76	DAI	Ken	Gallery A	Ken	2014-10-26	\N
+1998.77	DAI	Ken	Storage	Ken	2004-12-10	\N
+1999.2	DBG	Ken	Storage	Ken	2007-05-28	\N
+1999.76	DLGV	Ken	Gallery A	Ken	2014-09-15	\N
+1999.77	DLGV	Ken	Gallery A	Ken	2014-09-15	\N
+1999.78	DLGV	Ken	Gallery A	Ken	2014-09-15	\N
+1999.79	DLGV	Ken	Gallery A	Ken	2014-09-15	\N
+1999.8	DLGV	Ken	Gallery A	Ken	2014-09-15	\N
+1999.81	DLGV	Ken	Gallery A	Ken	2014-09-15	\N
+1999.82	DLGV	Ken	Gallery A	Ken	2014-09-15	\N
+2001.127	PHA	Ken	Storage	Ken	2008-11-06	\N
+2001.66	DLI	Ken	Storage	Ken	2009-03-29	\N
+2002.1	PHA	Ken	Gallery C	Ken	2014-09-26	\N
+2002.11	PMP	Ken	Storage	Ken	2002-01-07	\N
+2002.12	PMP	Ken	Storage	Ken	2002-09-25	\N
+2002.13	PMP	Ken	Storage	Ken	2010-10-22	\N
+2002.14	PMP	Ken	Storage	Ken	2011-09-06	\N
+2002.15	PMP	Ken	Storage	Ken	2005-09-01	\N
+2002.16	PMP	Ken	Storage	Ken	2005-08-20	\N
+2002.17	PMP	Ken	Storage	Ken	2003-08-11	\N
+2002.18	PMP	Ken	Storage	Ken	2003-01-26	\N
+2002.19	PMP	Ken	Storage	Ken	2008-11-21	\N
+2002.2	PMP	Ken	Storage	Ken	2013-07-05	\N
+2002.31	PAA	Ken	Gallery C	Ken	2014-10-26	\N
+2002.45	PAA	Ken	Gallery C	Ken	2014-10-26	\N
+2002.64	DVC	Ken	Gallery A	Ken	2014-09-15	\N
+2002.65	DVC	Ken	Gallery A	Ken	2014-09-15	\N
+2003.17	DBG	Ken	Gallery B	Ken	2014-08-15	\N
+2003.18	DHP	Ken	Gallery C	Ken	2014-09-26	\N
+2003.3	DWI	Ken	Storage	Ken	2012-09-10	\N
+2003.4	DHI	Ken	Gallery C	Ken	2014-09-26	\N
+2003.5	DWI	Ken	Storage	Ken	2012-09-10	\N
+2003.6	DHI	Ken	Gallery C	Ken	2014-10-29	\N
+2003.9	MLE	Ken	Storage	Ken	2004-07-26	\N
+2004.1	DLI	Ken	Storage	Ken	2004-07-24	\N
+2004.18	DLGV	Ken	Gallery B	Ken	2014-10-26	\N
+2004.27	PSP	Ken	Storage	Ken	2012-09-10	\N
+2004.3	DHP	Ken	Gallery C	Ken	2014-09-26	\N
+2004.42	WSG	Ken	Storage	Ken	2005-10-06	\N
+2004.43	WSG	Ken	Gallery A	Ken	2014-10-26	\N
+2004.44	WSG	Ken	Storage	Ken	2005-10-31	\N
+2004.45	WSG	Ken	Storage	Ken	2012-08-25	\N
+2004.46	WSG	Ken	Storage	Ken	2005-02-18	\N
+2004.47	WSG	Ken	Storage	Ken	2005-06-01	\N
+2004.6	DHC	Ken	Storage	Ken	2004-07-19	\N
+2004.7	DHC	Ken	Storage	Ken	2005-12-10	\N
+2004.8	DHC	Ken	Storage	Ken	2004-10-24	\N
+2004.9	DLI	Ken	Storage	Ken	2004-06-16	\N
+2005.24	DAP	Ken	Storage	Ken	2011-03-14	\N
+2005.26	DHI	Ken	Gallery C	Ken	2014-10-29	\N
+2005.29	DHC	Ken	Storage	Ken	2005-08-07	\N
+2005.39	DHG	Ken	Gallery C	Ken	2014-09-26	\N
+2005.4	DLP	Ken	Gallery B	Ken	2014-10-26	\N
+2005.7	WAI	Ken	Gallery C	Ken	2013-05-10	\N
+2005.74	PAO	Ken	Gallery C	Ken	2014-10-26	\N
+2006.17	PSG	Ken	Storage	Ken	2007-03-20	\N
+2006.19	DVGO	Ken	Gallery A	Ken	2014-09-15	\N
+2006.3	DBG	Ken	Gallery B	Ken	2014-08-15	\N
+2006.4	DBG	Ken	Storage	Ken	2006-07-28	\N
+2006.5	DBG	Ken	Gallery B	Ken	2014-08-15	\N
+2006.6	DHI	Ken	Gallery C	Ken	2014-10-29	\N
+2006.65	DBG	Ken	Gallery B	Ken	2014-08-15	\N
+2006.66	DBG	Ken	Gallery B	Ken	2014-08-15	\N
+2006.67	DBG	Ken	Gallery B	Ken	2014-08-15	\N
+2006.69	DBG	Ken	Gallery B	Ken	2014-08-15	\N
+2007.2	DBI	Ken	Gallery B	Ken	2014-08-15	\N
+2008.12	DWI	Ken	Storage	Ken	2008-12-23	\N
+2008.34	PWM	Ken	Storage	Ken	2009-10-02	\N
+2008.54	DAC	Ken	Gallery A	Ken	2014-10-26	\N
+2008.64	PSCO	Ken	Storage	Ken	2009-03-31	\N
+2009.22	GHGO	Ken	Gallery C	Ken	2014-09-26	\N
+2010.28	DAI	Ken	Gallery A	Ken	2014-10-26	\N
+2011.231	PAM	Ken	Storage	Ken	2012-06-18	\N
+2011.232	PAM	Ken	Storage	Ken	2012-06-10	\N
+2011.233	PAM	Ken	Storage	Ken	2012-10-07	\N
+2012.2	DWG	Ken	Storage	Ken	2012-01-09	\N
+2012.21	DWG	Ken	Storage	Ken	2012-08-26	\N
+2012.22	DWG	Ken	Storage	Ken	2013-07-04	\N
+2013.4	DHI	Ken	Gallery C	Ken	2014-10-29	\N

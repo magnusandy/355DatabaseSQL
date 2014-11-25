@@ -1,0 +1,33 @@
+Walker Art Center	totesmagotes@notfake.com	306-555-6483	510	\N	Real	\N	\N	\N	\N
+ROCKY	rocky@cartoon.com	306-555-0001	153	\N	Some	\N	\N	\N	\N
+Bullwinkle	bullwinkly@cartoon.com	306-555-0002	156	\N	Some	\N	\N	\N	\N
+wile coyote	wilec@cartoon.com	306-555-0003	132	\N	Some	\N	\N	\N	\N
+popeye	popeye@cartoon.com	306-555-0004	123	\N	This	\N	\N	\N	\N
+grinch	grinch@cartoon.com	306-555-0005	124	\N	This	\N	\N	\N	\N
+fred flinstone	fred@cartoon.com	306-555-0006	463	\N	bedrock	\N	\N	\N	\N
+charlie brown	cbrown@cartoon.com	306-555-0007	643	\N	Bowling	\N	\N	\N	\N
+bart simpson	barts@cartoon.com	306-555-0008	356	\N	Springfield	\N	\N	\N	\N
+mickey mouse	mickey@disney.com	306-555-0009	253	\N	Castle	\N	\N	\N	\N
+homer simpson	hjs@cartoon.com	306-555-0010	351	\N	Springfield	\N	\N	\N	\N
+bugs bunny	bugs@cartoon.com	306-555-0011	235	\N	rabbit	\N	\N	\N	\N
+george jetson	jetson@cartoon.com	306-555-0012	415	\N	more	\N	\N	\N	\N
+betty boop	bb@cartoon.com	306-555-0013	536	\N	boop	\N	\N	\N	\N
+fat albert	albert@sofat.com	306-555-0014	515	\N	fat	\N	\N	\N	\N
+mr magoo	mrmagoo@blind.com	306-555-0015	769	\N	where	\N	\N	\N	\N
+porky pig	porkpork@pigsrus.com	306-555-0016	6797	\N	bacon	\N	\N	\N	\N
+daffy duck	quack@mightydux.com	306-555-0017	6923	\N	quack	\N	\N	\N	\N
+sponge bob	yarr@sponges.com	306-555-0018	671	\N	pineapple	\N	\N	\N	\N
+tweety bird	donteatme@puttycatisbad.com	306-555-0019	69421	\N	bird	\N	\N	\N	\N
+gumby	bendit@benderibob.com	306-555-0020	3951	\N	bendy	\N	\N	\N	\N
+Royal Tyrrell	tyrell@museum.com	780-555-0001	153	\N	Drumheller	\N	\N	\N	\N
+Museum of Nature	plants@musuem.com	780-555-0002	252	\N	Regina	\N	\N	\N	\N
+California Automobiles	calicars@laishot.com	780-555-0003	526	\N	los	\N	\N	\N	\N
+British Museum of Ceramics	jollygood@pippip.com	780-555-0004	536	\N	Ashford	\N	\N	\N	\N
+Smithsonian Space	etgohome@spaaace.com	780-555-0005	1	\N	Spaaaace	\N	\N	\N	\N
+National Gallery of Canada	ohcanada@canada.ca	780-555-0006	353	\N	Ottawa	\N	\N	\N	\N
+Metropolitan	almostdone@yo.com	780-555-0007	5353	\N	so	\N	\N	\N	\N
+State Hermitage	comeonnow@yoo.com	780-555-0008	648	\N	you	\N	\N	\N	\N
+York Museums	3moretogo@emails.com	780-555-0009	536	\N	only	\N	\N	\N	\N
+Toledo	doyoubelieve@inmagic.com	780-555-0010	536	\N	Holy	\N	\N	\N	\N
+Fitzwilliams	isthis@foreals.gov	780-555-0011	2156	\N	What	\N	\N	\N	\N
+Dulwhich	thatsit@igotthis.com	780-555-0012	5326	\N	Not	\N	\N	\N	\N

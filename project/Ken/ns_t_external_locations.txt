@@ -1,0 +1,5 @@
+Saskatoon	Ken	Rick	Bob	2014-11-12	2014-11-19	3671484.30	5	\N	Ave	Saskatoon	\N	\N	\N
+Regina	Ken	Rick from Regina	Lawblaw	2014-11-26	2014-12-05	3671484.30	1	\N	th	Regina	\N	\N	\N
+PA	Ken	Rick from PA	Rob	2014-12-12	2014-12-19	3671484.30	643	\N	Melon	PA	\N	\N	\N
+Moose Jaw	Ken	Rick from MJ	Tob	2014-12-26	2015-01-04	3671484.30	64	\N	Sum	Moose Jaw	\N	\N	\N
+Gravelbourg	Ken	Sally	Karate Wob	2015-01-11	2015-01-18	3671484.30	09	\N	oh	Gravelbourg	\N	\N	\N

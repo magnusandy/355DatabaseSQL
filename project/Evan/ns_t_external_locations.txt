@@ -1,0 +1,5 @@
+Wynyard	Evan	James K.	Jerry S.	2015-03-05	2015-07-09	1661995	511	\N	McGregor	Wynyard	\N	\N	\N
+Yorkton	Evan	Mary H.	Mark W.	2015-03-05	2015-07-09	1758154	277	\N	Broadway	Yorkton	\N	\N	\N
+Humbolt	Evan	Betty C.	Tony N.	2015-03-05	2015-07-09	2401547	1919	\N	Ave	Humbolt	\N	\N	\N
+Uranium City	Evan	Ness C.	Warren G.	2015-03-05	2015-07-09	6012452	\N	\N	Chitek	Uranium City	\N	\N	\N
+Regina	Evan	Guy L.	Ryan H.	2015-03-05	2015-07-09	3012457	1	\N	T	Regina	\N	\N	\N

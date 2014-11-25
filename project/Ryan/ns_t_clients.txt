@@ -1,0 +1,12 @@
+Ryans Museum	fake@fakeemail.com	666-666-6666	666	\N	U of S	Wiggins	Saskatoon	Saskatchewan	s7n 2f3
+Elmo	elmonfire@sesameStreet.com	1234567891	\N	\N	\N	\N	\N	\N	\N
+Bugs	BugsBunny@yahoo.com	6671201459	\N	\N	\N	\N	\N	\N	\N
+Great Big Museum	TheGratMuseum@hotmail.com	3534859483	\N	\N	\N	\N	\N	\N	\N
+The Museum of Stuff and Things	StuffyAndThings@yahoo.com	7394372734	\N	\N	\N	\N	\N	\N	\N
+The Museum of Interesting Things	interestingThings@gmail.ca	1534567999	\N	\N	\N	\N	\N	\N	\N
+Bob The Builder	bob@fixit.ca	3067459999	\N	\N	\N	\N	\N	\N	\N
+Rick Savage	Savage@hopeless.net	3067413255	\N	\N	\N	\N	\N	\N	\N
+The Institution Of Fancy Things	fancyinc@hotmail.com	1455552987	\N	\N	\N	\N	\N	\N	\N
+The Institution Of Interesting Statues	interestingnotreally@gmail.com	9755568431	\N	\N	\N	\N	\N	\N	\N
+The Nice Art Museum	niceartismyfancy@mail.com	5555555555	\N	\N	\N	\N	\N	\N	\N
+Spider Man	notPeterParker@hotmail.com	1596741230	\N	\N	\N	\N	\N	\N	\N

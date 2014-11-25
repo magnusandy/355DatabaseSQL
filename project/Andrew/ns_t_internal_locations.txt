@@ -1,0 +1,6 @@
+Storage	Andrew	0	600	20	300	100	\N
+Lobby	Andrew	3	3	20	40	60	\N
+GalleryA	Andrew	7	14	20	130	30	\N
+GalleryB	Andrew	7	14	20	130	30	\N
+GalleryC	Andrew	14	24	20	130	60	\N
+GalleryD	Andrew	15	25	20	130	60	\N

@@ -1,0 +1,13 @@
+He-Man	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Eric Cartman	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Buggs Bunny	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Popeye	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Donald Duck	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Taz	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Johnny Bravo	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Some Museum	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Figardson Museum	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Andrew Museum	\N	\N	\N	\N	\N	\N	\N	\N	\N
+National Portrait Gallery	NPG@npg.com	 +61 2 6102 7000	1400	GPO Box	CANBERRA ACT 2601	\N	\N	\N	\N
+Guggenheim Museum	NPG@npg.com	 +61 2 6102 7000	22	\N	Hines Road	Ipswich Suffolk	UK	\N	IP3 9BG
+The Gold Museum	NPG@npg.com	 +61 2 6102 7000	39	\N	Magpie Street	Ballarat, Victoria	Australia	\N	3350

@@ -1,0 +1,8 @@
+InsName 1	curator@InsName1.com	000000000	InsBgNum 1	InsBgName 1	InsStName 1	InsCity 1	InsCountry 1	InsRegion 1	InsPstCd 1
+InsName 2	curator@InsName2.com	000000000	InsBgNum 2	InsBgName 2	InsStName 2	InsCity 2	InsCountry 2	InsRegion 2	InsPstCd 2
+InsName 3	curator@InsName3.com	000000000	InsBgNum 3	InsBgName 3	InsStName 3	InsCity 3	InsCountry 3	InsRegion 3	InsPstCd 3
+Mickey Mouse	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Danger Mouse	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mighty Mouse	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Jerry	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Iain	iain@gallery.com	0000000000	15	\N	Gallery Way	Saskatoon	Canada	Saskatchewan	S7S 1A1

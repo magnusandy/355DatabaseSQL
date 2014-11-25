@@ -1,0 +1,14 @@
+Lobby Display 3rd Quarter 2014	2014-05-01	lobby	Iain	2014-05-01	2014-08-28
+British Artists	2014-08-01	gallery b	Iain	2014-08-01	2015-01-10
+Newlyn School and Shoreham	2014-09-12	gallery a	Iain	2014-09-12	2014-12-28
+Lobby Display 4th Quarter 2014	2014-09-01	lobby	Iain	2014-09-01	2014-12-31
+Awesome Painting	2015-01-02	gallery a	Iain	2015-01-02	2015-07-02
+Pretty Good Art	2015-01-15	gallery b	Iain	2015-01-15	2015-05-15
+Surprise!	2014-11-21	gallery c	Iain	2014-11-21	2015-02-21
+Turner	2014-01-01	gallery a	Iain	2014-01-01	2014-06-01
+Pre-Raphaelites	2013-06-12	gallery b	Iain	2013-06-12	2014-01-01
+The Fallacies of Hope	2014-07-16	moose jaw city hall	Iain	2015-02-15	2015-03-08
+The Fallacies of Hope	2014-07-16	regina gallery	Iain	2015-01-18	2015-02-08
+The Fallacies of Hope	2014-07-16	estevan town hall	Iain	2014-12-21	2015-01-11
+The Fallacies of Hope	2014-07-16	yorkton museum	Iain	2014-11-23	2014-12-14
+The Fallacies of Hope	2014-07-16	gallery c	Iain	2014-07-16	2014-11-16

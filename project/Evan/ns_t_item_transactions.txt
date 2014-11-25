@@ -1,0 +1,56 @@
+97139	coin	Evan	Redpath Museum	Borrow	1997-02-08 00:00:00	2016-07-11 00:00:00	\N	2163673
+26895	spea	Evan	Wile E. Coyote	Borrow	1999-03-18 00:00:00	2016-07-11 00:00:00	\N	2446033
+40853	scra	Evan	Wile E. Coyote	Borrow	1998-05-31 00:00:00	2016-07-11 00:00:00	\N	567414
+93931	axes	Evan	Wile E. Coyote	Borrow	1994-01-18 00:00:00	2016-07-11 00:00:00	\N	1391127
+93815	carr	Evan	Wile E. Coyote	Borrow	1994-12-15 00:00:00	2016-07-11 00:00:00	\N	439455
+99423	cont	Evan	Wile E. Coyote	Borrow	1995-12-17 00:00:00	2016-07-11 00:00:00	\N	853984
+92619	armo	Evan	Clark Kent	Borrow	2013-05-29 00:00:00	2016-07-11 00:00:00	\N	102905
+97499	weap	Evan	Wile E. Coyote	Borrow	2005-03-09 00:00:00	2016-07-11 00:00:00	\N	2468736
+92759	weap	Evan	Evan Closson	Borrow	2007-07-27 00:00:00	2016-07-11 00:00:00	\N	731441
+95521	meda	Evan	Clark Kent	Borrow	2000-08-16 00:00:00	2016-07-11 00:00:00	\N	2152903
+93835	weap	Evan	Clark Kent	Borrow	2000-02-12 00:00:00	2016-07-11 00:00:00	\N	1255558
+30745	neph	Evan	Redpath Museum	Borrow	2009-07-05 00:00:00	2016-07-11 00:00:00	\N	2317551
+91113	armo	Evan	Clark Kent	Borrow	2001-05-09 00:00:00	2016-07-11 00:00:00	\N	2359274
+93034	weap	Evan	Clark Kent	Borrow	1992-06-23 00:00:00	2016-07-11 00:00:00	\N	1129018
+93149	armo	Evan	Homer Simpson	Borrow	1996-07-29 00:00:00	2016-07-11 00:00:00	\N	2084038
+47427	sedi	Evan	Homer Simpson	Borrow	1991-05-11 00:00:00	2016-07-11 00:00:00	\N	1792215
+22256	meta	Evan	Homer Simpson	Borrow	2013-02-15 00:00:00	2016-07-11 00:00:00	\N	758517
+12693	crys	Evan	Homer Simpson	Borrow	2011-10-23 00:00:00	2016-07-11 00:00:00	\N	1808832
+99223	weap	Evan	Wile E. Coyote	Borrow	2000-08-01 00:00:00	2016-07-11 00:00:00	\N	2008717
+90944	weap	Evan	Evan Closson	Borrow	1995-06-03 00:00:00	2016-07-11 00:00:00	\N	730464
+27400	armo	Evan	Evan Closson	Borrow	1997-06-18 00:00:00	2016-07-11 00:00:00	\N	473908
+58190	weap	Evan	Evan Closson	Borrow	1997-05-07 00:00:00	2016-07-11 00:00:00	\N	779579
+41967	crys	Evan	Redpath Museum	Borrow	1999-11-06 00:00:00	2016-07-11 00:00:00	\N	2396862
+48105	crys	Evan	Redpath Museum	Borrow	2001-05-20 00:00:00	2016-07-11 00:00:00	\N	2045053
+16749	crys	Evan	Redpath Museum	Borrow	2000-03-03 00:00:00	2016-07-11 00:00:00	\N	1500993
+50577	plag	Evan	Redpath Museum	Borrow	1993-06-09 00:00:00	2016-07-11 00:00:00	\N	838770
+92220	silv	Evan	Redpath Museum	Borrow	2011-12-04 00:00:00	2016-07-11 00:00:00	\N	2374853
+98119	silv	Evan	Redpath Museum	Borrow	1997-06-29 00:00:00	2016-07-11 00:00:00	\N	1554563
+32920	copp	Evan	Redpath Museum	Borrow	2005-03-27 00:00:00	2016-07-11 00:00:00	\N	1634730
+92215	neck	Evan	Redpath Museum	Borrow	2002-04-25 00:00:00	2016-07-11 00:00:00	\N	942696
+92719	ring	Evan	Redpath Museum	Borrow	1996-08-02 00:00:00	2016-07-11 00:00:00	\N	1329853
+41312	crys	Evan	Redpath Museum	Borrow	2002-06-11 00:00:00	2016-07-11 00:00:00	\N	1989144
+93131	disc	Evan	Owner	Sale	2005-01-13 00:00:00	\N	\N	2103546
+84700	wars	Evan	Owner	Sale	2004-04-15 00:00:00	\N	\N	985120
+91444	vess	Evan	Owner	Sale	2007-09-15 00:00:00	\N	\N	534321
+93917	figu	Evan	Owner	Purchase	2001-09-09 00:00:00	\N	\N	2015514
+10760	mirr	Evan	Owner	Purchase	2007-09-10 00:00:00	\N	\N	950389
+95228	vess	Evan	Owner	Purchase	2010-12-19 00:00:00	\N	\N	2793920
+93911	insc	Evan	Owner	Purchase	2011-06-14 00:00:00	\N	\N	851203
+91430	kniv	Evan	Owner	Purchase	2000-11-10 00:00:00	\N	\N	450131
+97713	wars	Evan	Owner	Purchase	2008-02-11 00:00:00	\N	\N	520470
+44500	bask	Evan	Owner	Purchase	2001-07-08 00:00:00	\N	\N	5210364
+95516	bone	Evan	Owner	Purchase	1999-05-13 00:00:00	\N	\N	2015432
+93780	tabl	Evan	Owner	Purchase	2003-08-01 00:00:00	\N	\N	2012340
+94363	horn	Evan	Owner	Purchase	2004-04-10 00:00:00	\N	\N	2510314
+95946	wars	Evan	Owner	Purchase	2012-05-09 00:00:00	\N	\N	654001
+45215	neck	Evan	Royal BC Museum	Loan	2015-02-07 00:00:00	2015-06-10 00:00:00	\N	804512
+94024	pend	Evan	Royal BC Museum	Loan	2015-02-07 00:00:00	2015-06-10 00:00:00	\N	750848
+91852	broo	Evan	Ontario Science Centre	Loan	2015-02-19 00:00:00	2015-09-11 00:00:00	\N	1178700
+96927	clas	Evan	Redpath Museum	Loan	2015-03-10 00:00:00	2015-05-21 00:00:00	\N	1378402
+47379	neck	Evan	Royal BC Museum	Loan	2015-02-07 00:00:00	2015-06-10 00:00:00	\N	677025
+92812	neck	Evan	Redpath Museum	Loan	2015-03-10 00:00:00	2015-05-21 00:00:00	\N	503032
+93216	pend	Evan	Redpath Museum	Loan	2015-03-10 00:00:00	2015-05-21 00:00:00	\N	158572
+47126	neck	Evan	Royal BC Museum	Loan	2015-02-07 00:00:00	2015-06-10 00:00:00	\N	260543
+93113	pend	Evan	Redpath Museum	Loan	2015-03-10 00:00:00	2015-05-21 00:00:00	\N	2222309
+91422	neck	Evan	Ontario Science Centre	Loan	2015-02-19 00:00:00	2015-09-11 00:00:00	\N	641785

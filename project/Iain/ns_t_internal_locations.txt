@@ -1,0 +1,6 @@
+storage	Iain	0	600	20	24	32.4	1990-10-26
+lobby	Iain	3	3	10	24.2	8	1990-10-26
+gallery a	Iain	7	14	10	12	8	1990-10-26
+gallery b	Iain	7	14	10	12	8	1990-10-26
+gallery c	Iain	14	24	10	24.2	16	1990-10-26
+gallery d	Iain	15	25	10	16	25	2014-12-14

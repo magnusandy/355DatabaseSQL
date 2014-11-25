@@ -1,0 +1,307 @@
+200346	JunRollinsBy	Ryan	Storage	Ryan	2014-10-28 22:11:32.230673	\N
+1989116	FebBosmanChicago	Ryan	Sold	Ryan	2014-10-28 22:07:24.99923	\N
+200646	AprDaceyLyra	Ryan	Storage	Ryan	2014-10-28 22:11:32.230673	\N
+19473	FebUnkownNecklace	Ryan	Sold	Ryan	2014-10-28 22:07:24.99923	\N
+200648	JulRosenPasswords	Ryan	Sold	Ryan	2014-10-28 22:07:24.99923	\N
+1982121	JulPearlsteinTwo	Ryan	Storage	Ryan	2014-10-28 22:11:32.230673	\N
+2007100	AugPaschkeParkway	Ryan	Storage	Ryan	2014-10-28 22:11:32.230673	\N
+200719	JulRemingtonCanea	Ryan	Storage	Ryan	2014-10-28 22:11:32.230673	\N
+197634	SepEstesHelens	Ryan	Storage	Ryan	2014-10-28 22:11:32.230673	\N
+19881	OctJenneySwimmer	Ryan	Storage	Ryan	2014-10-28 22:11:32.230673	\N
+197633	NovRauchenbergRound	Ryan	Storage	Ryan	2014-10-28 22:11:32.230673	\N
+197285	DecEvergoodThe	Ryan	Storage	Ryan	2014-10-28 22:11:32.230673	\N
+19995	JanMattaGay	Ryan	Storage	Ryan	2014-10-28 22:11:32.230673	\N
+199423	MarAkanKuduo	Ryan	Storage	Ryan	1994-03-04 00:00:00	2014-10-28 21:15:43.690267
+200044	MarJapaneseNetsuke	Ryan	Storage	Ryan	2010-03-04 00:00:00	2014-10-28 21:15:43.690267
+2008149	AugKanePink	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+1953129	AprUnkownLeaf	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+197772	MayBaulePendant	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+197313	JulKubaHeaddress	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+19731	JunKotaReliquary	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+1948139	FebJapaneseNetsuke	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+194717	DecVoragineSaint	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+1938123	JanRobbiaMadonna	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+20128	JunMihoyaFive	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+1914116	DecJozefShepherd	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+1923315	JanLendenstreichWings	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+1987225	AugPaladinoUntitled	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+200747	DecTookerMeadow	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+192115	AprUnkownStele	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+1967158	JunRusconiSaint	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+19764	SepUnkownShrine	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+19894	OctUnkownSeated	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+1928203	NovUnkownChrist	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+2006122	DecUnkownBuddhist	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+1948172	JanSokokuNetsuke	Ryan	Gallery C	Ryan	2014-10-14 00:00:00	\N
+20035	MarBurtonPair	Ryan	Storage	Ryan	2003-03-08 00:00:00	2014-10-14 00:00:00
+197852	OctChantreyGeorge	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+199423	MarAkanKuduo	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+200125	SepMcKiePolar	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+197731	JanPorterO'Hara	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+197744	MayBolotowskyEllipse	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+196456	MayChauncyWilliam	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+199511	JulCattaneoPortrait	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+200044	MarJapaneseNetsuke	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+198287	AprPearlsteinSphynx	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+199422	MarKieferAthanor	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+200052	OctGardnerGardner	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+199613	OctPaleyContinuum	Ryan	Possessed By Lender	Ryan	2014-10-28 21:15:43.690267	\N
+2009384	MarLibbeyHobstar	Ryan	Storage	Ryan	2009-03-15 00:00:00	2014-12-15 00:00:00
+2009386	MarLibbeyDouble	Ryan	Storage	Ryan	2009-03-16 00:00:00	2014-12-15 00:00:00
+2009388	MarLibbeyTall	Ryan	Storage	Ryan	2009-03-15 00:00:00	2014-12-15 00:00:00
+200466	MaySpencerPheonix	Ryan	Storage	Ryan	2004-05-25 00:00:00	2015-01-26 00:00:00
+200714	JulPreaultGrande	Ryan	Storage	Ryan	2007-07-14 00:00:00	2014-10-27 00:00:00
+199629	AugBesmalterBas	Ryan	Storage	Ryan	1996-08-01 00:00:00	2014-10-14 00:00:00
+1969301	SepAugusteCasket	Ryan	Storage	Ryan	2001-09-02 00:00:00	2014-10-14 00:00:00
+196876	OctCoxPagoda	Ryan	Storage	Ryan	1998-10-29 00:00:00	2014-10-14 00:00:00
+197831	NovFerrariOne	Ryan	Storage	Ryan	1999-11-30 00:00:00	2014-10-14 00:00:00
+197117	DecNicolasSurtout	Ryan	Storage	Ryan	2000-12-03 00:00:00	2014-10-14 00:00:00
+197019	DecBangwaNight	Ryan	Storage	Ryan	1997-12-09 00:00:00	2014-10-27 00:00:00
+1980133	AprDesjardinsEquestrian	Ryan	Storage	Ryan	1998-04-15 00:00:00	2014-10-27 00:00:00
+1987218	NovCloseAlex	Ryan	Storage	Ryan	1999-11-02 00:00:00	2014-12-15 00:00:00
+200716	SepLinoDinosaur	Ryan	Storage	Ryan	2013-09-25 00:00:00	2014-10-14 00:00:00
+2005292	JanSchnabelPortrait	Ryan	Storage	Ryan	2005-01-09 00:00:00	2014-12-15 00:00:00
+2006122	DecUnkownBuddhist	Ryan	Storage	Ryan	2006-12-17 00:00:00	2014-10-14 00:00:00
+19764	SepUnkownShrine	Ryan	Storage	Ryan	1993-09-01 00:00:00	2014-10-14 00:00:00
+1953129	AprUnkownLeaf	Ryan	Storage	Ryan	1991-09-07 00:00:00	2014-10-14 00:00:00
+197772	MayBaulePendant	Ryan	Storage	Ryan	1994-05-09 00:00:00	2014-10-14 00:00:00
+19894	OctUnkownSeated	Ryan	Storage	Ryan	1991-10-03 00:00:00	2014-10-14 00:00:00
+1912812	FebNyuodoSword	Ryan	Storage	Ryan	2010-02-10 00:00:00	2014-10-27 00:00:00
+197354	JuneBauleYauleRainbow	Ryan	Storage	Ryan	1993-06-05 00:00:00	2014-10-27 00:00:00
+1948172	JanSokokuNetsuke	Ryan	Storage	Ryan	1994-01-25 00:00:00	2014-10-14 00:00:00
+192115	AprUnkownStele	Ryan	Storage	Ryan	1992-04-05 00:00:00	2014-10-14 00:00:00
+1987225	AugPaladinoUntitled	Ryan	Storage	Ryan	2008-08-21 00:00:00	2014-10-14 00:00:00
+2006147	MayDianeLady	Ryan	Storage	Ryan	2006-05-04 00:00:00	2014-12-15 00:00:00
+1989116	FebBosmanChicago	Ryan	Storage	Ryan	1999-02-12 00:00:00	2014-10-28 22:07:24.99923
+200648	JulRosenPasswords	Ryan	Storage	Ryan	2006-07-30 00:00:00	2014-10-28 22:07:24.99923
+1984881	FebPableMetamorphoses	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2015-01-26 00:00:00
+195816	FebFangMask	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2014-10-27 00:00:00
+1965176	MayMochiCardinal	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2014-10-27 00:00:00
+1933169	AugUnkownEnamel	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2014-12-15 00:00:00
+200453	JanRollinsTemptation	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2014-12-15 00:00:00
+2005321	DecEjaghanCrest	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2014-10-27 00:00:00
+20061	AprMendeHelmet	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2014-10-27 00:00:00
+197051	MarSongyeNkisi	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2014-10-27 00:00:00
+20035	MarBurtonPair	Ryan	Gallery B	Ryan	2014-10-14 00:00:00	\N
+200716	SepLinoDinosaur	Ryan	Gallery B	Ryan	2014-10-14 00:00:00	\N
+199629	AugBesmalterBas	Ryan	Gallery B	Ryan	2014-10-14 00:00:00	\N
+1969301	SepAugusteCasket	Ryan	Gallery B	Ryan	2014-10-14 00:00:00	\N
+196876	OctCoxPagoda	Ryan	Gallery B	Ryan	2014-10-14 00:00:00	\N
+197831	NovFerrariOne	Ryan	Gallery B	Ryan	2014-10-14 00:00:00	\N
+197117	DecNicolasSurtout	Ryan	Gallery B	Ryan	2014-10-14 00:00:00	\N
+2009385	MarLibbeyCooler	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2014-12-15 00:00:00
+19739	MaySenufoHeaddress	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2014-10-27 00:00:00
+1906227	MayUnkownFragment	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	2014-10-27 00:00:00
+19473	FebUnkownNecklace	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-28 22:07:24.99923
+19991	DecSmithMose	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+19705	OctHofmannNight	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+19757	JunEddyJewlery	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+19761	JunLaliqueChalice	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-12-15 00:00:00
+19994	AprFouquetBrooch	Ryan	Storage	Ryan	2014-10-14 00:00:00	2015-01-26 00:00:00
+195298	FebBazoitesScorpion	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+20001	FebMunozBrok	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+20004	JanYoungbloodGorrila	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+190746	AugVivierMedal	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+190747	JulNiniMedal	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+192333	JunUnkownUnguent	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+194325	MarWyethHunter	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+195663	JanAltenstetterCovered	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-12-15 00:00:00
+196455	NovTemneInititation	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-10-27 00:00:00
+190749	JulCaunoisMedal	Ryan	Storage	Ryan	2014-10-14 00:00:00	2014-12-15 00:00:00
+200714	JulPreaultGrande	Ryan	Gallery B	Ryan	2014-10-27 00:00:00	\N
+19705	OctHofmannNight	Ryan	Gallery B	Ryan	2014-10-27 00:00:00	\N
+19757	JunEddyJewlery	Ryan	Gallery B	Ryan	2014-10-27 00:00:00	\N
+19991	DecSmithMose	Ryan	Gallery B	Ryan	2014-10-27 00:00:00	\N
+20001	FebMunozBrok	Ryan	Gallery B	Ryan	2014-10-27 00:00:00	\N
+20004	JanYoungbloodGorrila	Ryan	Gallery B	Ryan	2014-10-27 00:00:00	\N
+192333	JunUnkownUnguent	Ryan	Gallery B	Ryan	2014-10-27 00:00:00	\N
+19739	MaySenufoHeaddress	Ryan	Gallery C	Ryan	2014-10-27 00:00:00	\N
+197051	MarSongyeNkisi	Ryan	Gallery C	Ryan	2014-10-27 00:00:00	\N
+195298	FebBazoitesScorpion	Ryan	Gallery C	Ryan	2014-10-27 00:00:00	\N
+194325	MarWyethHunter	Ryan	Gallery C	Ryan	2014-10-27 00:00:00	\N
+1906227	MayUnkownFragment	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+190746	AugVivierMedal	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+190747	JulNiniMedal	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+1980133	AprDesjardinsEquestrian	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+1965176	MayMochiCardinal	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+1913232	NovBronzinoCosimo	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+1983113	NovCornellJCW	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+197019	DecBangwaNight	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+196455	NovTemneInititation	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+197354	JuneBauleYauleRainbow	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+2005321	DecEjaghanCrest	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+195816	FebFangMask	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+20061	AprMendeHelmet	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+1912812	FebNyuodoSword	Ryan	Gallery A	Ryan	2014-10-27 00:00:00	\N
+197313	JulKubaHeaddress	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+19731	JunKotaReliquary	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+1948139	FebJapaneseNetsuke	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+194717	DecVoragineSaint	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+1938123	JanRobbiaMadonna	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+20128	JunMihoyaFive	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+1914116	DecJozefShepherd	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+190749	JulCaunoisMedal	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+1950141	MayGyokujuNetsuke	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+1948116	JulMeishuOjime	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+1950171	JanMasanaoNetsuke	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+1948154	NovMasakazuNetsuke	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+195663	JanAltenstetterCovered	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+1933169	AugUnkownEnamel	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+2009384	MarLibbeyHobstar	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+2009385	MarLibbeyCooler	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+2009386	MarLibbeyDouble	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+2009388	MarLibbeyTall	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+19761	JunLaliqueChalice	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+2006147	MayDianeLady	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+1925109	JulSargentPrincess	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+1987218	NovCloseAlex	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+200453	JanRollinsTemptation	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+2005292	JanSchnabelPortrait	Ryan	Gallery C	Ryan	2014-12-15 00:00:00	\N
+2008149	AugKanePink	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+1953129	AprUnkownLeaf	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+197772	MayBaulePendant	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+20035	MarBurtonPair	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+200716	SepLinoDinosaur	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+199629	AugBesmalterBas	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+1969301	SepAugusteCasket	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+196876	OctCoxPagoda	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+197831	NovFerrariOne	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+197117	DecNicolasSurtout	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+200466	MaySpencerPheonix	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+19994	AprFouquetBrooch	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+1984881	FebPableMetamorphoses	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+19473	FebUnkownNecklace	Ryan	Gallery C	Ryan	2015-01-26 00:00:00	\N
+197313	JulKubaHeaddress	Ryan	Storage	Ryan	1998-07-15 00:00:00	2013-06-05 00:00:00
+197313	JulKubaHeaddress	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+19731	JunKotaReliquary	Ryan	Storage	Ryan	1996-06-15 00:00:00	2013-06-05 00:00:00
+19731	JunKotaReliquary	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+1948139	FebJapaneseNetsuke	Ryan	Storage	Ryan	1998-02-11 00:00:00	2013-06-05 00:00:00
+1948139	FebJapaneseNetsuke	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+194717	DecVoragineSaint	Ryan	Storage	Ryan	1998-12-08 00:00:00	2013-06-05 00:00:00
+194717	DecVoragineSaint	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+1938123	JanRobbiaMadonna	Ryan	Storage	Ryan	1991-01-12 00:00:00	2013-06-05 00:00:00
+20128	JunMihoyaFive	Ryan	Storage	Ryan	2012-06-19 00:00:00	2013-06-05 00:00:00
+20128	JunMihoyaFive	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+1914116	DecJozefShepherd	Ryan	Storage	Ryan	1995-12-01 00:00:00	2013-06-05 00:00:00
+190749	JulCaunoisMedal	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+1950141	MayGyokujuNetsuke	Ryan	Storage	Ryan	1997-05-01 00:00:00	2013-06-05 00:00:00
+1950141	MayGyokujuNetsuke	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+1948116	JulMeishuOjime	Ryan	Storage	Ryan	1996-07-12 00:00:00	2013-06-05 00:00:00
+1948116	JulMeishuOjime	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+1950171	JanMasanaoNetsuke	Ryan	Storage	Ryan	2002-01-26 00:00:00	2013-06-05 00:00:00
+1950171	JanMasanaoNetsuke	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+1948154	NovMasakazuNetsuke	Ryan	Storage	Ryan	2000-06-18 00:00:00	2013-06-05 00:00:00
+1948154	NovMasakazuNetsuke	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+195663	JanAltenstetterCovered	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+1933169	AugUnkownEnamel	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-12-21 00:00:00
+190749	JulCaunoisMedal	Ryan	Storage	Ryan	2013-12-21 00:00:00	2014-10-14 00:00:00
+195663	JanAltenstetterCovered	Ryan	Storage	Ryan	2013-12-21 00:00:00	2014-10-14 00:00:00
+1933169	AugUnkownEnamel	Ryan	Storage	Ryan	2013-12-21 00:00:00	2014-10-28 22:07:23.99923
+200125	SepMcKiePolar	Ryan	Storage	Ryan	2001-09-14 00:00:00	2013-09-09 00:00:00
+200125	SepMcKiePolar	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+19991	DecSmithMose	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+20001	FebMunozBrok	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+20004	JanYoungbloodGorrila	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+192333	JunUnkownUnguent	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+192554	JanBoehmJames	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+197852	OctChantreyGeorge	Ryan	Storage	Ryan	1993-10-20 00:00:00	2013-09-09 00:00:00
+197852	OctChantreyGeorge	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+196456	MayChauncyWilliam	Ryan	Storage	Ryan	1991-05-15 00:00:00	2013-09-09 00:00:00
+196456	MayChauncyWilliam	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+199511	JulCattaneoPortrait	Ryan	Storage	Ryan	1995-07-21 00:00:00	2013-09-09 00:00:00
+199511	JulCattaneoPortrait	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+199613	OctPaleyContinuum	Ryan	Storage	Ryan	1996-10-09 00:00:00	2013-09-09 00:00:00
+199613	OctPaleyContinuum	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+1928203	NovUnkownChrist	Ryan	Storage	Ryan	1992-11-05 00:00:00	2013-09-09 00:00:00
+1928203	NovUnkownChrist	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+2008149	AugKanePink	Ryan	Storage	Ryan	2008-08-05 00:00:00	2013-09-09 00:00:00
+2008149	AugKanePink	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+1938123	JanRobbiaMadonna	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-09-09 00:00:00
+1938123	JanRobbiaMadonna	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+1967158	JunRusconiSaint	Ryan	Storage	Ryan	2000-06-18 00:00:00	2013-09-09 00:00:00
+1967158	JunRusconiSaint	Ryan	Gallery A	Ryan	2013-09-09 00:00:00	2013-11-03 00:00:00
+19991	DecSmithMose	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-14 00:00:00
+20001	FebMunozBrok	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-14 00:00:00
+20004	JanYoungbloodGorrila	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-14 00:00:00
+192333	JunUnkownUnguent	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-14 00:00:00
+19705	OctHofmannNight	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+19757	JunEddyJewlery	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+195298	FebBazoitesScorpion	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+193549	SepHopperTwo	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+193992	JulHashWom	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+194325	MarWyethHunter	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+197731	JanPorterO'Hara	Ryan	Storage	Ryan	1991-01-01 00:00:00	2013-10-21 00:00:00
+197731	JanPorterO'Hara	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+197744	MayBolotowskyEllipse	Ryan	Storage	Ryan	2005-05-14 00:00:00	2013-10-21 00:00:00
+197744	MayBolotowskyEllipse	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+198287	AprPearlsteinSphynx	Ryan	Storage	Ryan	2001-04-22 00:00:00	2013-10-21 00:00:00
+198287	AprPearlsteinSphynx	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+199422	MarKieferAthanor	Ryan	Storage	Ryan	1994-03-15 00:00:00	2013-10-21 00:00:00
+199422	MarKieferAthanor	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+200052	OctGardnerGardner	Ryan	Storage	Ryan	1997-10-27 00:00:00	2013-10-21 00:00:00
+200052	OctGardnerGardner	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+1925109	JulSargentPrincess	Ryan	Storage	Ryan	1991-07-03 00:00:00	2013-10-21 00:00:00
+1925109	JulSargentPrincess	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+200456	SepStanczakThree	Ryan	Storage	Ryan	2004-09-05 00:00:00	2013-10-21 00:00:00
+200456	SepStanczakThree	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+1983113	NovCornellJCW	Ryan	Storage	Ryan	1993-11-25 00:00:00	2013-10-21 00:00:00
+1983113	NovCornellJCW	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+200747	DecTookerMeadow	Ryan	Storage	Ryan	2008-12-05 00:00:00	2013-10-21 00:00:00
+200747	DecTookerMeadow	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+1913232	NovBronzinoCosimo	Ryan	Storage	Ryan	1994-11-28 00:00:00	2013-10-21 00:00:00
+1913232	NovBronzinoCosimo	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+1923315	JanLendenstreichWings	Ryan	Storage	Ryan	1996-01-12 00:00:00	2013-10-21 00:00:00
+1923315	JanLendenstreichWings	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+1914116	DecJozefShepherd	Ryan	Gallery B	Ryan	2013-06-05 00:00:00	2013-10-21 00:00:00
+1914116	DecJozefShepherd	Ryan	Gallery C	Ryan	2013-10-21 00:00:00	2014-01-02 00:00:00
+19705	OctHofmannNight	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-14 00:00:00
+19757	JunEddyJewlery	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-14 00:00:00
+195298	FebBazoitesScorpion	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-14 00:00:00
+194325	MarWyethHunter	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-14 00:00:00
+1914116	DecJozefShepherd	Ryan	Storage	Ryan	2013-12-21 00:00:00	2014-01-02 00:00:00
+2008149	AugKanePink	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-14 00:00:00
+2005290	OctWileySaint	Ryan	Storage	Ryan	2006-12-30 00:00:00	\N
+1984909	DecPabloChevaux	Ryan	Storage	Ryan	1998-12-17 00:00:00	\N
+193992	JulHashWom	Ryan	Storage	Ryan	2014-01-02 00:00:00	\N
+1983113	NovCornellJCW	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-27 00:00:00
+1967158	JunRusconiSaint	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-14 00:00:00
+1950171	JanMasanaoNetsuke	Ryan	Storage	Ryan	2013-12-21 00:00:00	\N
+1950141	MayGyokujuNetsuke	Ryan	Storage	Ryan	2013-12-21 00:00:00	\N
+1948154	NovMasakazuNetsuke	Ryan	Storage	Ryan	2013-12-21 00:00:00	\N
+1948139	FebJapaneseNetsuke	Ryan	Storage	Ryan	2013-12-21 00:00:00	2014-10-14 00:00:00
+1948116	JulMeishuOjime	Ryan	Storage	Ryan	2013-12-21 00:00:00	\N
+1938123	JanRobbiaMadonna	Ryan	Storage	Ryan	2013-12-21 00:00:00	2014-10-14 00:00:00
+1938123	JanRobbiaMadonna	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-14 00:00:00
+1928203	NovUnkownChrist	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-14 00:00:00
+1925109	JulSargentPrincess	Ryan	Storage	Ryan	2014-01-02 00:00:00	\N
+1925108	FebAntoninAntonin	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	\N
+1923315	JanLendenstreichWings	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-14 00:00:00
+1920542	JulWolgemutLiber	Ryan	Storage	Ryan	1990-07-02 00:00:00	\N
+1914116	DecJozefShepherd	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-14 00:00:00
+1913232	NovBronzinoCosimo	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-27 00:00:00
+1913127	OctTannerDisciples	Ryan	Storage	Ryan	1998-10-05 00:00:00	\N
+201212	NovRinggoldBen	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	\N
+200812	JunChokweScepter	Ryan	Storage	Ryan	2008-06-07 00:00:00	\N
+200747	DecTookerMeadow	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-14 00:00:00
+200456	SepStanczakThree	Ryan	Storage	Ryan	2014-01-02 00:00:00	\N
+200352	AprDineColumn	Ryan	Storage	Ryan	2014-10-28 22:07:23.99923	\N
+200125	SepMcKiePolar	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-28 21:15:43.690267
+200052	OctGardnerGardner	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-28 21:15:43.690267
+199613	OctPaleyContinuum	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-28 21:15:43.690267
+199511	JulCattaneoPortrait	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-28 21:15:43.690267
+199422	MarKieferAthanor	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-28 21:15:43.690267
+198287	AprPearlsteinSphynx	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-28 21:15:43.690267
+197852	OctChantreyGeorge	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-28 21:15:43.690267
+197744	MayBolotowskyEllipse	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-28 21:15:43.690267
+197731	JanPorterO'Hara	Ryan	Storage	Ryan	2014-01-02 00:00:00	2014-10-28 21:15:43.690267
+197313	JulKubaHeaddress	Ryan	Storage	Ryan	2013-12-21 00:00:00	2014-10-14 00:00:00
+196456	MayChauncyWilliam	Ryan	Storage	Ryan	2013-11-03 00:00:00	2014-10-28 21:15:43.690267
+196026	NovMorrisThe	Ryan	Storage	Ryan	2014-10-14 00:00:00	\N
+194717	DecVoragineSaint	Ryan	Storage	Ryan	2013-12-21 00:00:00	2014-10-14 00:00:00
+193992	JulHashWom	Ryan	Storage	Ryan	2014-10-14 00:00:00	\N
+193549	SepHopperTwo	Ryan	Storage	Ryan	2014-10-14 00:00:00	\N
+193549	SepHopperTwo	Ryan	Storage	Ryan	2014-01-02 00:00:00	\N
+192554	JanBoehmJames	Ryan	Storage	Ryan	2014-10-14 00:00:00	\N
+192554	JanBoehmJames	Ryan	Storage	Ryan	2013-11-03 00:00:00	\N
+20128	JunMihoyaFive	Ryan	Storage	Ryan	2013-12-21 00:00:00	2014-10-14 00:00:00
+19731	JunKotaReliquary	Ryan	Storage	Ryan	2013-12-21 00:00:00	2014-10-14 00:00:00

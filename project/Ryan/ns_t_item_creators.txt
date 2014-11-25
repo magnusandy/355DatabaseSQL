@@ -1,0 +1,98 @@
+1953129	AprUnkownLeaf	Ryan	Unknown
+197772	MayBaulePendant	Ryan	Baule People
+197354	JuneBauleYauleRainbow	Ryan	Yaule People
+197354	JuneBauleYauleRainbow	Ryan	Baule People
+197313	JulKubaHeaddress	Ryan	Kuba Peoples
+2005321	DecEjaghanCrest	Ryan	Ejaghan Peoples
+195816	FebFangMask	Ryan	Fang Peoples
+19731	JunKotaReliquary	Ryan	Kota Peoples
+200812	JunChokweScepter	Ryan	Chokwe Peoples
+20061	AprMendeHelmet	Ryan	Mende People
+197051	MarSongyeNkisi	Ryan	Songye Peoples
+19739	MaySenufoHeaddress	Ryan	Senufo Peoples
+197019	DecBangwaNight	Ryan	Bangwa Peoples
+1948139	FebJapaneseNetsuke	Ryan	Japanese Peoples
+1950141	MayGyokujuNetsuke	Ryan	Gyokuju
+1948116	JulMeishuOjime	Ryan	Meishu
+1950171	JanMasanaoNetsuke	Ryan	Masanao
+1948154	NovMasakazuNetsuke	Ryan	Masakazu
+20128	JunMihoyaFive	Ryan	Mihoya Glass Co. Ltd
+1984881	FebPableMetamorphoses	Ryan	Lausanne
+1984881	FebPableMetamorphoses	Ryan	Oyid
+192115	AprUnkownStele	Ryan	Unknown
+1906227	MayUnkownFragment	Ryan	Unkown
+1933169	AugUnkownEnamel	Ryan	Unkown
+19764	SepUnkownShrine	Ryan	Unkown
+19894	OctUnkownSeated	Ryan	Unkown
+1928203	NovUnkownChrist	Ryan	Unkown
+2006122	DecUnkownBuddhist	Ryan	Unkown
+1948172	JanSokokuNetsuke	Ryan	Sokoku
+2009384	MarLibbeyHobstar	Ryan	Libbey Glass Inc
+2009385	MarLibbeyCooler	Ryan	Libbey Glass Inc
+2009386	MarLibbeyDouble	Ryan	Libbey Glass Inc
+2009388	MarLibbeyTall	Ryan	Libbey Glass Inc
+200466	MaySpencerPheonix	Ryan	The Artificers
+2008149	AugKanePink	Ryan	Jun  Kaneko
+201212	NovRinggoldBen	Ryan	Faith  Ringgold
+20035	MarBurtonPair	Ryan	Scott  Burton
+200352	AprDineColumn	Ryan	Jim  Dine
+1980133	AprDesjardinsEquestrian	Ryan	Martin  Desjardins
+1965176	MayMochiCardinal	Ryan	Francesco Mochi
+194717	DecVoragineSaint	Ryan	Jacobus de Voragine
+1938123	JanRobbiaMadonna	Ryan	Luca Robbia
+1938123	JanRobbiaMadonna	Ryan	Andrea Robbia
+1912812	FebNyuodoSword	Ryan	Soheishi  Nyudo
+2006147	MayDianeLady	Ryan	Neil Selkirk
+1984881	FebPableMetamorphoses	Ryan	Albert Skira
+1984881	FebPableMetamorphoses	Ryan	Louis Fort
+1984881	FebPableMetamorphoses	Ryan	Leon Pichon
+1984881	FebPableMetamorphoses	Ryan	Georges Lafaye
+1984881	FebPableMetamorphoses	Ryan	Pable Picasso
+1984909	DecPabloChevaux	Ryan	Roch Grey
+1984909	DecPabloChevaux	Ryan	Jacques Snegarof
+1984909	DecPabloChevaux	Ryan	Robert Dutrou
+1984909	DecPabloChevaux	Ryan	Roger Lacouriere
+1984909	DecPabloChevaux	Ryan	Pablo Picasso
+1920542	JulWolgemutLiber	Ryan	Anton Koberger
+1920542	JulWolgemutLiber	Ryan	Hartmann Schedel
+1920542	JulWolgemutLiber	Ryan	Wilhelm Pleydenwurff
+1920542	JulWolgemutLiber	Ryan	Michel Wolgemut
+1987218	NovCloseAlex	Ryan	Chuck close
+200453	JanRollinsTemptation	Ryan	Tim Rollins
+200716	SepLinoDinosaur	Ryan	Lino Tagliapietra
+1913232	NovBronzinoCosimo	Ryan	Agnolo Bronzino
+1914116	DecJozefShepherd	Ryan	Jozef Israels
+1923315	JanLendenstreichWings	Ryan	Valentin Lendenstreich
+1925108	FebAntoninAntonin	Ryan	Antonin Proust
+2005292	JanSchnabelPortrait	Ryan	Julian  Schnabel
+1989116	FebBosmanChicago	Ryan	Richard Bosman
+200648	JulRosenPasswords	Ryan	Kay Rosen
+1987225	AugPaladinoUntitled	Ryan	Mimmo Paladino
+200456	SepStanczakThree	Ryan	Julian Stanczak
+1983113	NovCornellJCW	Ryan	Joseph Cornell
+200747	DecTookerMeadow	Ryan	George Tooker
+1967158	JunRusconiSaint	Ryan	Camillo Rusconi
+200466	MaySpencerPheonix	Ryan	Edward Spencer
+199629	AugBesmalterBas	Ryan	Jacob Desmalter
+1969301	SepAugusteCasket	Ryan	Henry  Auguste
+196876	OctCoxPagoda	Ryan	Joseph  Beloudy
+196876	OctCoxPagoda	Ryan	James  Cox
+197831	NovFerrariOne	Ryan	Lorenzo de Ferrari
+197117	DecNicolasSurtout	Ryan	Nicolas  Delaunay
+200346	JunRollinsBy	Ryan	Tim Rollins
+200646	AprDaceyLyra	Ryan	Paul Dacey
+1982121	JulPearlsteinTwo	Ryan	Philip Pearlstein
+2007100	AugPaschkeParkway	Ryan	Ed Paschke
+200719	JulRemingtonCanea	Ryan	Remington Deborah 
+197634	SepEstesHelens	Ryan	Richard Estes
+19881	OctJenneySwimmer	Ryan	Sam Jenney
+197633	NovRauchenbergRound	Ryan	Robert Rauschenberg
+197285	DecEvergoodThe	Ryan	Philip Evergood
+19995	JanMattaGay	Ryan	Roberto Matta
+2006147	MayDianeLady	Ryan	Diane Nemergy Arbus
+1925109	JulSargentPrincess	Ryan	John Singer Sargent
+1913127	OctTannerDisciples	Ryan	Henry Ossawa Tanner
+200714	JulPreaultGrande	Ryan	Francois Desire Forment Meurice
+200714	JulPreaultGrande	Ryan	Antoine Auguste Preault
+199629	AugBesmalterBas	Ryan	Francois  Honore Georges
+1969301	SepAugusteCasket	Ryan	Jean Guillaume Moitte
