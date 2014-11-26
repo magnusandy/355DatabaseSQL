@@ -1,373 +1,588 @@
 -- VIEW CREATION FOR ALL TABLES
 --CLIENTS
-CREATE VIEW ns_v_clients AS SELECT 
-	ns_cl_clname,
-	ns_cl_email,
-	ns_cl_phonenum,	
-	ns_cl_buildingnum,
-	ns_cl_buildingname,
-	ns_cl_streetname,
-	ns_cl_city,
-	ns_cl_country,
-	ns_cl_region,
-	ns_cl_postalcode
-	FROM ns_t_clients
+CREATE VIEW v_clients AS SELECT 
+	cl_clname,
+	cl_email,
+	cl_phonenum,	
+	cl_buildingnum,
+	cl_buildingname,
+	cl_streetname,
+	cl_city,
+	cl_country,
+	cl_region,
+	cl_postalcode
+	FROM t_clients
 ;
 
 
 --ITEMS
-CREATE VIEW ns_v_items AS SELECT 
-	ns_i_inumkey,
-	ns_i_ialphakey,
-	ns_i_clientkey,
-	ns_i_iname,
-	ns_i_iorigin, 
-	ns_i_iformat,
-	ns_i_isubformat,
-	ns_i_ischool,
-	ns_i_isubject,
-	ns_i_iinsurance,
-	ns_i_iacquisitiondate,
-	ns_i_icreationyear,
-	ns_i_idescription,
-	ns_i_itsvector
-	FROM ns_t_items
+CREATE VIEW v_items AS SELECT 
+	i_inumkey,
+	i_ialphakey,
+	i_clientkey,
+	i_iname,
+	i_iorigin, 
+	i_iformat,
+	i_isubformat,
+	i_ischool,
+	i_isubject,
+	i_iinsurance,
+	i_iacquisitiondate,
+	i_icreationyear,
+	i_idescription,
+	i_itsvector
+	FROM t_items
 ;
 
 -- ITEM CREATORS
-CREATE VIEW ns_v_item_creators AS SELECT 
-	ns_cr_inumkey,
-	ns_cr_ialphakey,
-	ns_cr_clientkey,
-	ns_cr_crname
-	FROM ns_t_item_creators
+CREATE VIEW v_item_creators AS SELECT 
+	cr_inumkey,
+	cr_ialphakey,
+	cr_clientkey,
+	cr_crname
+	FROM t_item_creators
 ;
 
 --MATERIALS
-CREATE VIEW ns_v_materials AS SELECT 
-	ns_mat_matname
-	FROM ns_t_materials
+CREATE VIEW v_materials AS SELECT 
+	mat_matname
+	FROM t_materials
 ;
 
 --SUB COMPONENTS
-CREATE VIEW ns_v_materials_subcomponents AS SELECT 
-	ns_matsub_matname,
-	ns_matsub_subcomponent
-	FROM ns_t_materials_subcomponents
+CREATE VIEW v_materials_subcomponents AS SELECT 
+	matsub_matname,
+	matsub_subcomponent
+	FROM t_materials_subcomponents
 ;
 
 --ITEM MATERIALS
-CREATE VIEW ns_v_item_materials AS SELECT 
-	ns_imat_inumkey,
-	ns_imat_ialphakey,
-	ns_imat_clientkey,
-	ns_imat_matname
-	FROM ns_t_item_materials
+CREATE VIEW v_item_materials AS SELECT 
+	imat_inumkey,
+	imat_ialphakey,
+	imat_clientkey,
+	imat_matname
+	FROM t_item_materials
 ;
 
 --ITEM TRANSACTIONS
-CREATE VIEW ns_v_item_transactions AS SELECT 
-	ns_it_inumkey,
-	ns_it_ialphakey,
-	ns_it_clientkey,
-	ns_it_clname,
-	ns_it_ittype,
-	ns_it_itdatetime_start,
-	ns_it_itdatetime_end,
-	ns_it_itdatetime_returnby,
-	ns_it_itgross
-	FROM ns_t_item_transactions
+CREATE VIEW v_item_transactions AS SELECT 
+	it_inumkey,
+	it_ialphakey,
+	it_clientkey,
+	it_clname,
+	it_ittype,
+	it_itdatetime_start,
+	it_itdatetime_end,
+	it_itdatetime_returnby,
+	it_itgross
+	FROM t_item_transactions
 ;
 
 --LOCATIONS
-CREATE VIEW ns_v_locations AS SELECT 
-	ns_loc_locname,
-	ns_loc_clientkey,
-	ns_loc_loctype,
-	ns_loc_numitems_min,
-	ns_loc_numitems_max,
-	ns_loc_locdimensionmetres_height,
-	ns_loc_locdimensionmetres_length,
-	ns_loc_locdimensionmetres_width,
-	ns_loc_loccreationdate,
-	ns_loc_elocdate_start,
-	ns_loc_elocdate_end,
-	ns_loc_iinsurance_total
-	FROM ns_t_locations;
+CREATE VIEW v_locations AS SELECT 
+	loc_locname,
+	loc_clientkey,
+	loc_loctype,
+	loc_numitems_min,
+	loc_numitems_max,
+	loc_locdimensionmetres_height,
+	loc_locdimensionmetres_length,
+	loc_locdimensionmetres_width,
+	loc_loccreationdate,
+	loc_elocdate_start,
+	loc_elocdate_end,
+	loc_iinsurance_total
+	FROM t_locations;
 ;
 
 --ITEM LOCATIONS
-CREATE VIEW ns_v_item_locations AS SELECT 
-	ns_ilo_inumkey,
-	ns_ilo_ialphakey,
-	ns_ilo_clientkey_item,
-	ns_ilo_locname,
-	ns_ilo_clientkey_location,
-	ns_ilo_ilodatetime_start,
-	ns_ilo_ilodatetime_end
-	FROM ns_t_item_locations
+CREATE VIEW v_item_locations AS SELECT 
+	ilo_inumkey,
+	ilo_ialphakey,
+	ilo_clientkey_item,
+	ilo_locname,
+	ilo_clientkey_location,
+	ilo_ilodatetime_start,
+	ilo_ilodatetime_end
+	FROM t_item_locations
 ;
 
 
 --LOCATION DOORS
-CREATE VIEW ns_v_location_doors AS SELECT 
-	ns_lodor_locname_entrance,
-	ns_lodor_clientkey_entrance,
-	ns_lodor_locname_exit,
-	ns_lodor_clientkey_exit
-	FROM ns_t_location_doors
+CREATE VIEW v_location_doors AS SELECT 
+	lodor_locname_entrance,
+	lodor_clientkey_entrance,
+	lodor_locname_exit,
+	lodor_clientkey_exit
+	FROM t_location_doors
 ;
 
 --EXHIBITIONS 
-CREATE VIEW ns_v_exhibitions AS SELECT 
-	ns_ex_ename,
-	ns_ex_showdate_start,
-	ns_ex_showdate_end,
-	ns_ex_edescription
-	FROM ns_t_exhibitions
+CREATE VIEW v_exhibitions AS SELECT 
+	ex_ename,
+	ex_showdate_start,
+	ex_showdate_end,
+	ex_edescription
+	FROM t_exhibitions
 ;
 
 
 --EXHIBITION ITEMS
-CREATE VIEW ns_v_exhibition_items AS SELECT 
-	ns_exi_inumkey,
-	ns_exi_ialphakey,
-	ns_exi_clientkey,
-	ns_exi_ename,
-	ns_exi_showdate_start,
-	ns_exi_exidate_start,
-	ns_exi_exidate_end
-	FROM ns_t_exhibition_items
+CREATE VIEW v_exhibition_items AS SELECT 
+	exi_inumkey,
+	exi_ialphakey,
+	exi_clientkey,
+	exi_ename,
+	exi_showdate_start,
+	exi_exidate_start,
+	exi_exidate_end
+	FROM t_exhibition_items
 ;
 
 --EXHIBITION LOCATIONS
-CREATE VIEW ns_v_exhibition_locations AS SELECT 
-	ns_exl_ename,
-	ns_exl_showdate_start,
-	ns_exl_locname,
-	ns_exl_clientkey,
-	ns_exl_exldate_start,
-	ns_exl_exldate_end,
-	ns_exl_security
-	FROM ns_t_exhibition_locations
+CREATE VIEW v_exhibition_locations AS SELECT 
+	exl_ename,
+	exl_showdate_start,
+	exl_locname,
+	exl_clientkey,
+	exl_exldate_start,
+	exl_exldate_end,
+	exl_security
+	FROM t_exhibition_locations
 ;
 
 -- ITEM COLORS
-CREATE VIEW ns_v_item_colors AS SELECT
-	ns_icol_inumkey,
-	ns_icol_ialphakey,
-	ns_icol_clientkey,
-	ns_icol_icolor
-	FROM ns_t_item_colors
+CREATE VIEW v_item_colors AS SELECT
+	icol_inumkey,
+	icol_ialphakey,
+	icol_clientkey,
+	icol_icolor
+	FROM t_item_colors
 ;
 
 -- VIEW CREATION FROM ASSIGNMENTS AND OTHER USEFUL VIEWS
 
 -- current item location
-CREATE VIEW ns_v_current_item_location AS SELECT
-	ns_ilo_inumkey,
-	ns_ilo_ialphakey,
-	ns_ilo_clientkey_item,
-	ns_ilo_locname,
-	ns_ilo_clientkey_location,
-	ns_ilo_ilodatetime_start,
-	ns_ilo_ilodatetime_end
+CREATE VIEW v_current_item_location AS SELECT
+	ilo_inumkey,
+	ilo_ialphakey,
+	ilo_clientkey_item,
+	ilo_locname,
+	ilo_clientkey_location,
+	ilo_ilodatetime_start,
+	ilo_ilodatetime_end
 	FROM
-	ns_t_item_locations
+	t_item_locations
 	WHERE 
-	ns_ilo_ilodatetime_start <= current_timestamp AND 
-	(ns_ilo_ilodatetime_end >= current_timestamp OR ns_ilo_ilodatetime_end IS NULL)
+	ilo_ilodatetime_start <= current_timestamp AND 
+	(ilo_ilodatetime_end >= current_timestamp OR ilo_ilodatetime_end IS NULL)
 ;
 	
 -- currently in storage
-CREATE VIEW ns_v_current_items_in_storage AS SELECT
-	ns_ilo_inumkey,
-	ns_ilo_ialphakey,
-	ns_ilo_clientkey_item,
-	ns_ilo_locname,
-	ns_ilo_clientkey_location,
-	ns_ilo_ilodatetime_start,
-	ns_ilo_ilodatetime_end
+CREATE VIEW v_current_items_in_storage AS SELECT
+	ilo_inumkey,
+	ilo_ialphakey,
+	ilo_clientkey_item,
+	ilo_locname,
+	ilo_clientkey_location,
+	ilo_ilodatetime_start,
+	ilo_ilodatetime_end
 	FROM
-	ns_v_current_item_location
+	v_current_item_location
 	WHERE
-	ns_ilo_locname = 'Storage' OR ns_ilo_locname = 'storage'
+	ilo_locname = 'Storage' OR ilo_locname = 'storage'
 ;
 -- currently not in storage
-CREATE VIEW ns_v_current_items_not_in_storage AS SELECT
-	ns_ilo_inumkey,
-	ns_ilo_ialphakey,
-	ns_ilo_clientkey_item,
-	ns_ilo_locname,
-	ns_ilo_clientkey_location,
-	ns_ilo_ilodatetime_start,
-	ns_ilo_ilodatetime_end
+CREATE VIEW v_current_items_not_in_storage AS SELECT
+	ilo_inumkey,
+	ilo_ialphakey,
+	ilo_clientkey_item,
+	ilo_locname,
+	ilo_clientkey_location,
+	ilo_ilodatetime_start,
+	ilo_ilodatetime_end
 	FROM
-	ns_v_current_item_location
+	v_current_item_location
 	WHERE
-	ns_ilo_locname != 'Storage' AND
-	ns_ilo_locname != 'storage'
+	ilo_locname != 'Storage' AND
+	ilo_locname != 'storage'
 ;
 
 --current exhibitions
-CREATE VIEW ns_v_current_exhibitions AS SELECT 
-	ns_ex_ename,
-	ns_ex_showdate_start,
-	ns_ex_showdate_end,
-	ns_ex_edescription
+CREATE VIEW v_current_exhibitions AS SELECT 
+	ex_ename,
+	ex_showdate_start,
+	ex_showdate_end,
+	ex_edescription
 	FROM
-	ns_t_exhibitions
+	t_exhibitions
 	WHERE 
-	ns_ex_showdate_start <= current_timestamp AND 
-	ns_ex_showdate_end >= current_timestamp
+	ex_showdate_start <= current_timestamp AND 
+	ex_showdate_end >= current_timestamp
 ;
 	
 -- finished exhibitions
-CREATE VIEW ns_v_past_exhibitions AS SELECT 
-	ns_ex_ename,
-	ns_ex_showdate_start,
-	ns_ex_showdate_end,
-	ns_ex_edescription
+CREATE VIEW v_past_exhibitions AS SELECT 
+	ex_ename,
+	ex_showdate_start,
+	ex_showdate_end,
+	ex_edescription
 	FROM
-	ns_t_exhibitions
+	t_exhibitions
 	WHERE  
-	ns_ex_showdate_end < current_timestamp
+	ex_showdate_end < current_timestamp
 ;
 -- planned exhibitions
-CREATE VIEW ns_v_future_exhibitions AS SELECT 
-	ns_ex_ename,
-	ns_ex_showdate_start,
-	ns_ex_showdate_end,
-	ns_ex_edescription
+CREATE VIEW v_future_exhibitions AS SELECT 
+	ex_ename,
+	ex_showdate_start,
+	ex_showdate_end,
+	ex_edescription
 	FROM
-	ns_t_exhibitions
+	t_exhibitions
 	WHERE 
-	ns_ex_showdate_start > current_timestamp
+	ex_showdate_start > current_timestamp
 ;
 -- view used to debug the item locations table
-CREATE VIEW ns_v_problem AS SELECT
-	ns_ilo_ialphakey,
-	ns_ilo_inumkey,
-	count(ns_ilo_inumkey)
+CREATE VIEW v_problem AS SELECT
+	ilo_ialphakey,
+	ilo_inumkey,
+	count(ilo_inumkey)
 	FROM
-	ns_v_current_item_location
+	v_current_item_location
 	GROUP BY
-	ns_ilo_inumkey,
-	ns_ilo_ialphakey
+	ilo_inumkey,
+	ilo_ialphakey
 	HAVING
-	(Count(ns_ilo_inumkey) > 1)
+	(Count(ilo_inumkey) > 1)
 ;
 
 -- key, name, insurance of works in currently storage (also not in storage)
-CREATE VIEW ns_v_current_insurance_storage AS SELECT
-	ns_i_iname,
-	ns_i_inumkey, 
-	ns_i_ialphakey,
-	ns_i_clientkey,
-	ns_i_iinsurance
+CREATE VIEW v_current_insurance_storage AS SELECT
+	i_iname,
+	i_inumkey, 
+	i_ialphakey,
+	i_clientkey,
+	i_iinsurance
 	FROM 
-	ns_v_items,
-	ns_v_current_items_in_storage
+	v_items,
+	v_current_items_in_storage
 	WHERE 
-	ns_i_inumkey = ns_ilo_inumkey AND 
-	ns_i_ialphakey = ns_ilo_ialphakey AND 
-	ns_i_clientkey = ns_ilo_clientkey_item
+	i_inumkey = ilo_inumkey AND 
+	i_ialphakey = ilo_ialphakey AND 
+	i_clientkey = ilo_clientkey_item
 ;
 
 -- key, name, insurance of works currently not in storage
-CREATE VIEW ns_v_current_insurance_not_storage AS SELECT
-	ns_i_iname,
-	ns_i_inumkey, 
-	ns_i_ialphakey,
-	ns_i_clientkey,
-	ns_i_iinsurance
+CREATE VIEW v_current_insurance_not_storage AS SELECT
+	i_iname,
+	i_inumkey, 
+	i_ialphakey,
+	i_clientkey,
+	i_iinsurance
 	FROM 
-	ns_v_items,
-	ns_v_current_items_not_in_storage
+	v_items,
+	v_current_items_not_in_storage
 	WHERE 
-	ns_i_inumkey = ns_ilo_inumkey AND 
-	ns_i_ialphakey = ns_ilo_ialphakey AND 
-	ns_i_clientkey = ns_ilo_clientkey_item
+	i_inumkey = ilo_inumkey AND 
+	i_ialphakey = ilo_ialphakey AND 
+	i_clientkey = ilo_clientkey_item
 ;
 -- current number of items in all exhibitions
-CREATE VIEW ns_v_numitems_in_exhibitions AS SELECT
-	ns_exi_ename AS showname,
-	ns_exi_showdate_start AS showstart,
-	count(ns_exi_ename) AS numitems
+CREATE VIEW v_numitems_in_exhibitions AS SELECT
+	exi_ename AS showname,
+	exi_showdate_start AS showstart,
+	count(exi_ename) AS numitems
 	FROM
-	ns_t_exhibition_items
+	t_exhibition_items
 	GROUP BY
-	ns_exi_ename,
-	ns_exi_showdate_start
+	exi_ename,
+	exi_showdate_start
 ;
 
 -- name, desc, location, numworks of all exhititions (public_current, public_past, public_future)
-CREATE VIEW ns_v_public_data_exhibitions AS SELECT
-	ns_ex_ename,
-	ns_exl_locname,
+CREATE VIEW v_public_data_exhibitions AS SELECT
+	ex_ename,
+	ex_showdate_start,
+	exl_locname,
+	exl_clientkey,
 	numitems,
-	ns_ex_edescription
+	ex_edescription
 	FROM
-	ns_v_exhibitions,
-	ns_v_exhibition_locations,
-	ns_v_numitems_in_exhibitions
+	v_exhibitions,
+	v_exhibition_locations,
+	v_numitems_in_exhibitions
 	WHERE
-	ns_ex_ename = ns_exl_ename AND ns_ex_ename = showname AND
-	ns_ex_showdate_start = ns_exl_showdate_start AND ns_ex_showdate_start = showstart
-;
-
-CREATE VIEW ns_v_public_data_past_exhibitions AS SELECT
-	ns_ex_ename,
-	ns_exl_locname,
-	numitems,
-	ns_ex_edescription
-	FROM
-	ns_v_past_exhibitions,
-	ns_v_exhibition_locations,
-	ns_v_numitems_in_exhibitions
-	WHERE
-	ns_ex_ename = ns_exl_ename AND ns_ex_ename = showname AND
-	ns_ex_showdate_start = ns_exl_showdate_start AND ns_ex_showdate_start = showstart
-;
-
-CREATE VIEW ns_v_public_data_current_exhibitions AS SELECT
-	ns_ex_ename,
-	ns_exl_locname,
-	numitems,
-	ns_ex_edescription
-	FROM
-	ns_v_current_exhibitions,
-	ns_v_exhibition_locations,
-	ns_v_numitems_in_exhibitions
-	WHERE
-	ns_ex_ename = ns_exl_ename AND ns_ex_ename = showname AND
-	ns_ex_showdate_start = ns_exl_showdate_start AND ns_ex_showdate_start = showstart
-;
-
-CREATE VIEW ns_v_public_data_future_exhibitions AS SELECT
-	ns_ex_ename,
-	ns_exl_locname,
-	numitems,
-	ns_ex_edescription
-	FROM
-	ns_v_future_exhibitions,
-	ns_v_exhibition_locations,
-	ns_v_numitems_in_exhibitions
-	WHERE
-	ns_ex_ename = ns_exl_ename AND ns_ex_ename = showname AND
-	ns_ex_showdate_start = ns_exl_showdate_start AND ns_ex_showdate_start = showstart
+	ex_ename = exl_ename AND ex_ename = showname AND
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
 ;
 	
---public info on all works in the items table	
--- info public on items in exhibitions sorted by exhibition and name of the work (current, future, past)
--- listing of works SORTED by when they are available for use in a new exhibition and by classification ()
--- additional works that could be added to an exhibition just name of exhibition and number you could add (just make for all exhibitions)
---tsvector stuff?
--- current and future exhibitions, name, dates, max capacity, current num of works
--- query that lists locations a work is/was/will be in between two dates
--- all works found in an exhibition between two dates including, name of work, dates, 
--- all the exhibitions that use a location between two dates
--- all borrowed, purchased, sold, rented, etc items
--- items made out of X material
+CREATE VIEW v_public_data_past_exhibitions AS SELECT
+	ex_ename,
+	ex_showdate_start,
+	exl_locname,
+	exl_clientkey,
+	numitems,
+	ex_edescription
+	FROM
+	v_past_exhibitions,
+	v_exhibition_locations,
+	v_numitems_in_exhibitions
+	WHERE
+	ex_ename = exl_ename AND ex_ename = showname AND
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+;
 
-SELECT ns_ilo_ialphakey, ns_ilo_inumkey, count(ns_ilo_inumkey) FROM ns_v_current_item_location GROUP BY ns_ilo_inumkey, ns_ilo_ialphakey HAVING (Count(ns_ilo_inumkey) > 1);
+CREATE VIEW v_public_data_current_exhibitions AS SELECT
+	ex_ename,
+	ex_showdate_start,
+	exl_locname,
+	exl_clientkey,
+	numitems,
+	ex_edescription
+	FROM
+	v_current_exhibitions,
+	v_exhibition_locations,
+	v_numitems_in_exhibitions
+	WHERE
+	ex_ename = exl_ename AND ex_ename = showname AND
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+;
+
+CREATE VIEW v_public_data_future_exhibitions AS SELECT
+	ex_ename,
+	ex_showdate_start,
+	exl_locname,
+	exl_clientkey,
+	numitems,
+	ex_edescription
+	FROM
+	v_future_exhibitions,
+	v_exhibition_locations,
+	v_numitems_in_exhibitions
+	WHERE
+	ex_ename = exl_ename AND ex_ename = showname AND
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+;
+	
+--public info on all works in the items table
+CREATE VIEW v_public_data_items AS SELECT
+	i_inumkey,
+	i_ialphakey,
+	i_clientkey,
+	i_iname,
+	i_iorigin, 
+	i_iformat,
+	i_isubformat,
+	i_ischool,
+	i_isubject,
+	i_iacquisitiondate,
+	i_icreationyear,
+	i_idescription
+	FROM
+	v_items
+;
+
+-- info public on items in exhibitions sorted by exhibition and name of the work (current, future, past)
+CREATE VIEW v_public_data_items_in_exhibitions AS SELECT
+    exi_ename,
+	exi_showdate_start,
+	i_iname,
+	i_iorigin, 
+	i_iformat,
+	i_isubformat,
+	i_ischool,
+	i_isubject,
+	i_iacquisitiondate,
+	i_icreationyear,
+	i_idescription
+	FROM
+	v_exhibition_items,
+	v_public_data_items
+	WHERE
+	exi_ialphakey = i_ialphakey AND
+	exi_inumkey = i_inumkey AND 
+	exi_clientkey = i_clientkey
+	ORDER BY 
+	exi_ename,
+	exi_showdate_start,
+	i_iname
+;
+
+CREATE VIEW v_public_data_items_in_past_exhibitions AS SELECT
+    exi_ename,
+	exi_showdate_start,
+	i_iname,
+	i_iorigin, 
+	i_iformat,
+	i_isubformat,
+	i_ischool,
+	i_isubject,
+	i_iacquisitiondate,
+	i_icreationyear,
+	i_idescription
+	FROM 
+	v_public_data_items_in_exhibitions,
+	v_past_exhibitions
+	WHERE
+	exi_ename = ex_ename AND 
+	exi_showdate_start = ex_showdate_start
+;
+
+CREATE VIEW v_public_data_items_in_current_exhibitions AS SELECT
+    exi_ename,
+	exi_showdate_start,
+	i_iname,
+	i_iorigin, 
+	i_iformat,
+	i_isubformat,
+	i_ischool,
+	i_isubject,
+	i_iacquisitiondate,
+	i_icreationyear,
+	i_idescription
+	FROM 
+	v_public_data_items_in_exhibitions,
+	v_current_exhibitions
+	WHERE
+	exi_ename = ex_ename AND 
+	exi_showdate_start = ex_showdate_start
+;
+
+CREATE VIEW v_public_data_items_in_future_exhibitions AS SELECT
+    exi_ename,
+	exi_showdate_start,
+	i_iname,
+	i_iorigin, 
+	i_iformat,
+	i_isubformat,
+	i_ischool,
+	i_isubject,
+	i_iacquisitiondate,
+	i_icreationyear,
+	i_idescription
+	FROM 
+	v_public_data_items_in_exhibitions,
+	v_future_exhibitions
+	WHERE
+	exi_ename = ex_ename AND 
+	exi_showdate_start = ex_showdate_start
+;
+	
+-- listing of works SORTED by when they are available for use in a new exhibition and by classification ()
+CREATE VIEW v_item_availability AS SELECT
+	i_iname,
+	i_inumkey,
+	i_ialphakey,
+	i_clientkey,
+	ilo_ilodatetime_end
+	FROM
+	v_items,
+	v_current_items_not_in_storage
+	WHERE 
+	i_ialphakey = ilo_ialphakey AND
+	i_inumkey = ilo_inumkey AND 
+	i_clientkey = ilo_clientkey_item
+;
+
+	
+-- additional works that could be added to an exhibition just name of exhibition and number you could add (just make for all exhibitions)
+CREATE VIEW v_space_available_in_exhibitions AS SELECT
+	ex_ename,
+	ex_showdate_start,
+	exl_locname,
+	exl_clientkey,
+	numitems as current_numitems,
+	loc_numitems_max - numitems as space_available
+	FROM 
+	v_public_data_exhibitions,
+	v_locations
+	WHERE
+	exl_locname = loc_locname AND
+	exl_clientkey = loc_clientkey AND 
+	loc_numitems_max IS NOT NULL
+	ORDER BY 
+	ex_ename
+;
+
+-- current and future exhibitions, name, dates, max capacity, current num of works
+	--pretty much the same as v_space_available_in_exhibitions
+
+-- query that lists locations a work is/was/will be in between two dates
+	--some kind of dbvisualizer scripts
+-- all works found in an exhibition between two dates including, name of work, dates, 
+	--some kind of dbvisualizer scripts
+-- all the exhibitions that use a location between two dates
+	--some kind of dbvisualizer scripts
+
+-- all borrowed, purchased, sold, rented, etc items
+CREATE VIEW v_borrowed_item_info AS SELECT
+	it_inumkey,
+	it_ialphakey,
+	it_clientkey,
+	i_iname,
+	it_itdatetime_start,
+	it_itdatetime_end,
+	it_itdatetime_returnby
+	FROM 
+	v_item_transactions,
+	v_items
+	WHERE
+	it_ialphakey = i_ialphakey AND
+	it_inumkey = i_inumkey AND 
+	it_clientkey = i_clientkey AND 
+	it_ittype = 'Borrow'
+;
+
+CREATE VIEW v_Loaned_item_info AS SELECT
+	it_inumkey,
+	it_ialphakey,
+	it_clientkey,
+	i_iname,
+	it_itdatetime_start,
+	it_itdatetime_end,
+	it_itdatetime_returnby
+	FROM 
+	v_item_transactions,
+	v_items
+	WHERE
+	it_ialphakey = i_ialphakey AND
+	it_inumkey = i_inumkey AND 
+	it_clientkey = i_clientkey AND 
+	it_ittype = 'Loan'
+;
+
+CREATE VIEW v_purchased_item_info AS SELECT
+	it_inumkey,
+	it_ialphakey,
+	it_clientkey,
+	i_iname,
+	it_itdatetime_start
+	FROM 
+	v_item_transactions,
+	v_items
+	WHERE
+	it_ialphakey = i_ialphakey AND
+	it_inumkey = i_inumkey AND 
+	it_clientkey = i_clientkey AND 
+	it_ittype = 'Purchase'
+;
+
+CREATE VIEW v_sold_item_info AS SELECT
+	it_inumkey,
+	it_ialphakey,
+	it_clientkey,
+	i_iname,
+	it_itdatetime_start
+	FROM 
+	v_item_transactions,
+	v_items
+	WHERE
+	it_ialphakey = i_ialphakey AND
+	it_inumkey = i_inumkey AND 
+	it_clientkey = i_clientkey AND 
+	it_ittype = 'Sale'
+;
+	
+
