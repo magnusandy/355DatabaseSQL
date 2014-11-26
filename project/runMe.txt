@@ -155,6 +155,7 @@ DROP TABLE ns_t_exhibition_locations_temp CASCADE;
 --Run alteration file
 \i alter.sql
 \i rename.sql
+\i defaultCountryToCanada.sql
 \i views.sql
 
 /*
