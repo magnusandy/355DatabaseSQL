@@ -1,3 +1,4 @@
+\i dropfile.txt
 \i masterdatabase.sql
 \i mastertemps.sql
 \cd Evan
@@ -153,6 +154,7 @@ DROP TABLE ns_t_exhibition_items_temp CASCADE;
 DROP TABLE ns_t_exhibition_locations_temp CASCADE;
 --Run alteration file
 \i alter.sql
+\i views.sql
 /*
 DROP TABLE ns_t_clients CASCADE;
 DROP TABLE ns_t_items CASCADE;

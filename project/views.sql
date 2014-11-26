@@ -244,7 +244,7 @@ CREATE VIEW ns_v_future_exhibitions AS SELECT
 	WHERE 
 	ns_ex_showdate_start > current_timestamp
 ;
-
+-- view used to debug the item locations table
 CREATE VIEW ns_v_problem AS SELECT
 	ns_ilo_ialphakey,
 	ns_ilo_inumkey,
@@ -258,9 +258,107 @@ CREATE VIEW ns_v_problem AS SELECT
 	(Count(ns_ilo_inumkey) > 1)
 ;
 
-
 -- key, name, insurance of works in currently storage (also not in storage)
+CREATE VIEW ns_v_current_insurance_storage AS SELECT
+	ns_i_iname,
+	ns_i_inumkey, 
+	ns_i_ialphakey,
+	ns_i_clientkey,
+	ns_i_iinsurance
+	FROM 
+	ns_v_items,
+	ns_v_current_items_in_storage
+	WHERE 
+	ns_i_inumkey = ns_ilo_inumkey AND 
+	ns_i_ialphakey = ns_ilo_ialphakey AND 
+	ns_i_clientkey = ns_ilo_clientkey_item
+;
+
+-- key, name, insurance of works currently not in storage
+CREATE VIEW ns_v_current_insurance_not_storage AS SELECT
+	ns_i_iname,
+	ns_i_inumkey, 
+	ns_i_ialphakey,
+	ns_i_clientkey,
+	ns_i_iinsurance
+	FROM 
+	ns_v_items,
+	ns_v_current_items_not_in_storage
+	WHERE 
+	ns_i_inumkey = ns_ilo_inumkey AND 
+	ns_i_ialphakey = ns_ilo_ialphakey AND 
+	ns_i_clientkey = ns_ilo_clientkey_item
+;
+-- current number of items in all exhibitions
+CREATE VIEW ns_v_numitems_in_exhibitions AS SELECT
+	ns_exi_ename AS showname,
+	ns_exi_showdate_start AS showstart,
+	count(ns_exi_ename) AS numitems
+	FROM
+	ns_t_exhibition_items
+	GROUP BY
+	ns_exi_ename,
+	ns_exi_showdate_start
+;
+
 -- name, desc, location, numworks of all exhititions (public_current, public_past, public_future)
+CREATE VIEW ns_v_public_data_exhibitions AS SELECT
+	ns_ex_ename,
+	ns_exl_locname,
+	numitems,
+	ns_ex_edescription
+	FROM
+	ns_v_exhibitions,
+	ns_v_exhibition_locations,
+	ns_v_numitems_in_exhibitions
+	WHERE
+	ns_ex_ename = ns_exl_ename AND ns_ex_ename = showname AND
+	ns_ex_showdate_start = ns_exl_showdate_start AND ns_ex_showdate_start = showstart
+;
+
+CREATE VIEW ns_v_public_data_past_exhibitions AS SELECT
+	ns_ex_ename,
+	ns_exl_locname,
+	numitems,
+	ns_ex_edescription
+	FROM
+	ns_v_past_exhibitions,
+	ns_v_exhibition_locations,
+	ns_v_numitems_in_exhibitions
+	WHERE
+	ns_ex_ename = ns_exl_ename AND ns_ex_ename = showname AND
+	ns_ex_showdate_start = ns_exl_showdate_start AND ns_ex_showdate_start = showstart
+;
+
+CREATE VIEW ns_v_public_data_current_exhibitions AS SELECT
+	ns_ex_ename,
+	ns_exl_locname,
+	numitems,
+	ns_ex_edescription
+	FROM
+	ns_v_current_exhibitions,
+	ns_v_exhibition_locations,
+	ns_v_numitems_in_exhibitions
+	WHERE
+	ns_ex_ename = ns_exl_ename AND ns_ex_ename = showname AND
+	ns_ex_showdate_start = ns_exl_showdate_start AND ns_ex_showdate_start = showstart
+;
+
+CREATE VIEW ns_v_public_data_future_exhibitions AS SELECT
+	ns_ex_ename,
+	ns_exl_locname,
+	numitems,
+	ns_ex_edescription
+	FROM
+	ns_v_future_exhibitions,
+	ns_v_exhibition_locations,
+	ns_v_numitems_in_exhibitions
+	WHERE
+	ns_ex_ename = ns_exl_ename AND ns_ex_ename = showname AND
+	ns_ex_showdate_start = ns_exl_showdate_start AND ns_ex_showdate_start = showstart
+;
+	
+--public info on all works in the items table	
 -- info public on items in exhibitions sorted by exhibition and name of the work (current, future, past)
 -- listing of works SORTED by when they are available for use in a new exhibition and by classification ()
 -- additional works that could be added to an exhibition just name of exhibition and number you could add (just make for all exhibitions)
