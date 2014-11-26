@@ -1,0 +1,13 @@
+Storage	Evan	Internal
+Lobby	Evan	Internal
+Gallery D	Evan	Internal
+Gallery C	Evan	Internal
+Gallery A	Evan	Internal
+Gallery B	Evan	Internal
+Wynyard	Evan	External
+Yorkton	Evan	External
+Humbolt	Evan	External
+Uranium City	Evan	External
+Regina	Evan	External
+On Loan	Evan	External
+Travel	Evan	External

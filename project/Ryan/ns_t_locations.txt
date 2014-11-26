@@ -1,0 +1,15 @@
+Gallery B	Ryan	Internal
+Gallery C	Ryan	Internal
+Gallery A	Ryan	Internal
+Storage	Ryan	Internal
+Lobby	Ryan	Internal
+Large Gallery	Ryan	Internal
+Possessed By Lender	Ryan	Internal
+Sold	Ryan	Internal
+On-Loan	Ryan	Internal
+In Transit	Ryan	External
+Credit Union Center	Ryan	External
+Rosewood Park	Ryan	External
+Martensville Aquatic Center	Ryan	External
+Agrium Vanscoy Potash Operations	Ryan	External
+Preeceville Park	Ryan	External

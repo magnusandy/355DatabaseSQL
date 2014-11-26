@@ -1,0 +1,59 @@
+1925108	FebAntoninAntonin	Ryan	Bob The Builder	Purchase	2014-10-28 22:07:23.99923	\N	\N	350000.00
+1984881	FebPableMetamorphoses	Ryan	Bob The Builder	Purchase	2014-10-28 22:07:23.99923	\N	\N	35000.00
+195816	FebFangMask	Ryan	Bob The Builder	Purchase	2014-10-28 22:07:23.99923	\N	\N	250000.00
+1965176	MayMochiCardinal	Ryan	Bob The Builder	Purchase	2014-10-28 22:07:23.99923	\N	\N	125000.00
+200453	JanRollinsTemptation	Ryan	Bob The Builder	Purchase	2014-10-28 22:07:23.99923	\N	\N	650000.00
+2005321	DecEjaghanCrest	Ryan	Bob The Builder	Purchase	2014-10-28 22:07:23.99923	\N	\N	25000.00
+20061	AprMendeHelmet	Ryan	Bob The Builder	Purchase	2014-10-28 22:07:23.99923	\N	\N	375000.00
+1933169	AugUnkownEnamel	Ryan	Rick Savage	Purchase	2014-10-28 22:07:23.99923	\N	\N	3500.00
+197051	MarSongyeNkisi	Ryan	Rick Savage	Purchase	2014-10-28 22:07:23.99923	\N	\N	1250000.00
+200352	AprDineColumn	Ryan	Rick Savage	Purchase	2014-10-28 22:07:23.99923	\N	\N	65000.00
+2009385	MarLibbeyCooler	Ryan	Rick Savage	Purchase	2014-10-28 22:07:23.99923	\N	\N	80000.00
+19739	MaySenufoHeaddress	Ryan	Rick Savage	Purchase	2014-10-28 22:07:23.99923	\N	\N	5500.00
+201212	NovRinggoldBen	Ryan	Rick Savage	Purchase	2014-10-28 22:07:23.99923	\N	\N	97500.00
+1906227	MayUnkownFragment	Ryan	Rick Savage	Purchase	2014-10-28 22:07:23.99923	\N	\N	125555.00
+1989116	FebBosmanChicago	Ryan	Elmo	Sale	2014-10-28 22:07:23.99923	\N	\N	75000.00
+2005290	OctWileySaint	Ryan	Elmo	Sale	2014-10-28 22:07:23.99923	\N	\N	500000.00
+200648	JulRosenPasswords	Ryan	Spider Man	Sale	2014-10-28 22:07:23.99923	\N	\N	25000.00
+19473	FebUnkownNecklace	Ryan	Elmo	Borrow	1998-02-11 00:00:00	\N	\N	0
+19705	OctHofmannNight	Ryan	Elmo	Borrow	1992-10-17 00:00:00	\N	\N	0
+19757	JunEddyJewlery	Ryan	Elmo	Borrow	2007-06-22 00:00:00	\N	\N	0
+19761	JunLaliqueChalice	Ryan	Elmo	Borrow	2005-06-15 00:00:00	\N	\N	0
+19991	DecSmithMose	Ryan	Elmo	Borrow	1999-12-12 00:00:00	\N	\N	0
+19994	AprFouquetBrooch	Ryan	Elmo	Borrow	2010-04-18 00:00:00	\N	\N	0
+195298	FebBazoitesScorpion	Ryan	Spider Man	Borrow	1992-02-07 00:00:00	\N	\N	0
+20001	FebMunozBrok	Ryan	Elmo	Borrow	2000-02-10 00:00:00	\N	\N	0
+20004	JanYoungbloodGorrila	Ryan	Elmo	Borrow	2000-01-06 00:00:00	\N	\N	0
+190746	AugVivierMedal	Ryan	Bugs	Borrow	2001-08-15 00:00:00	\N	\N	0
+190747	JulNiniMedal	Ryan	Bugs	Borrow	1990-07-02 00:00:00	\N	\N	0
+190749	JulCaunoisMedal	Ryan	Bugs	Borrow	1990-07-03 00:00:00	\N	\N	0
+192333	JunUnkownUnguent	Ryan	Bugs	Borrow	2012-06-10 00:00:00	\N	\N	0
+192554	JanBoehmJames	Ryan	Bugs	Borrow	2000-01-12 00:00:00	\N	\N	0
+193549	SepHopperTwo	Ryan	Bugs	Borrow	1995-09-15 00:00:00	\N	\N	0
+193992	JulHashWom	Ryan	Spider Man	Borrow	1990-07-09 00:00:00	\N	\N	0
+194325	MarWyethHunter	Ryan	Spider Man	Borrow	1995-03-21 00:00:00	\N	\N	0
+195663	JanAltenstetterCovered	Ryan	Spider Man	Borrow	2002-01-05 00:00:00	\N	\N	0
+196026	NovMorrisThe	Ryan	Spider Man	Borrow	1992-11-25 00:00:00	\N	\N	0
+196455	NovTemneInititation	Ryan	Spider Man	Borrow	1998-11-15 00:00:00	\N	\N	0
+200125	SepMcKiePolar	Ryan	Spider Man	Borrow	2001-09-14 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+197852	OctChantreyGeorge	Ryan	Spider Man	Borrow	1993-10-20 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+199423	MarAkanKuduo	Ryan	Spider Man	Borrow	1994-03-04 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+197731	JanPorterO'Hara	Ryan	Spider Man	Borrow	1991-01-01 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+197744	MayBolotowskyEllipse	Ryan	Spider Man	Borrow	2005-05-14 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+196456	MayChauncyWilliam	Ryan	Spider Man	Borrow	1991-05-15 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+199511	JulCattaneoPortrait	Ryan	Spider Man	Borrow	1995-07-21 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+200044	MarJapaneseNetsuke	Ryan	Spider Man	Borrow	2010-03-04 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+198287	AprPearlsteinSphynx	Ryan	Spider Man	Borrow	2001-04-22 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+199422	MarKieferAthanor	Ryan	Spider Man	Borrow	1994-03-15 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+200052	OctGardnerGardner	Ryan	Spider Man	Borrow	1997-10-27 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+199613	OctPaleyContinuum	Ryan	Spider Man	Borrow	1996-10-09 00:00:00	2014-10-25 00:00:00	2024-10-25 00:00:00	0
+192115	AprUnkownStele	Ryan	The Institution Of Interesting Statues	Loan	2014-11-02 00:00:00	\N	2015-02-25 00:00:00	0
+196876	OctCoxPagoda	Ryan	The Institution Of Interesting Statues	Loan	2015-03-18 00:00:00	\N	2015-05-25 00:00:00	0
+200346	JunRollinsBy	Ryan	The Institution Of Interesting Statues	Loan	2014-11-01 00:00:00	\N	2015-02-25 00:00:00	0
+200646	AprDaceyLyra	Ryan	The Institution Of Interesting Statues	Loan	20154-12-15 00:00:00	\N	2015-04-25 00:00:00	0
+1982121	JulPearlsteinTwo	Ryan	The Nice Art Museum	Loan	2015-03-18 00:00:00	\N	2015-05-25 00:00:00	0
+2007100	AugPaschkeParkway	Ryan	The Nice Art Museum	Loan	2015-01-18 00:00:00	\N	2015-03-25 00:00:00	0
+200719	JulRemingtonCanea	Ryan	The Nice Art Museum	Loan	2014-12-12 00:00:00	\N	2015-04-05 00:00:00	0
+197634	SepEstesHelens	Ryan	The Nice Art Museum	Loan	2014-12-12 00:00:00	\N	2015-04-05 00:00:00	0
+19881	OctJenneySwimmer	Ryan	The Institution Of Interesting Statues	Loan	2014-12-12 00:00:00	\N	2015-02-12 00:00:00	0
+19995	JanMattaGay	Ryan	The Institution Of Interesting Statues	Loan	2014-11-12 00:00:00	\N	2015-04-12 00:00:00	0

@@ -1,0 +1,14 @@
+Storage	Ken	Lobby	Ken
+Lobby	Ken	Storage	Ken
+Lobby	Ken	Gallery A	Ken
+Lobby	Ken	Gallery B	Ken
+Gallery A	Ken	Lobby	Ken
+Gallery A	Ken	Gallery B	Ken
+Gallery A	Ken	Gallery C	Ken
+Gallery B	Ken	Lobby	Ken
+Gallery B	Ken	Gallery A	Ken
+Gallery B	Ken	Gallery C	Ken
+Gallery C	Ken	Gallery B	Ken
+Gallery C	Ken	Gallery A	Ken
+Gallery B	Ken	Gallery D	Ken
+Gallery D	Ken	Gallery B	Ken

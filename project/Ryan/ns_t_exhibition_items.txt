@@ -1,0 +1,151 @@
+1965176	MayMochiCardinal	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+1913232	NovBronzinoCosimo	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+197019	DecBangwaNight	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+196455	NovTemneInititation	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+197354	JuneBauleYauleRainbow	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+2005321	DecEjaghanCrest	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+195816	FebFangMask	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+20061	AprMendeHelmet	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+1912812	FebNyuodoSword	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+19739	MaySenufoHeaddress	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+197051	MarSongyeNkisi	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+195298	FebBazoitesScorpion	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+194325	MarWyethHunter	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+2008149	AugKanePink	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+1953129	AprUnkownLeaf	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+197772	MayBaulePendant	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+20035	MarBurtonPair	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+200716	SepLinoDinosaur	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+199629	AugBesmalterBas	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+1969301	SepAugusteCasket	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+196876	OctCoxPagoda	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+197831	NovFerrariOne	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+200456	SepStanczakThree	Ryan	African Culture	2014-11-01	2014-11-01 00:00:00	2015-04-07 00:00:00
+200714	JulPreaultGrande	Ryan	African Culture	2014-11-01	2014-11-01 00:00:00	2015-04-07 00:00:00
+1913232	NovBronzinoCosimo	Ryan	African Culture	2014-11-01	2014-11-01 00:00:00	2015-04-07 00:00:00
+1920542	JulWolgemutLiber	Ryan	African Culture	2014-11-01	2014-11-01 00:00:00	2015-04-07 00:00:00
+2005292	JanSchnabelPortrait	Ryan	African Culture	2014-11-01	2014-11-01 00:00:00	2015-04-07 00:00:00
+197313	JulKubaHeaddress	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+19731	JunKotaReliquary	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+1948139	FebJapaneseNetsuke	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+194717	DecVoragineSaint	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+20128	JunMihoyaFive	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+190749	JulCaunoisMedal	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+1950141	MayGyokujuNetsuke	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+1948116	JulMeishuOjime	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+1950171	JanMasanaoNetsuke	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+1948154	NovMasakazuNetsuke	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+195663	JanAltenstetterCovered	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+1933169	AugUnkownEnamel	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-12-21 00:00:00
+1938123	JanRobbiaMadonna	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-09-09 00:00:00
+1914116	DecJozefShepherd	Ryan	Trinket Mania	2013-06-05	2013-06-05 00:00:00	2013-10-21 00:00:00
+197313	JulKubaHeaddress	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+19731	JunKotaReliquary	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+1948139	FebJapaneseNetsuke	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+194717	DecVoragineSaint	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+1938123	JanRobbiaMadonna	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+20128	JunMihoyaFive	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+1914116	DecJozefShepherd	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+190749	JulCaunoisMedal	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+1950141	MayGyokujuNetsuke	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+1948116	JulMeishuOjime	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+1950171	JanMasanaoNetsuke	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+1948154	NovMasakazuNetsuke	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+195663	JanAltenstetterCovered	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+1933169	AugUnkownEnamel	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+2009384	MarLibbeyHobstar	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+2009385	MarLibbeyCooler	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+2009386	MarLibbeyDouble	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+2009388	MarLibbeyTall	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+19761	JunLaliqueChalice	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+2006147	MayDianeLady	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+1925109	JulSargentPrincess	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+1987218	NovCloseAlex	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+200453	JanRollinsTemptation	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+2005292	JanSchnabelPortrait	Ryan	Trinket Mania	2014-12-15	2014-12-15 00:00:00	2015-03-15 00:00:00
+2008149	AugKanePink	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+1953129	AprUnkownLeaf	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+197772	MayBaulePendant	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+197313	JulKubaHeaddress	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+19731	JunKotaReliquary	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+1948139	FebJapaneseNetsuke	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+194717	DecVoragineSaint	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+1938123	JanRobbiaMadonna	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+20128	JunMihoyaFive	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+1914116	DecJozefShepherd	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+1923315	JanLendenstreichWings	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+1987225	AugPaladinoUntitled	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+200747	DecTookerMeadow	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+192115	AprUnkownStele	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+1967158	JunRusconiSaint	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+19764	SepUnkownShrine	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+19894	OctUnkownSeated	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+1928203	NovUnkownChrist	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+2006122	DecUnkownBuddhist	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+1948172	JanSokokuNetsuke	Ryan	Religious Artifacts	2014-07-20	2014-07-20 00:00:00	2014-12-10 00:00:00
+197354	JuneBauleYauleRainbow	Ryan	African Culture	2014-08-15	2014-08-15 00:00:00	2014-10-05 00:00:00
+2005321	DecEjaghanCrest	Ryan	African Culture	2014-08-15	2014-08-15 00:00:00	2014-10-05 00:00:00
+195816	FebFangMask	Ryan	African Culture	2014-08-15	2014-08-15 00:00:00	2014-10-05 00:00:00
+200812	JunChokweScepter	Ryan	African Culture	2014-08-15	2014-08-15 00:00:00	2014-10-05 00:00:00
+20061	AprMendeHelmet	Ryan	African Culture	2014-08-15	2014-08-15 00:00:00	2014-10-05 00:00:00
+197051	MarSongyeNkisi	Ryan	African Culture	2014-08-15	2014-08-15 00:00:00	2014-10-05 00:00:00
+19739	MaySenufoHeaddress	Ryan	African Culture	2014-08-15	2014-08-15 00:00:00	2014-10-05 00:00:00
+197019	DecBangwaNight	Ryan	African Culture	2014-08-15	2014-08-15 00:00:00	2014-10-05 00:00:00
+20035	MarBurtonPair	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+200716	SepLinoDinosaur	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+199629	AugBesmalterBas	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+1969301	SepAugusteCasket	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+196876	OctCoxPagoda	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+197831	NovFerrariOne	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+197117	DecNicolasSurtout	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+1906227	MayUnkownFragment	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+190746	AugVivierMedal	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+190747	JulNiniMedal	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+1980133	AprDesjardinsEquestrian	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+1983113	NovCornellJCW	Ryan	Political Novelty	2014-10-10	2014-10-10 00:00:00	2015-04-10 00:00:00
+197117	DecNicolasSurtout	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+200466	MaySpencerPheonix	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+19473	FebUnkownNecklace	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+19994	AprFouquetBrooch	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+1984881	FebPableMetamorphoses	Ryan	Masks and Jewlery	2015-01-26	2015-01-26 00:00:00	2015-05-26 00:00:00
+200714	JulPreaultGrande	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+19705	OctHofmannNight	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+19757	JunEddyJewlery	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+19991	DecSmithMose	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+20001	FebMunozBrok	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+20004	JanYoungbloodGorrila	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+192333	JunUnkownUnguent	Ryan	Fabulous Furniture	2014-09-15	2014-09-15 00:00:00	2015-01-21 00:00:00
+200125	SepMcKiePolar	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+19991	DecSmithMose	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+20001	FebMunozBrok	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+20004	JanYoungbloodGorrila	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+192333	JunUnkownUnguent	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+192554	JanBoehmJames	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+197852	OctChantreyGeorge	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+196456	MayChauncyWilliam	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+199511	JulCattaneoPortrait	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+199613	OctPaleyContinuum	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+1928203	NovUnkownChrist	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+2008149	AugKanePink	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+1938123	JanRobbiaMadonna	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+1967158	JunRusconiSaint	Ryan	Statues Galore!	2013-09-09	2013-09-09 00:00:00	2013-11-03 00:00:00
+19705	OctHofmannNight	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+19757	JunEddyJewlery	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+195298	FebBazoitesScorpion	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+193549	SepHopperTwo	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+193992	JulHashWom	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+194325	MarWyethHunter	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+197731	JanPorterO'Hara	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+197744	MayBolotowskyEllipse	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+198287	AprPearlsteinSphynx	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+199422	MarKieferAthanor	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+200052	OctGardnerGardner	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+1925109	JulSargentPrincess	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+200456	SepStanczakThree	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+1983113	NovCornellJCW	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+200747	DecTookerMeadow	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+1913232	NovBronzinoCosimo	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+1923315	JanLendenstreichWings	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+1914116	DecJozefShepherd	Ryan	Pretty Paintings	2013-10-21	2013-10-21 00:00:00	2014-01-02 00:00:00
+197285	DecEvergoodThe	Ryan	African Culture	2014-11-01	2014-11-01 00:00:00	2015-04-07 00:00:00
+197633	NovRauchenbergRound	Ryan	African Culture	2014-11-01	2014-11-01 00:00:00	2015-04-07 00:00:00

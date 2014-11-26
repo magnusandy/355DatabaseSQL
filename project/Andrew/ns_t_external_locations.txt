@@ -1,0 +1,5 @@
+Luseland	Andrew	Andrew Magnus	Alexander Magnus	2014-11-20	2014-12-17	288695	342	\N	Grand Ave	Luseland	Canada	SK	\N
+Saskatoon	Andrew	Valery Weston	Randy Degle	2014-12-17	2015-01-13	288695	3463	\N	Broadway Road West	Saskatoon	Canada	SK	\N
+Regina	Andrew	Nikolas Cag	Chad R	2015-01-13	2015-02-09	288695	976	\N	rustin street 43 house north	Regina	Canada	SK	\N
+Climax	Andrew	Samuel Vimes	Bradly Copp	2015-02-09	2015-03-08	288695	777	\N	valey drive	Climax	Canada	SK	\N
+Kindersley	Andrew	Harry Christian	Jim Slim	2015-03-08	2015-04-08	288695	46	\N	doge road northface drive	Kindersley	Canada	SK	\N

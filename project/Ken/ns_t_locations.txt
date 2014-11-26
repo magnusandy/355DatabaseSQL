@@ -1,0 +1,11 @@
+Storage	Ken	Internal
+Lobby	Ken	Internal
+Gallery A	Ken	Internal
+Gallery B	Ken	Internal
+Gallery C	Ken	Internal
+Gallery D	Ken	Internal
+Saskatoon	Ken	Internal
+Regina	Ken	Internal
+PA	Ken	Internal
+Moose Jaw	Ken	Internal
+Gravelbourg	Ken	Internal

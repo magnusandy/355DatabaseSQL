@@ -1,0 +1,6 @@
+Storage	Ken	0	600	15	400	500	\N
+Lobby	Ken	3	3	20	100	15	\N
+Gallery A	Ken	7	14	25	50	185	\N
+Gallery B	Ken	7	14	25	50	185	\N
+Gallery C	Ken	14	24	30	100	300	\N
+Gallery D	Ken	15	25	30	150	300	\N

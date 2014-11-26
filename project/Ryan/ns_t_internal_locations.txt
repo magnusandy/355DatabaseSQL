@@ -1,0 +1,6 @@
+Gallery B	Ryan	7	14	50	60	45	2015-05-26
+Gallery A	Ryan	7	14	50	60	45	2015-04-10
+Gallery C	Ryan	14	24	50	120	50	2015-03-15
+Storage	Ryan	0	600	60	75	140	2014-10-14
+Lobby	Ryan	3	3	35	120	35	2014-10-14
+Large Gallery	Ryan	15	25	80	140	75	2014-12-15

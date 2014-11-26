@@ -1,0 +1,12 @@
+Storage	Andrew	Internal
+Lobby	Andrew	Internal
+GalleryA	Andrew	Internal
+GalleryB	Andrew	Internal
+GalleryC	Andrew	Internal
+GalleryD	Andrew	Internal
+On Loan	Andrew	External
+Luseland	Andrew	External
+Saskatoon	Andrew	External
+Regina	Andrew	External
+Climax	Andrew	External
+Kindersley	Andrew	External

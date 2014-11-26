@@ -1,0 +1,4 @@
+Credit Union Center	Ryan	Leeroy Jenkens	Bob Sagget	2014-10-28	2014-11-30	23050000.00	3515	Credit Union Center	Thatcher Avenue	\N	Canada	Saskatchewan	\N
+Preeceville Park	Ryan	Darryl Wood	Jessica Sharpe	2014-10-28	2015-03-30	2307500.00	130	Preeceville Park	1st Ave	\N	Canada	Saskatchewan	\N
+Agrium Vanscoy Potash Operations	Ryan	Logan La Forge	Jacob Van Breugel	2014-10-28	2015-02-28	23120050.00	127	Agrium Vanscoy Potash Operations	Salt Road	\N	Canada	Saskatchewan	\N
+Rosewood Park	Ryan	Calvin Worth	Barry Shankov	2014-10-28	2014-12-30	2364755.00	100	Rosewood Park	Main St	\N	Canada	Saskatchewan	\N

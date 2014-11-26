@@ -1,0 +1,14 @@
+Storage	Ryan	Lobby	Ryan
+Gallery A	Ryan	Gallery B	Ryan
+Gallery A	Ryan	Gallery C	Ryan
+Gallery A	Ryan	Lobby	Ryan
+Gallery B	Ryan	Gallery A	Ryan
+Gallery B	Ryan	Lobby	Ryan
+Gallery B	Ryan	Gallery C	Ryan
+Gallery C	Ryan	Gallery A	Ryan
+Gallery C	Ryan	Gallery B	Ryan
+Lobby	Ryan	Storage	Ryan
+Lobby	Ryan	Gallery A	Ryan
+Lobby	Ryan	Gallery B	Ryan
+Large Gallery	Ryan	Gallery B	Ryan
+Gallery B	Ryan	Large Gallery	Ryan

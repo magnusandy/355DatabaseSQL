@@ -1,0 +1,9 @@
+Storage	Evan	Lobby	Evan
+Lobby	Evan	Gallery A	Evan
+Lobby	Evan	Gallery B	Evan
+Gallery A	Evan	Gallery B	Evan
+Gallery A	Evan	Gallery C	Evan
+Gallery B	Evan	Gallery A	Evan
+Gallery B	Evan	Gallery C	Evan
+Gallery D	Evan	Gallery B	Evan
+Gallery B	Evan	Gallery D	Evan

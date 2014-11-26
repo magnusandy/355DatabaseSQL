@@ -1,0 +1,23 @@
+Many Things Mediterranean	2014-11-20	Luseland	Andrew	2014-11-20	2014-12-17
+Many Things Mediterranean	2014-11-20	Saskatoon	Andrew	2014-12-17	2015-01-13
+Many Things Mediterranean	2014-11-20	Regina	Andrew	2015-01-13	2015-02-09
+Many Things Mediterranean	2014-11-20	Climax	Andrew	2015-02-09	2015-03-08
+Many Things Mediterranean	2014-11-20	Kindersley	Andrew	2015-03-08	2015-04-08
+American Decor	2014-07-15	GalleryB	Andrew	2014-07-15	2014-12-15
+Many Things Mediterranean	2014-08-15	GalleryC	Andrew	2014-08-15	2014-11-15
+Serious Ceramics	2014-09-15	GalleryA	Andrew	2014-09-15	2015-02-15
+Ring the Dinner Bell	2014-12-20	GalleryB	Andrew	2014-12-20	2015-06-18
+Don't Sit Down	2015-02-20	GalleryA	Andrew	2015-02-20	2015-06-20
+Not Getting Younger	2014-11-20	GalleryC	Andrew	2014-11-20	2015-02-18
+Don't Sit Down	2012-06-17	GalleryA	Andrew	2012-06-17	2013-01-17
+Ring the Dinner Bell	2012-06-17	GalleryB	Andrew	2012-06-17	2013-07-17
+Rusting Jimmies	2012-06-17	GalleryC	Andrew	2012-06-17	2012-11-17
+Closed for changing exhibitions	0001-01-01	GalleryB	Andrew	2014-07-10	2014-07-15
+Closed for changing exhibitions	0001-01-01	GalleryC	Andrew	2014-08-10	2014-08-15
+Closed for changing exhibitions	0001-01-01	GalleryA	Andrew	2014-09-10	2014-09-15
+Closed for changing exhibitions	0001-01-01	GalleryB	Andrew	2014-12-15	2014-12-20
+Closed for changing exhibitions	0001-01-01	GalleryA	Andrew	2015-02-15	2015-02-20
+Closed for changing exhibitions	0001-01-01	GalleryC	Andrew	2014-11-15	2014-11-20
+Closed for changing exhibitions	0001-01-01	GalleryA	Andrew	2012-06-12	2012-06-17
+Closed for changing exhibitions	0001-01-01	GalleryB	Andrew	2012-06-12	2012-06-17
+Closed for changing exhibitions	0001-01-01	GalleryC	Andrew	2012-06-12	2012-06-17
