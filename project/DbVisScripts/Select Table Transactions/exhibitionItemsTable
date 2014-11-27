@@ -1,0 +1,10 @@
+ SELECT
+    exi_inumkey,
+    exi_ialphakey,
+    exi_clientkey,
+    exi_ename,
+    exi_showdate_start,
+    exi_exidate_start,
+    exi_exidate_end
+FROM
+    public.v_exhibition_items

@@ -11,7 +11,10 @@ CREATE VIEW v_clients AS SELECT
 	cl_country,
 	cl_region,
 	cl_postalcode
-	FROM t_clients
+	FROM
+	t_clients
+	ORDER BY 
+	cl_clname
 ;
 
 
@@ -32,6 +35,9 @@ CREATE VIEW v_items AS SELECT
 	i_idescription,
 	i_itsvector
 	FROM t_items
+	ORDER BY
+	i_clientkey,
+	i_iname
 ;
 
 -- ITEM CREATORS
@@ -41,19 +47,28 @@ CREATE VIEW v_item_creators AS SELECT
 	cr_clientkey,
 	cr_crname
 	FROM t_item_creators
+	ORDER BY 
+	cr_clientkey
 ;
 
 --MATERIALS
 CREATE VIEW v_materials AS SELECT 
 	mat_matname
-	FROM t_materials
+	FROM
+	t_materials
+	ORDER BY 
+	mat_matname
 ;
 
 --SUB COMPONENTS
 CREATE VIEW v_materials_subcomponents AS SELECT 
 	matsub_matname,
 	matsub_subcomponent
-	FROM t_materials_subcomponents
+	FROM
+	t_materials_subcomponents
+	ORDER BY
+	matsub_matname,
+	matsub_subcomponent	
 ;
 
 --ITEM MATERIALS
@@ -63,6 +78,8 @@ CREATE VIEW v_item_materials AS SELECT
 	imat_clientkey,
 	imat_matname
 	FROM t_item_materials
+	ORDER BY
+	imat_matname
 ;
 
 --ITEM TRANSACTIONS
@@ -77,6 +94,9 @@ CREATE VIEW v_item_transactions AS SELECT
 	it_itdatetime_returnby,
 	it_itgross
 	FROM t_item_transactions
+	ORDER BY 
+	it_clientkey,
+	it_itdatetime_start
 ;
 
 --LOCATIONS
@@ -93,7 +113,10 @@ CREATE VIEW v_locations AS SELECT
 	loc_elocdate_start,
 	loc_elocdate_end,
 	loc_iinsurance_total
-	FROM t_locations;
+	FROM t_locations
+	ORDER BY 
+	loc_clientkey,
+	loc_locname
 ;
 
 --ITEM LOCATIONS
@@ -106,6 +129,9 @@ CREATE VIEW v_item_locations AS SELECT
 	ilo_ilodatetime_start,
 	ilo_ilodatetime_end
 	FROM t_item_locations
+	ORDER BY
+	ilo_clientkey_item,
+	ilo_locname
 ;
 
 
@@ -125,6 +151,9 @@ CREATE VIEW v_exhibitions AS SELECT
 	ex_showdate_end,
 	ex_edescription
 	FROM t_exhibitions
+	ORDER BY
+	ex_ename,
+	ex_showdate_start
 ;
 
 
@@ -138,6 +167,9 @@ CREATE VIEW v_exhibition_items AS SELECT
 	exi_exidate_start,
 	exi_exidate_end
 	FROM t_exhibition_items
+	ORDER BY
+	exi_ename,
+	exi_showdate_start
 ;
 
 --EXHIBITION LOCATIONS
@@ -150,6 +182,9 @@ CREATE VIEW v_exhibition_locations AS SELECT
 	exl_exldate_end,
 	exl_security
 	FROM t_exhibition_locations
+	ORDER BY
+	exl_ename,
+	exl_showdate_start
 ;
 
 -- ITEM COLORS
@@ -159,6 +194,8 @@ CREATE VIEW v_item_colors AS SELECT
 	icol_clientkey,
 	icol_icolor
 	FROM t_item_colors
+	ORDER BY 
+	icol_icolor
 ;
 
 -- VIEW CREATION FROM ASSIGNMENTS AND OTHER USEFUL VIEWS
@@ -177,6 +214,9 @@ CREATE VIEW v_current_item_location AS SELECT
 	WHERE 
 	ilo_ilodatetime_start <= current_timestamp AND 
 	(ilo_ilodatetime_end >= current_timestamp OR ilo_ilodatetime_end IS NULL)
+	ORDER BY 
+	ilo_clientkey_item,
+	ilo_ilodatetime_start
 ;
 	
 -- currently in storage
@@ -192,6 +232,9 @@ CREATE VIEW v_current_items_in_storage AS SELECT
 	v_current_item_location
 	WHERE
 	ilo_locname = 'Storage' OR ilo_locname = 'storage'
+	ORDER BY 
+	ilo_clientkey_item,
+	ilo_ilodatetime_start
 ;
 -- currently not in storage
 CREATE VIEW v_current_items_not_in_storage AS SELECT
@@ -207,6 +250,9 @@ CREATE VIEW v_current_items_not_in_storage AS SELECT
 	WHERE
 	ilo_locname != 'Storage' AND
 	ilo_locname != 'storage'
+	ORDER BY 
+	ilo_clientkey_item,
+	ilo_ilodatetime_start
 ;
 
 --current exhibitions
@@ -220,6 +266,9 @@ CREATE VIEW v_current_exhibitions AS SELECT
 	WHERE 
 	ex_showdate_start <= current_timestamp AND 
 	ex_showdate_end >= current_timestamp
+	ORDER BY 
+	ex_ename,
+	ex_showdate_start
 ;
 	
 -- finished exhibitions
@@ -232,6 +281,9 @@ CREATE VIEW v_past_exhibitions AS SELECT
 	t_exhibitions
 	WHERE  
 	ex_showdate_end < current_timestamp
+	ORDER BY 
+	ex_ename,
+	ex_showdate_start
 ;
 -- planned exhibitions
 CREATE VIEW v_future_exhibitions AS SELECT 
@@ -243,6 +295,9 @@ CREATE VIEW v_future_exhibitions AS SELECT
 	t_exhibitions
 	WHERE 
 	ex_showdate_start > current_timestamp
+	ORDER BY 
+	ex_ename,
+	ex_showdate_start
 ;
 -- view used to debug the item locations table
 CREATE VIEW v_problem AS SELECT
@@ -272,6 +327,8 @@ CREATE VIEW v_current_insurance_storage AS SELECT
 	i_inumkey = ilo_inumkey AND 
 	i_ialphakey = ilo_ialphakey AND 
 	i_clientkey = ilo_clientkey_item
+	ORDER BY 
+	i_iinsurance
 ;
 
 -- key, name, insurance of works currently not in storage
@@ -288,6 +345,8 @@ CREATE VIEW v_current_insurance_not_storage AS SELECT
 	i_inumkey = ilo_inumkey AND 
 	i_ialphakey = ilo_ialphakey AND 
 	i_clientkey = ilo_clientkey_item
+	ORDER BY 
+	i_iinsurance
 ;
 -- current number of items in all exhibitions
 CREATE VIEW v_numitems_in_exhibitions AS SELECT
@@ -297,6 +356,9 @@ CREATE VIEW v_numitems_in_exhibitions AS SELECT
 	FROM
 	t_exhibition_items
 	GROUP BY
+	exi_ename,
+	exi_showdate_start
+	ORDER BY
 	exi_ename,
 	exi_showdate_start
 ;
@@ -316,6 +378,9 @@ CREATE VIEW v_public_data_exhibitions AS SELECT
 	WHERE
 	ex_ename = exl_ename AND ex_ename = showname AND
 	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+	ORDER BY
+	ex_ename,
+	ex_showdate_start
 ;
 	
 CREATE VIEW v_public_data_past_exhibitions AS SELECT
@@ -332,6 +397,9 @@ CREATE VIEW v_public_data_past_exhibitions AS SELECT
 	WHERE
 	ex_ename = exl_ename AND ex_ename = showname AND
 	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+	ORDER BY
+	ex_ename,
+	ex_showdate_start
 ;
 
 CREATE VIEW v_public_data_current_exhibitions AS SELECT
@@ -348,6 +416,9 @@ CREATE VIEW v_public_data_current_exhibitions AS SELECT
 	WHERE
 	ex_ename = exl_ename AND ex_ename = showname AND
 	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+	ORDER BY
+	ex_ename,
+	ex_showdate_start
 ;
 
 CREATE VIEW v_public_data_future_exhibitions AS SELECT
@@ -364,6 +435,9 @@ CREATE VIEW v_public_data_future_exhibitions AS SELECT
 	WHERE
 	ex_ename = exl_ename AND ex_ename = showname AND
 	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+	ORDER BY
+	ex_ename,
+	ex_showdate_start
 ;
 	
 --public info on all works in the items table
@@ -382,6 +456,9 @@ CREATE VIEW v_public_data_items AS SELECT
 	i_idescription
 	FROM
 	v_items
+	ORDER BY
+	i_clientkey,
+	i_iname
 ;
 
 -- info public on items in exhibitions sorted by exhibition and name of the work (current, future, past)
@@ -428,6 +505,10 @@ CREATE VIEW v_public_data_items_in_past_exhibitions AS SELECT
 	WHERE
 	exi_ename = ex_ename AND 
 	exi_showdate_start = ex_showdate_start
+	ORDER BY 
+	exi_ename,
+	exi_showdate_start,
+	i_iname
 ;
 
 CREATE VIEW v_public_data_items_in_current_exhibitions AS SELECT
@@ -448,6 +529,10 @@ CREATE VIEW v_public_data_items_in_current_exhibitions AS SELECT
 	WHERE
 	exi_ename = ex_ename AND 
 	exi_showdate_start = ex_showdate_start
+	ORDER BY 
+	exi_ename,
+	exi_showdate_start,
+	i_iname
 ;
 
 CREATE VIEW v_public_data_items_in_future_exhibitions AS SELECT
@@ -468,6 +553,10 @@ CREATE VIEW v_public_data_items_in_future_exhibitions AS SELECT
 	WHERE
 	exi_ename = ex_ename AND 
 	exi_showdate_start = ex_showdate_start
+	ORDER BY 
+	exi_ename,
+	exi_showdate_start,
+	i_iname
 ;
 	
 -- listing of works SORTED by when they are available for use in a new exhibition and by classification ()
@@ -484,6 +573,8 @@ CREATE VIEW v_item_availability AS SELECT
 	i_ialphakey = ilo_ialphakey AND
 	i_inumkey = ilo_inumkey AND 
 	i_clientkey = ilo_clientkey_item
+	ORDER BY 
+	ilo_ilodatetime_start
 ;
 
 	
@@ -503,7 +594,8 @@ CREATE VIEW v_space_available_in_exhibitions AS SELECT
 	exl_clientkey = loc_clientkey AND 
 	loc_numitems_max IS NOT NULL
 	ORDER BY 
-	ex_ename
+	ex_ename,
+	ex_showdate_start
 ;
 
 -- current and future exhibitions, name, dates, max capacity, current num of works
@@ -521,6 +613,7 @@ CREATE VIEW v_borrowed_item_info AS SELECT
 	it_inumkey,
 	it_ialphakey,
 	it_clientkey,
+	it_clname,
 	i_iname,
 	it_itdatetime_start,
 	it_itdatetime_end,
@@ -533,12 +626,16 @@ CREATE VIEW v_borrowed_item_info AS SELECT
 	it_inumkey = i_inumkey AND 
 	it_clientkey = i_clientkey AND 
 	it_ittype = 'Borrow'
+	ORDER BY 
+	it_clientkey,
+	i_iname
 ;
 
 CREATE VIEW v_Loaned_item_info AS SELECT
 	it_inumkey,
 	it_ialphakey,
 	it_clientkey,
+	it_clname,
 	i_iname,
 	it_itdatetime_start,
 	it_itdatetime_end,
@@ -551,12 +648,16 @@ CREATE VIEW v_Loaned_item_info AS SELECT
 	it_inumkey = i_inumkey AND 
 	it_clientkey = i_clientkey AND 
 	it_ittype = 'Loan'
+	ORDER BY 
+	it_clientkey,
+	i_iname
 ;
 
 CREATE VIEW v_purchased_item_info AS SELECT
 	it_inumkey,
 	it_ialphakey,
 	it_clientkey,
+	it_clname,
 	i_iname,
 	it_itdatetime_start
 	FROM 
@@ -567,12 +668,16 @@ CREATE VIEW v_purchased_item_info AS SELECT
 	it_inumkey = i_inumkey AND 
 	it_clientkey = i_clientkey AND 
 	it_ittype = 'Purchase'
+	ORDER BY 
+	it_clientkey,
+	i_iname
 ;
 
 CREATE VIEW v_sold_item_info AS SELECT
 	it_inumkey,
 	it_ialphakey,
 	it_clientkey,
+	it_clname,
 	i_iname,
 	it_itdatetime_start
 	FROM 
@@ -583,6 +688,9 @@ CREATE VIEW v_sold_item_info AS SELECT
 	it_inumkey = i_inumkey AND 
 	it_clientkey = i_clientkey AND 
 	it_ittype = 'Sale'
+	ORDER BY 
+	it_clientkey,
+	i_iname
 ;
 	
 

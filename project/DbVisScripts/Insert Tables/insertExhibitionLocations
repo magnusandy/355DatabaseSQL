@@ -1,0 +1,24 @@
+INSERT
+INTO
+    public.v_exhibition_locations
+    (
+        exl_ename,
+        exl_showdate_start,
+        exl_locname,
+        exl_clientkey,
+        exl_exldate_start,
+        exl_exldate_end,
+        exl_security
+    )
+    VALUES
+    (
+        ${ename||(null)||String}$,
+        ${showdatestart||(null)||Date}$,
+        ${locname||(null)||String}$,
+        ${locClientkey||(null)||String}$,
+        ${locdatestart||(null)||Date}$,
+        ${locdateend||(null)||Date}$,
+        ${security||(null)||String||nullable}$
+    )
+;
+--tested works
