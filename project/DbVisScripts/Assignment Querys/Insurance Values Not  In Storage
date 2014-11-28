@@ -1,0 +1,8 @@
+SELECT
+    i_iname as "Item Name",
+    i_inumkey as "Numeric Key",
+    i_ialphakey as "Alphabetical Key",
+    i_clientkey as "Client Key",
+    i_iinsurance as "Insurance Value"
+FROM
+    public.v_current_insurance_not_storage

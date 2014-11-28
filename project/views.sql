@@ -388,6 +388,8 @@ CREATE VIEW v_public_data_past_exhibitions AS SELECT
 	ex_showdate_start,
 	exl_locname,
 	exl_clientkey,
+	exl_exldate_start,
+	exl_exldate_end,
 	numitems,
 	ex_edescription
 	FROM
@@ -396,7 +398,8 @@ CREATE VIEW v_public_data_past_exhibitions AS SELECT
 	v_numitems_in_exhibitions
 	WHERE
 	ex_ename = exl_ename AND ex_ename = showname AND
-	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart AND 
+	exl_exldate_end < current_timestamp
 	ORDER BY
 	ex_ename,
 	ex_showdate_start
@@ -407,6 +410,8 @@ CREATE VIEW v_public_data_current_exhibitions AS SELECT
 	ex_showdate_start,
 	exl_locname,
 	exl_clientkey,
+	exl_exldate_start,
+	exl_exldate_end,
 	numitems,
 	ex_edescription
 	FROM
@@ -415,7 +420,8 @@ CREATE VIEW v_public_data_current_exhibitions AS SELECT
 	v_numitems_in_exhibitions
 	WHERE
 	ex_ename = exl_ename AND ex_ename = showname AND
-	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart AND 
+	exl_exldate_start < current_timestamp AND exl_exldate_end > current_timestamp
 	ORDER BY
 	ex_ename,
 	ex_showdate_start
@@ -426,6 +432,8 @@ CREATE VIEW v_public_data_future_exhibitions AS SELECT
 	ex_showdate_start,
 	exl_locname,
 	exl_clientkey,
+	exl_exldate_start,
+	exl_exldate_end,
 	numitems,
 	ex_edescription
 	FROM
@@ -434,7 +442,8 @@ CREATE VIEW v_public_data_future_exhibitions AS SELECT
 	v_numitems_in_exhibitions
 	WHERE
 	ex_ename = exl_ename AND ex_ename = showname AND
-	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart AND 
+	exl_exldate_start > current_timestamp
 	ORDER BY
 	ex_ename,
 	ex_showdate_start
@@ -565,6 +574,10 @@ CREATE VIEW v_item_availability AS SELECT
 	i_inumkey,
 	i_ialphakey,
 	i_clientkey,
+	i_iformat,
+	i_isubformat,
+	i_ischool,
+	i_isubject,
 	ilo_ilodatetime_end
 	FROM
 	v_items,
@@ -692,7 +705,7 @@ CREATE VIEW v_sold_item_info AS SELECT
 	it_clientkey,
 	i_iname
 ;
-
+	
 -- View for returning the names of our museums
 CREATE VIEW v_us AS 
 SELECT 
@@ -711,3 +724,4 @@ WHERE
 	OR 
 	cl_clname = 'Evan Closson'
 );
+
