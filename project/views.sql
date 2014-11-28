@@ -692,7 +692,8 @@ CREATE VIEW v_sold_item_info AS SELECT
 	it_clientkey,
 	i_iname
 ;
-	
+
+-- View for returning the names of our museums
 CREATE VIEW v_us AS 
 SELECT 
 	cl_clname 
