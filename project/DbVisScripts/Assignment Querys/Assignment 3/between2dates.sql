@@ -1,5 +1,5 @@
 select 
-        i_iname, exi_exidate_start, exi_exidate_end
+        i_iname, exi_inumkey, exi_ialphakey, exi_clientkey, exi_exidate_start, exi_exidate_end
 FROM
         t_exhibition_items,
         t_items
