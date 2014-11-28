@@ -3,10 +3,13 @@ BEGIN
 IF(new.it_ittype = 'Sale') THEN
 INSERT INTO t_item_locations (ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end)
 VALUES (new.it_inumkey, new.it_ialphakey, (SELECT i_clientkey from t_items where (i_inumkey = new.it_inumkey and i_ialphakey = new.it_ialphakey)), 'Sold', 'Transactions', new.it_itdatetime_start, NULL);
+UPDATE t_items SET i_clientkey = new.it_clname_recipient WHERE i_inumkey = new.it_inumkey and i_ialphakey = new.it_ialphakey and i_clientkey = new.it_clientkey;
+
 
 ELSEIF(new.it_ittype = 'Purchase') THEN
 INSERT INTO t_item_locations (ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end)
 VALUES (new.it_inumkey, new.it_ialphakey, (SELECT i_clientkey from t_items where (i_inumkey = new.it_inumkey and i_ialphakey = new.it_ialphakey)), 'Storage', new.it_clname_recipient, new.it_itdatetime_start, NULL);
+UPDATE t_items SET i_iacquisitiondate = now(), i_clientkey = new.it_clname_proprietor WHERE i_inumkey = new.it_inumkey and i_ialphakey = new.it_ialphakey and i_clientkey = new.it_clientkey;
 
 ELSEIF(new.it_ittype = 'Borrow') THEN
 INSERT INTO t_item_locations (ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end)
