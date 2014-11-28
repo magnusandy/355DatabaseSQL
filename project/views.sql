@@ -693,4 +693,20 @@ CREATE VIEW v_sold_item_info AS SELECT
 	i_iname
 ;
 	
-
+CREATE VIEW v_us AS 
+SELECT 
+	cl_clname 
+FROM 
+	t_clients 
+WHERE 
+(
+	cl_clname = 'Iain' 
+	OR 
+	cl_clname = 'Ryans Museum' 
+	OR 
+	cl_clname = 'Walker Art Center' 
+	OR 
+	cl_clname = 'Andrew Museums' 
+	OR 
+	cl_clname = 'Evan Closson'
+);
