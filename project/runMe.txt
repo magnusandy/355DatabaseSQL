@@ -157,7 +157,7 @@ DROP TABLE ns_t_exhibition_locations_temp CASCADE;
 \i rename.sql
 \i defaultCountryToCanada.sql
 \i views.sql
-
+\i alterTransactions.sql
 /*
 DROP TABLE ns_t_clients CASCADE;
 DROP TABLE ns_t_items CASCADE;
