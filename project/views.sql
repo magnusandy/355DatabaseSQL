@@ -725,7 +725,7 @@ WHERE
 	OR 
 	cl_clname = 'Walker Art Center' 
 	OR 
-	cl_clname = 'Andrew Museums' 
+	cl_clname = 'Andrew Museum' 
 	OR 
 	cl_clname = 'Evan Closson'
 );
