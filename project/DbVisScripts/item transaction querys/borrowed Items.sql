@@ -1,0 +1,12 @@
+SELECT
+ it_inumkey,
+  it_ialphakey,
+   it_clientkey, 
+   it_clname_proprietor, 
+   it_clname_recipient,
+    i_iname, 
+    it_itdatetime_start, 
+    it_itdatetime_end, 
+    it_itdatetime_returnby   
+FROM
+ public.v_borrowed_item_info;

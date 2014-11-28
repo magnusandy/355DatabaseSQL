@@ -425,4 +425,4 @@ WHERE
 	)
 	OR
 	(it_clname_proprietor = it_clname_recipient)
-);
+);*/
