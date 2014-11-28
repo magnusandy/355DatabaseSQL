@@ -1,9 +1,9 @@
 #Extended file properties defined by DbVisualizer
-#Thu Nov 27 17:26:04 GMT-06:00 2014
+#Thu Nov 27 17:33:13 GMT-06:00 2014
 chart.type=result-set-chartviewer-area-chart-command
 chart.line_width=2
-chart.serie.0.label=Date Created
-chart.serie.0.name=Date Created
+chart.serie.0.name=Number of Works
+chart.serie.0.label=Number of Works
 exec.catalog=cmpt355_team01
 chart.serie.0.visible=true
 chart.line_points_visible=true
@@ -22,8 +22,8 @@ file.comment=
 chart.xaxis_major_grid_visible=false
 chart.pie_label_type=Line Labels
 chart.bar_type=Raised
-chart.category_column=Item Name
 exec.schema=public
+chart.category_column=Item Name
 file.encoding=Cp1252
 chart.bg_top_color=\#ffffff
 chart.line_type=Straight

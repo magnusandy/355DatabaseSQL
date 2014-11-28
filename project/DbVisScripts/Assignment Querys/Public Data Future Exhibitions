@@ -1,0 +1,10 @@
+SELECT
+    ex_ename as "Exhibition Name",
+    exl_locname as " Location",
+     exl_clientkey as "Location Key",
+    exl_exldate_start  as "Start Date",
+    exl_exldate_end as "End Date",
+    numitems as "Number of Works",
+    ex_edescription as "Description"
+FROM
+    public.v_public_data_future_exhibitions

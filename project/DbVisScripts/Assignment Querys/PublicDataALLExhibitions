@@ -1,0 +1,10 @@
+SELECT
+    ex_ename as "Exhibition Name",
+    ex_showdate_start as "Start Date",
+    exl_locname as "Location",
+    numitems as "Number of Works",
+    ex_edescription as "Description"
+FROM
+    public.v_public_data_exhibitions
+    
+    --tested

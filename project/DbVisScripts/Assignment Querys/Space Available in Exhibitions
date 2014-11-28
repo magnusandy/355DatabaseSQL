@@ -1,0 +1,6 @@
+SELECT
+    ex_ename as "Exhibition Name",
+    ex_showdate_start as "Start Date",
+    space_available as "Available Space"
+FROM
+    public.v_space_available_in_exhibitions

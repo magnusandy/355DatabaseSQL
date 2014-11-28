@@ -1,0 +1,12 @@
+SELECT
+    i_iname as "Item Name",
+    i_inumkey as "Numeric Key",
+    i_ialphakey as "Alphabetical Key",
+    i_clientkey as " Client Key",
+    i_iformat as "Format",
+    i_isubformat as "Sub-Format",
+    i_ischool as "School of Work",
+    i_isubject as "Subject of Work",
+    ilo_ilodatetime_end  as "Date Available"
+FROM
+    public.v_item_availability
