@@ -12,9 +12,6 @@ ALTER TABLE t_item_transactions RENAME it_clname TO it_clname_proprietor;
 -- Make recipient a FK to client
 ALTER TABLE t_item_transactions ADD CONSTRAINT it_clname_recipient_cl_clname FOREIGN KEY (it_clname_recipient) REFERENCES t_clients(cl_clname);
 
--- Create a temporary view that can be used to easily view the effects
-CREATE VIEW v_temptransactions AS SELECT it_inumkey, it_ialphakey, it_clientkey, it_clname_recipient, it_clname_proprietor, it_ittype FROM t_item_transactions;
-
 -- Assume that the proprietor of a loan is the owner of the work
 UPDATE t_item_transactions
 	SET it_clname_proprietor = it_clientkey
@@ -387,7 +384,8 @@ WHERE
 );
 
 -- View the transactions which are still problems
-SELECT * FROM v_temptransactions
+/*
+SELECT it_inumkey, it_ialphakey, it_clientkey, it_clname_recipient, it_clname_proprietor, it_ittype FROM t_item_transactions
 WHERE
 (
 	(
@@ -428,4 +426,3 @@ WHERE
 	OR
 	(it_clname_proprietor = it_clname_recipient)
 );
---ROLLBACK;
