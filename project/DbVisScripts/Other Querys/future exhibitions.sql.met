@@ -1,12 +1,11 @@
 #Extended file properties defined by DbVisualizer
-#Thu Nov 27 21:14:06 CST 2014
+#Thu Nov 27 21:17:03 CST 2014
 chart.type=result-set-chartviewer-area-chart-command
 chart.line_width=2
-chart.serie.0.name=it_inumkey
-chart.serie.0.label=it_inumkey
-chart.serie.1.label=it_ialphakey
+chart.serie.0.label=ex_ename
+chart.serie.0.name=ex_ename
 exec.catalog=cmpt355_team01
-chart.serie.0.visible=true
+chart.serie.0.visible=false
 chart.line_points_visible=true
 chart.yaxis_number_format=\#,\#\#0
 chart.yaxis_title_visible=true
@@ -23,19 +22,17 @@ chart.series_shadow_visible=true
 file.comment=
 chart.xaxis_major_grid_visible=false
 chart.pie_label_type=Line Labels
-chart.serie.1.visible=false
 chart.bar_type=Raised
+chart.category_column=ex_ename
 exec.schema=public
-chart.category_column=it_ialphakey
 file.encoding=Cp1252
 chart.bg_top_color=\#ffffff
-chart.serie.1.name=it_ialphakey
 chart.line_type=Straight
 chart.xaxis_title_visible=true
 chart.bar_group_gap=4
-chart.title=
 chart.yaxis_auto_start_value=true
 monitor.frame_bounds=
+chart.title=
 chart.yaxis_major_grid_visible=true
 chart.yaxis_title=
 chart.bar_gap=2
@@ -43,5 +40,5 @@ chart.series_color_scheme=Scheme 1
 chart.yaxis_minor_grid_visible=false
 chart.font=Tahoma-plain-11
 chart.xaxis_rotate=45
-chart.xaxis_label_overlap=false
 chart.pie_type=Raised
+chart.xaxis_label_overlap=false

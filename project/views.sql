@@ -87,12 +87,13 @@ CREATE VIEW v_item_transactions AS SELECT
 	it_inumkey,
 	it_ialphakey,
 	it_clientkey,
-	it_clname,
+	it_clname_proprietor,
 	it_ittype,
 	it_itdatetime_start,
 	it_itdatetime_end,
 	it_itdatetime_returnby,
-	it_itgross
+	it_itgross,
+	it_clname_recipient
 	FROM t_item_transactions
 	ORDER BY 
 	it_clientkey,
@@ -388,6 +389,8 @@ CREATE VIEW v_public_data_past_exhibitions AS SELECT
 	ex_showdate_start,
 	exl_locname,
 	exl_clientkey,
+	exl_exldate_start,
+	exl_exldate_end,
 	numitems,
 	ex_edescription
 	FROM
@@ -396,7 +399,8 @@ CREATE VIEW v_public_data_past_exhibitions AS SELECT
 	v_numitems_in_exhibitions
 	WHERE
 	ex_ename = exl_ename AND ex_ename = showname AND
-	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart AND 
+	exl_exldate_end < current_timestamp
 	ORDER BY
 	ex_ename,
 	ex_showdate_start
@@ -407,6 +411,8 @@ CREATE VIEW v_public_data_current_exhibitions AS SELECT
 	ex_showdate_start,
 	exl_locname,
 	exl_clientkey,
+	exl_exldate_start,
+	exl_exldate_end,
 	numitems,
 	ex_edescription
 	FROM
@@ -415,7 +421,8 @@ CREATE VIEW v_public_data_current_exhibitions AS SELECT
 	v_numitems_in_exhibitions
 	WHERE
 	ex_ename = exl_ename AND ex_ename = showname AND
-	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart AND 
+	exl_exldate_start < current_timestamp AND exl_exldate_end > current_timestamp
 	ORDER BY
 	ex_ename,
 	ex_showdate_start
@@ -426,6 +433,8 @@ CREATE VIEW v_public_data_future_exhibitions AS SELECT
 	ex_showdate_start,
 	exl_locname,
 	exl_clientkey,
+	exl_exldate_start,
+	exl_exldate_end,
 	numitems,
 	ex_edescription
 	FROM
@@ -434,7 +443,8 @@ CREATE VIEW v_public_data_future_exhibitions AS SELECT
 	v_numitems_in_exhibitions
 	WHERE
 	ex_ename = exl_ename AND ex_ename = showname AND
-	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart AND 
+	exl_exldate_start > current_timestamp
 	ORDER BY
 	ex_ename,
 	ex_showdate_start
@@ -565,6 +575,10 @@ CREATE VIEW v_item_availability AS SELECT
 	i_inumkey,
 	i_ialphakey,
 	i_clientkey,
+	i_iformat,
+	i_isubformat,
+	i_ischool,
+	i_isubject,
 	ilo_ilodatetime_end
 	FROM
 	v_items,
@@ -613,7 +627,8 @@ CREATE VIEW v_borrowed_item_info AS SELECT
 	it_inumkey,
 	it_ialphakey,
 	it_clientkey,
-	it_clname,
+	it_clname_proprietor,
+	it_clname_recipient,
 	i_iname,
 	it_itdatetime_start,
 	it_itdatetime_end,
@@ -635,7 +650,8 @@ CREATE VIEW v_Loaned_item_info AS SELECT
 	it_inumkey,
 	it_ialphakey,
 	it_clientkey,
-	it_clname,
+	it_clname_proprietor,
+	it_clname_recipient,
 	i_iname,
 	it_itdatetime_start,
 	it_itdatetime_end,
@@ -657,7 +673,8 @@ CREATE VIEW v_purchased_item_info AS SELECT
 	it_inumkey,
 	it_ialphakey,
 	it_clientkey,
-	it_clname,
+	it_clname_proprietor,
+	it_clname_recipient,
 	i_iname,
 	it_itdatetime_start
 	FROM 
@@ -677,7 +694,8 @@ CREATE VIEW v_sold_item_info AS SELECT
 	it_inumkey,
 	it_ialphakey,
 	it_clientkey,
-	it_clname,
+	it_clname_proprietor,
+	it_clname_recipient,
 	i_iname,
 	it_itdatetime_start
 	FROM 
@@ -693,4 +711,22 @@ CREATE VIEW v_sold_item_info AS SELECT
 	i_iname
 ;
 	
+-- View for returning the names of our museums
+CREATE VIEW v_us AS 
+SELECT 
+	cl_clname 
+FROM 
+	t_clients 
+WHERE 
+(
+	cl_clname = 'Iain' 
+	OR 
+	cl_clname = 'Ryans Museum' 
+	OR 
+	cl_clname = 'Walker Art Center' 
+	OR 
+	cl_clname = 'Andrew Museums' 
+	OR 
+	cl_clname = 'Evan Closson'
+);
 

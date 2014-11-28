@@ -1,0 +1,1 @@
+Select exl_ename, exl_locname,exl_clientkey from v_exhibition_locations, v_current_exhibitions WHERE exl_ename = ex_ename AND exl_showdate_start = ex_showdate_start and exl_exldate_start< current_timestamp AND exl_exldate_end > current_timestamp; 

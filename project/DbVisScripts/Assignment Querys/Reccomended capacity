@@ -1,0 +1,22 @@
+SELECT
+	ex_ename,
+	ex_showdate_start,
+	ex_showdate_end,
+	numitems as current_numitems,
+	loc_numitems_max as reccomended_capacity
+	FROM 
+	v_exhibitions,
+	v_exhibition_locations,
+	v_numitems_in_exhibitions,
+	v_locations
+	WHERE
+	ex_ename = exl_ename AND ex_ename = showname AND
+	ex_showdate_start = exl_showdate_start AND ex_showdate_start = showstart AND 
+	exl_locname = loc_locname AND
+	exl_clientkey = loc_clientkey AND 
+	loc_numitems_max IS NOT NULL
+	ORDER BY 
+	ex_ename,
+	ex_showdate_start
+	
+	

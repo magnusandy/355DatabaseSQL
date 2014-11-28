@@ -1,0 +1,14 @@
+SELECT
+    exi_ename as "Exhibition Name",
+    exi_showdate_start as "Exhibition Start",
+    i_iname as "Item name",
+    i_iorigin "Place of Origin" ,
+    i_iformat "Format",
+    i_isubformat "Sub-Format",
+    i_ischool "School of Work",
+    i_isubject "Subject of Work",
+    i_iacquisitiondate "Date Aquired",
+    i_icreationyear "Date Created",
+    i_idescription "Item Description"
+FROM
+    public.v_public_data_items_in_exhibitions

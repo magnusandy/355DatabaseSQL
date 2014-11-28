@@ -1,0 +1,1 @@
+select * from v_item_locations WHERE ilo_ilodatetime_start >= current_timestamp and ilo_ilodatetime_start <= current_timestamp + interval '3 week'

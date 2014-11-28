@@ -1,0 +1,10 @@
+SELECT
+ it_inumkey, 
+ it_ialphakey, 
+ it_clientkey, 
+ it_clname_proprietor, 
+ it_clname_recipient, 
+ i_iname, 
+ it_itdatetime_start 
+ FROM 
+ public.v_purchased_item_info;
