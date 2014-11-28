@@ -1,3 +1,5 @@
+-- List the exhibitions that use Location X between Y and Z
+
 select 
         exl_ename, exl_exldate_start, exl_exldate_end
 FROM

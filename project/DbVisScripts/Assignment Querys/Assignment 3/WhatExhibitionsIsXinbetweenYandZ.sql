@@ -1,3 +1,5 @@
+-- List the Exhibitions some item X is in between dates Y and Z
+
 select 
         exi_ename, exi_showdate_start, exi_exidate_start, exi_exidate_end
 FROM

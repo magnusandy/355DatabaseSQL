@@ -1,3 +1,5 @@
+-- List the items in location X between dates Y and Z
+
 select 
         ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_ilodatetime_start, ilo_ilodatetime_end
 FROM
