@@ -159,6 +159,12 @@ WHERE
 	(it_inumkey = 20043615 AND it_ialphakey = 'CVT')
 	OR
 	(it_inumkey = 40170201 AND it_ialphakey = 'JAR')
+	OR
+        (it_inumkey = 74511787 AND it_ialphakey = 'CFT')
+	OR
+	(it_inumkey = 17190241 AND it_ialphakey = 'CMM')
+	OR
+	(it_inumkey = 20002641 AND it_ialphakey = 'JBC')
 );
 
 UPDATE t_item_transactions
@@ -194,24 +200,232 @@ WHERE
 	(it_inumkey = 19761 AND it_ialphakey = 'JunLaliqueChalice')
 	OR
 	(it_inumkey = 192554 AND it_ialphakey = 'JanBoehmJames')
+	OR
+	(it_inumkey = 195298 AND it_ialphakey = 'FebBazoitesScorpion')
+	OR
+	(it_inumkey = 20004 AND it_ialphakey = 'JanYoungbloodGorrila')
+	OR
+	(it_inumkey = 195816 AND it_ialphakey = 'FebFangMask')
+	OR
+	(it_inumkey = 2005321 AND it_ialphakey = 'DecEjaghanCrest')
+	OR
+	(it_inumkey = 20061 AND  it_ialphakey = 'AprMendeHelmet')
+	OR
+	(it_inumkey = 19739 AND it_ialphakey = 'MaySenufoHeaddress')
+	OR
+	(it_inumkey = 196455 AND it_ialphakey = 'NovTemneInititation')
+	OR
+	(it_inumkey = 19473 AND it_ialphakey = 'FebUnkownNecklace')
+	OR
+	(it_inumkey = 19705 AND it_ialphakey = 'OctHofmannNight')
+	OR
+	(it_inumkey = 19757 AND it_ialphakey = 'JunEddyJewlery')
+	OR
+	(it_inumkey = 19991 AND it_ialphakey = 'DecSmithMose')
+	OR
+	(it_inumkey = 19994 AND it_ialphakey = 'AprFouquetBrooch')
+	OR
+	(it_inumkey = 20001 AND it_ialphakey = 'FebMunozBrok')
+	OR
+	(it_inumkey = 192333 AND it_ialphakey = 'JunUnkownUnguent')
+	OR
+	(it_inumkey = 193549 AND it_ialphakey = 'SepHopperTwo')
+	OR
+	(it_inumkey = 193992 AND it_ialphakey = 'JulHashWom')
+	OR
+	(it_inumkey = 194325 AND it_ialphakey = 'MarWyethHunter')
+	OR
+	(it_inumkey = 195663 AND it_ialphakey = 'JanAltenstetterCovered')
+	OR
+	(it_inumkey = 196026 AND it_ialphakey = 'NovMorrisThe')
+	OR
+	(it_inumkey = 200125 AND it_ialphakey = 'SepMcKiePolar')
+	OR
+	(it_inumkey = 197852 AND it_ialphakey = 'OctChantreyGeorge')
+	OR
+	(it_inumkey = 199423 AND it_ialphakey = 'MarAkanKuduo')
+	OR
+	(it_inumkey = 197731 AND it_ialphakey LIKE 'JanPorterO%')
+	OR
+	(it_inumkey = 2009385 AND it_ialphakey = 'MarLibbeyCooler')
+	OR
+	(it_inumkey = 1933169 AND it_ialphakey = 'AugUnkownEnamel')
+	OR
+	(it_inumkey = 1925108 AND it_ialphakey = 'FebAntoninAntonin')
+	OR
+	(it_inumkey = 1984881 AND it_ialphakey = 'FebPableMetamorphoses')
+	OR
+	(it_inumkey = 1965176 AND it_ialphakey = 'MayMochiCardinal')
+	OR
+	(it_inumkey = 200453 AND it_ialphakey = 'JanRollinsTemptation')
+	OR
+	(it_inumkey = 197051 AND it_ialphakey = 'MarSongyeNkisi')
+	OR
+	(it_inumkey = 200352 AND it_ialphakey = 'AprDineColumn')
+	OR
+	(it_inumkey = 201212 AND it_ialphakey = 'NovRinggoldBen')
+	OR
+	(it_inumkey = 1906227 AND it_ialphakey = 'MayUnkownFragment')
+	OR
+	(it_inumkey = 197744 AND it_ialphakey = 'MayBolotowskyEllipse')
+	OR
+	(it_inumkey = 196456 AND it_ialphakey = 'MayChauncyWilliam')
+	OR
+	(it_inumkey = 199511 AND it_ialphakey = 'JulCattaneoPortrait')
+	OR
+	(it_inumkey = 200044 AND it_ialphakey = 'MarJapaneseNetsuke')
+	OR
+	(it_inumkey = 198287 AND it_ialphakey = 'AprPearlsteinSphynx')
+	OR
+	(it_inumkey = 199422 AND it_ialphakey = 'MarKieferAthanor')
+	OR
+	(it_inumkey = 200052 AND it_ialphakey = 'OctGardnerGardner')
+	OR
+	(it_inumkey = 199613 AND it_ialphakey = 'OctPaleyContinuum')
+	OR
+	(it_inumkey = 190747 AND it_ialphakey = 'JulNiniMedal')
+	OR
+	(it_inumkey = 190746 AND it_ialphakey = 'AugVivierMedal')
+	OR
+	(it_inumkey = 190749 AND it_ialphakey = 'JulCaunoisMedal')
 );
-/*
+
+UPDATE t_item_transactions
+	SET it_clname_proprietor = 'Ryans Museum'
+WHERE
+(
+	(it_inumkey = 1989116 AND it_ialphakey = 'FebBosmanChicago')
+	OR
+	(it_inumkey = 2005290 AND it_ialphakey = 'OctWileySaint')
+	OR
+	(it_inumkey = 200648 AND it_ialphakey = 'JulRosenPasswords')
+);
 --Kens
 UPDATE t_item_transactions
 	SET it_clname_recipient = 'Walker Art Center'
 WHERE
 (
-
+	(it_inumkey = 2004.1 AND it_ialphakey = 'DLI')
+	OR
+	(it_inumkey = 2004.9 AND it_ialphakey = 'DLI')
+	OR
+	(it_inumkey = 2001.66 AND it_ialphakey = 'DLI')
+	OR
+	(it_inumkey = 1996.61 AND it_ialphakey = 'DWI')
+	OR
+	(it_inumkey = 2008.34 AND it_ialphakey = 'PWM')
+	OR
+	(it_inumkey = 1996.7 AND it_ialphakey = 'DWI')
+	OR
+	(it_inumkey = 1996.172 AND it_ialphakey = 'DWP')
+	OR
+	(it_inumkey = 2002.11 AND it_ialphakey = 'PMP')
+	OR
+	(it_inumkey = 002.12 AND it_ialphakey = 'PMP')
+	OR
+	(it_inumkey = 2003.9 AND it_ialphakey = 'MLE')
+	OR
+	(it_inumkey = 1988.14 AND it_ialphakey = 'DAP')
+	OR
+	(it_inumkey = 2005.24 AND it_ialphakey = 'DAP')
+	OR
+	(it_inumkey = 2008.54 AND it_ialphakey = 'DAC')
+	OR
+	(it_inumkey = 2011.232 AND it_ialphakey = 'PAM')
+	OR
+	(it_inumkey = 2011.233 AND it_ialphakey = 'PAM')
+	OR
+	(it_inumkey = 1998.76 AND it_ialphakey = 'DAI')
+	OR
+	(it_inumkey = 2010.28 AND it_ialphakey = 'DAI')
+	OR
+	(it_inumkey = 2005.74 AND it_ialphakey = 'PAO')
+	OR
+	(it_inumkey = 1998.1 AND it_ialphakey = 'GAGO')
+	OR
+	(it_inumkey = 1994.127 AND it_ialphakey = 'MAS')
+	OR
+	(it_inumkey = 2002.16 AND it_ialphakey = 'PMP')
+	OR
+	(it_inumkey = 2002.17 AND it_ialphakey = 'PMP')
+	OR
+	(it_inumkey = 2002.13 AND it_ialphakey = 'PMP')
+	OR
+	(it_inumkey = 2002.14 AND it_ialphakey = 'PMP')
+	OR
+	(it_inumkey = 2002.18 AND it_ialphakey = 'PMP')
+	OR
+	(it_inumkey = 2002.19 AND it_ialphakey = 'PMP')
+	OR
+	(it_inumkey = 2002.2 AND it_ialphakey = 'PMP')
+	OR
+	(it_inumkey = 2002.15 AND it_ialphakey = 'PMP')
+	OR
+	(it_inumkey = 1949.3 AND it_ialphakey = 'WHI')
+	OR
+	(it_inumkey = 1962.1 AND it_ialphakey = 'WBI')
+	OR
+	(it_inumkey = 1998.77 AND it_ialphakey = 'DAI')
+	OR
+	(it_inumkey = 1997.83 AND it_ialphakey = 'DAA')
+	OR
+	(it_inumkey = 2011.231 AND it_ialphakey = 'PAM')
+	OR
+	(it_inumkey = 2002.12 AND it_ialphakey = 'PMP')
 );
 --Iains
+
 UPDATE t_item_transactions
 	SET it_clname_recipient = 'Iain'
 WHERE
 (
-
+	(it_ialphakey = 'PA' OR it_ialphakey = 'PU' OR it_ialphakey = 'SC' OR it_ialphakey = 'BU')
+	AND
+	(it_clientkey = 'Mickey Mouse' OR it_clientkey = 'Danger Mouse' OR it_clientkey = 'Mighty Mouse')
+	AND
+	(it_ittype = 'Borrow')
 );
-*/
--- View the effects
-SELECT * FROM v_temptransactions;
 
+-- View the transactions which are still problems
+SELECT * FROM v_temptransactions
+WHERE
+(
+	(
+		it_clname_recipient <> 'Iain'
+		AND
+		it_clname_recipient <> 'Evan Closson'
+		AND
+		it_clname_recipient <> 'Ryans Museum'
+		AND
+		it_clname_recipient <> 'Walker Art Center'
+		AND
+		it_clname_recipient <> 'Andrew Museum'
+		AND
+		(
+			it_ittype = 'Purchase'
+			OR
+			it_ittype = 'Borrow'
+		)
+	)
+	OR
+	(
+		it_clname_proprietor <> 'Iain'
+		AND
+		it_clname_proprietor <> 'Evan Closson'
+		AND
+		it_clname_proprietor <> 'Ryans Museum'
+		AND
+		it_clname_proprietor <> 'Walker Art Center'
+		AND
+		it_clname_proprietor <> 'Andrew Museum'
+		AND
+		(
+			it_ittype = 'Sale'
+			OR
+			it_ittype = 'Loan'
+		)
+	)
+	OR
+	(it_clname_proprietor = it_clname_recipient)
+);
 --ROLLBACK;
