@@ -5,18 +5,21 @@ itemOwner clname;
 begin
 itemOwner:= (select i_clientkey from t_items where i_inumkey = numkey);
  
-if ((select count(*) from t_items where i_inumkey = numkey and i_ialphakey = alphakey) <= 0) then
-raise exception 'Error:The alphakey does not match the numkey';
+if (numkey is null or alphakey is null) then
+raise exception 'You must specify both a numkey and an alphakey for the item.';
+
+elseif ((select count(*) from t_items where i_inumkey = numkey and i_ialphakey = alphakey) <= 0) then
+raise exception 'The alphakey does not match the numkey.';
 
 elseif(select itemOwner not in (select cl_clname from v_us)) then
-raise exception 'Error: We cannot lend an item that we dont own.';
+raise exception ' We cannot lend an item that we dont own.';
 
 
 elseif (itemOwner = recipient) then
-raise exception 'Error: The owner of this item cannot borrow it';
+raise exception ' The owner of this item cannot borrow it';
 
 elseif (loan_datetime > due_datetime) then
-raise exception 'Error: Cannot have a return date before the item was borrowed';
+raise exception ' Cannot have a return date before the item was borrowed';
 
 end if;
 
@@ -43,19 +46,3 @@ recipient,
 
 end;
 $$ language plpgsql;
-
-select add_loan(328, 'PA', cast('2014-11-30' as timestamp), cast('2015-02-15' as timestamp), 'Ryans Museum');
-
-select add_loan(328, 'PA', cast('2014-11-30' as timestamp), cast('2015-02-15' as timestamp), 'Iain');
-
-select add_loan(328, 'PA', cast('2014-11-30' as timestamp), cast('2014-11-29' as timestamp), 'Ryans Museum');
-
-select add_loan(941, 'PA', cast('2014-11-30' as timestamp), cast('2015-02-15' as timestamp), 'Ryans Museum');
-
-select add_loan(328, 'PWF', cast('2014-11-30' as timestamp), cast('2015-02-15' as timestamp), 'Ryans Museum');
-
-
-
-
-
-

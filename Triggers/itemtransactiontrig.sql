@@ -144,7 +144,7 @@ BEGIN
 		(
 			exi_inumkey = NEW.it_inumkey
 			AND
-			exi_inumkey = NEW.it_ialphakey
+			exi_ialphakey = NEW.it_ialphakey
 			AND
 			exi_clientkey = current_owner
 			AND
