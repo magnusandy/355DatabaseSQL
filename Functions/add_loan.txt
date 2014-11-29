@@ -1,4 +1,4 @@
-create function add_loan(numkey inumkey, alphakey ialphakey, startDateTime itdatetime, dueDateTime itdatetime, recipient clname) returns void as $$
+create or replace function add_loan(numkey inumkey, alphakey ialphakey, loan_datetime itdatetime, due_dateTime itdatetime, recipient clname) returns void as $$
 declare
 itemOwner clname;
 
@@ -15,14 +15,17 @@ raise exception 'Error: We cannot lend an item that we dont own.';
 elseif (itemOwner = recipient) then
 raise exception 'Error: The owner of this item cannot borrow it';
 
+elseif (loan_datetime > due_datetime) then
+raise exception 'Error: Cannot have a return date before the item was borrowed';
+
 end if;
 
-if (select (startDate, dueDate) overlaps (ilo_ilodatetime_start, ilo_ilodatetime_end) from t_item_locations where ilo_inumkey = 142) then
-raise exception 'Error: Cannot loan the item because it has a prior commitment';
-
-elseif (select (startDate, dueDate) overlaps (ilo_ilodatetime_start, ilo_ilodatetime_start) from t_item_locations where ilo_inumkey = 142) then
-raise exception 'Error: Cannot loan this item because it has a prior commitment';
-
+-- Warn the user when an item is sold at midnight (they probably didn't specify a full date and time)
+	IF ((SELECT EXTRACT(HOUR FROM CAST(loan_datetime AS timestamp)) = 0) 
+		AND (SELECT EXTRACT(MINUTE FROM CAST(loan_datetime AS timestamp)) = 0) 
+		AND (SELECT EXTRACT(SECOND FROM CAST(loan_datetime AS timestamp)) = 0)) THEN
+		RAISE NOTICE 'Warning: Lending item  at midnight, are you sure you specified a date and time?';
+	
 end if;
 
 insert into t_item_transactions(it_inumkey, it_ialphakey, it_clientkey, it_clname_proprietor, it_ittype, it_itdatetime_start, it_itdatetime_returnby, it_clname_recipient, it_itgross)
@@ -32,8 +35,8 @@ alphakey,
 (select i_clientkey from t_items where i_inumkey = numkey),
 itemOwner,
 'Loan',
-startDateTime,
-dueDateTime,
+loan_datetime,
+due_dateTime,
 recipient,
 0
 );
@@ -41,4 +44,18 @@ recipient,
 end;
 $$ language plpgsql;
 
-add_loan(142, numkey inumkey, alphakey ialphakey, startDateTime itdatetime, dueDateTime itdatetime, recipient clname)
+select add_loan(328, 'PA', cast('2014-11-30' as timestamp), cast('2015-02-15' as timestamp), 'Ryans Museum');
+
+select add_loan(328, 'PA', cast('2014-11-30' as timestamp), cast('2015-02-15' as timestamp), 'Iain');
+
+select add_loan(328, 'PA', cast('2014-11-30' as timestamp), cast('2014-11-29' as timestamp), 'Ryans Museum');
+
+select add_loan(941, 'PA', cast('2014-11-30' as timestamp), cast('2015-02-15' as timestamp), 'Ryans Museum');
+
+select add_loan(328, 'PWF', cast('2014-11-30' as timestamp), cast('2015-02-15' as timestamp), 'Ryans Museum');
+
+
+
+
+
+

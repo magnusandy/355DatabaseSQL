@@ -1,0 +1,103 @@
+(1)update t_item_locations
+condition: item pulled out of exhibition
+                     endDate > startdate > now
+Action:update _exhibition_items
+
+
+(2)insert t_item_locations
+condition: item pulled from an exhibition
+update t_exhibition_items
+
+(3)delete from t_item_locations
+condition: startDate < now
+action:  prevent deletion
+
+
+(4)insert on t_exhibition_locations
+condition: exhibition already scheduled for that time in that location
+action: report error
+
+(5)update t_exhibition_locations
+ 	(i) dates changed
+ 		update t_exhibition_items
+ 		trigger 7 handles update of t_item_locations
+	(ii)location changed
+ 	 if startdate < enddate < now
+ 		don't allow, this is a past record.
+ 	else if now < startdate < enddate (future)
+ 	 	allow this update
+ 		update the location in t_item_locations for
+ 		every item in the exhibition in the previous location
+ 	else if startDAte < now < enddate
+ 		don't allow update
+ 		insert a new record into this table 
+ 		insert new records into t_item_locations
+ 		   **handling the previous enddates handled by trigger
+ 	(iii) Sponsor changed
+ 		if startdate < enddate < now
+ 			past record, don't allow update.
+ 		else if now < startDate < enddate
+ 			present, don't allow update
+ 			simply allow update
+ 		else if startdate < now < enddate
+ 		 	don't update.
+ 			instead, insert a new record.
+
+
+(6) delete from t_exhibition_locations
+ 	if startdate < enddate < now
+ 		past, don't allow update.
+ 	else if startdate < enddate < now
+ 		future. allow deletion
+ 		delete fro t_item_locations
+ 	else if startdate < now < enddate
+ 		insert a new record into t_item_locations and update the previous enddate(it may not have been null). 
+		
+(7)update t_exhibition_items
+if startDate < enddate < now
+ 	don't allow, past record.
+else if now < startDate < enddate
+ 	ensure no item is promised somwhere else on that date. 
+ 	if all items are free on the new date,
+ 	 	allow update.
+ 		update t_item_locations
+else if startdate < now < enddate
+ 	ensure no item is promised elsewhere on the new dates.
+ 	don't allow update, instead insert new records into this table.
+ 	insert new records into t_item_locations by
+ 		update the previous enddate for the item(it may not have been null)
+ 		insert new records into t_item_locations
+
+(8) insert into t_exhibition_items
+ 	allow insert, but do nothing. not enough information on the item;s location.
+
+(9) delete from t_exhibition_items
+ 	if   now < startDate < enddate 
+ 		allow deletion.
+		delete from t_item_locations.
+ 	else don't allow deletion. 
+ 		update the enddate instead
+ 		update the enddates item affecteed in the locations table.
+
+(10) insert into exhibitions
+ 	do nothing.
+
+(11) update exhibitions
+ 	if startDate < enddate < now
+ 		past record, do not allow.
+	else if startdate < now < enddate
+ 		ensure start date was not changed.
+ 		allow update
+ 		update t_exhibition_locations
+ 		* trigger 5 handles the rest.
+ 	else if now < startdate < enddate
+ 		allow update. 
+ 		update t_exhibition_locations
+ 		* trigger 5 handles the rest.
+
+(12) delete from exhibitions
+ 	if now < startdate < enddate
+ 		future record, allow deletion.
+ 		delete from t_exhibition_locations.
+ 		* trigger 6 handles the rest.
+		
