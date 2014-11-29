@@ -11,7 +11,7 @@ BEGIN
 	-----------------------------------
 	IF(new.it_ittype = 'Sale') THEN
 		-- Update the owner of the item to be the new owner
-        	UPDATE t_items SET i_clientkey = NEW.it_clname_recipient WHERE (i_numkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_proprietor);
+        	UPDATE t_items SET i_clientkey = NEW.it_clname_recipient WHERE (i_inumkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_proprietor);
 		
 		-- Remove from all future planned exhibitions
 		DELETE FROM t_exhibition_items
