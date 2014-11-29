@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION sell_item(item_number inumkey, item_code ialphakey, client clname, sale_date itdatetime, value itgross) RETURNS VOID AS $f_sellitem$
+CREATE OR REPLACE FUNCTION add_sale(item_number inumkey, item_code ialphakey, client clname, sale_date itdatetime, value itgross) RETURNS VOID AS $f_sellitem$
 DECLARE
 current_owner clname;
 BEGIN
@@ -58,72 +58,13 @@ BEGIN
 	END IF;
 	
 	-- Add the sale transaction
-	INSERT INTO v_item_transactions
+	INSERT INTO t_item_transactions
 	(
 		it_inumkey, it_ialphakey, it_clientkey, it_clname_proprietor, it_clname_recipient, it_ittype, it_itdatetime_start, it_itgross
 	)
 	VALUES
 	(
 		item_number, item_code, current_owner, current_owner, client, 'Sale', sale_date, value 
-	);
-	
-	-- Update the client key of the item to the new client
-	UPDATE v_items SET i_clientkey = client WHERE i_inumkey = item_number AND i_ialphakey = item_code;
-
-	-- Remove from planned exhibitions where the start date is after the sale date
-	DELETE FROM v_exhibition_items 
-	WHERE 
-	(
-		exi_inumkey = item_number 
-		AND 
-		exi_ialphakey = item_code 
-		AND 
-		exi_exidate_start > CAST(sale_date AS exidate)		
-	);
-
-	-- Update the end date if the item is currently in an exhibition at the sale date
-	UPDATE v_exhibition_items 
-	SET
-		exi_exidate_end = CAST(sale_date AS exidate)
-	WHERE
-	(
-		exi_inumkey = item_number
-		AND
-		exi_ialphakey = item_code
-		AND
-		(
-			exi_exidate_start < CAST(sale_date AS exidate) 
-			AND
-			(exi_exidate_end > CAST(sale_date AS exidate) OR exi_exidate_end IS NULL) 
-		)
-	);
-
-	-- Remove from planned locations which the item is in after the sale date
-	DELETE FROM t_item_locations 
-	WHERE 
-	(
-		ilo_inumkey = item_number 
-		AND 
-		ilo_ialphakey = item_code 
-		AND
-		ilo_ilodatetime_start > CAST(sale_date AS ilodatetime)
-	);
-
-	-- Update the end date of the location the item is currently in
-	UPDATE t_item_locations
-	SET
-		ilo_ilodatetime_end = CAST(sale_date AS ilodatetime)
-	WHERE
-	(
-		ilo_inumkey = item_number 
-		AND 
-		ilo_ialphakey = item_code
-		AND
-		(
-			ilo_ilodatetime_start < CAST(sale_date AS ilodatetime)
-			AND
-			(ilo_ilodatetime_end > CAST(sale_date AS ilodatetime) OR ilo_ilodatetime_end IS NULL)
-		)
 	);
 END;
 $f_sellitem$ LANGUAGE plpgsql;
