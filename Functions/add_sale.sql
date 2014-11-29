@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION sell_item(item_number inumkey, item_code ialphakey, client clname, sale_date itdatetime, value itgross) RETURNS VOID AS $f_sellitem$
+CREATE OR REPLACE FUNCTION add_sale(item_number inumkey, item_code ialphakey, client clname, sale_date itdatetime, value itgross) RETURNS VOID AS $f_sellitem$
 DECLARE
 current_owner clname;
 BEGIN
@@ -58,7 +58,7 @@ BEGIN
 	END IF;
 	
 	-- Add the sale transaction
-	INSERT INTO v_item_transactions
+	INSERT INTO t_item_transactions
 	(
 		it_inumkey, it_ialphakey, it_clientkey, it_clname_proprietor, it_clname_recipient, it_ittype, it_itdatetime_start, it_itgross
 	)
