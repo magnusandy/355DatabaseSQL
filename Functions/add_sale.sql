@@ -24,8 +24,9 @@ BEGIN
 	END IF;
 
 	-- Ensure date date is not in the past (We shouldn't really be using standard day-to-day transactions to alter historical information)
-	if(sale_date < current_timestamp) THEN
+	IF(sale_date < current_timestamp) THEN
 		RAISE EXCEPTION 'Unable to sell item % % to % if the sale date has already passed. Please speak with the database administrator if this was not an input error', item_number, item_code, client;
+	END IF;
 
 	-- Ensure the item specified actually exists
 	IF NOT(SELECT EXISTS (SELECT 1 FROM t_items WHERE i_inumkey = item_number AND i_ialphakey = item_code)) THEN
