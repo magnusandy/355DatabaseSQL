@@ -45,6 +45,6 @@ buyer,
 timeOfTransaction, 
 cost);
 end if;
-update t_items set i_clientkey = buyer where i_inumkey = numkey and i_ialphakey = alphakey;
+
 end;
 $$ language plpgsql;
