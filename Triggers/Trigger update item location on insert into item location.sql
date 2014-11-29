@@ -19,7 +19,9 @@ where
 				ilo_ialphakey = NEW.ilo_ialphakey 
 				AND 
 				ilo_clientkey_item = NEW.ilo_clientkey_item 
-		);
+		)
+	AND
+	ilo_ilodatetime_start < new.ilo_ilodatetime_start;
                 --This subquery selects only the latest record for this item to update.
 RETURN NEW;
 END;
