@@ -1,0 +1,44 @@
+create function add_loan(numkey inumkey, alphakey ialphakey, startDateTime itdatetime, dueDateTime itdatetime, recipient clname) returns void as $$
+declare
+itemOwner clname;
+
+begin
+itemOwner:= (select i_clientkey from t_items where i_inumkey = numkey);
+ 
+if ((select count(*) from t_items where i_inumkey = numkey and i_ialphakey = alphakey) <= 0) then
+raise exception 'Error:The alphakey does not match the numkey';
+
+elseif(select itemOwner not in (select cl_clname from v_us)) then
+raise exception 'Error: We cannot lend an item that we dont own.';
+
+
+elseif (itemOwner = recipient) then
+raise exception 'Error: The owner of this item cannot borrow it';
+
+end if;
+
+if (select (startDate, dueDate) overlaps (ilo_ilodatetime_start, ilo_ilodatetime_end) from t_item_locations where ilo_inumkey = 142) then
+raise exception 'Error: Cannot loan the item because it has a prior commitment';
+
+elseif (select (startDate, dueDate) overlaps (ilo_ilodatetime_start, ilo_ilodatetime_start) from t_item_locations where ilo_inumkey = 142) then
+raise exception 'Error: Cannot loan this item because it has a prior commitment';
+
+end if;
+
+insert into t_item_transactions(it_inumkey, it_ialphakey, it_clientkey, it_clname_proprietor, it_ittype, it_itdatetime_start, it_itdatetime_returnby, it_clname_recipient, it_itgross)
+VALUES(
+numkey,
+alphakey,
+(select i_clientkey from t_items where i_inumkey = numkey),
+itemOwner,
+'Loan',
+startDateTime,
+dueDateTime,
+recipient,
+0
+);
+
+end;
+$$ language plpgsql;
+
+add_loan(142, numkey inumkey, alphakey ialphakey, startDateTime itdatetime, dueDateTime itdatetime, recipient clname)
