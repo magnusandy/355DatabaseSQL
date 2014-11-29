@@ -1,4 +1,4 @@
-create or replace function add_loan(numkey inumkey, alphakey ialphakey, loan_datetime itdatetime, due_dateTime itdatetime, recipient clname) returns void as $$
+create or replace function add_loan(numkey inumkey, alphakey ialphakey, recipient clname, loan_datetime itdatetime, due_dateTime itdatetime) returns void as $$
 declare
 itemOwner clname;
 

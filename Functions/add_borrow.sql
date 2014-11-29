@@ -14,6 +14,14 @@ raise exception 'Error: An owner of the item cannot borrow from himself';
 
 end if;
 
+-- Warn the user when an item is sold at midnight (they probably didn't specify a full date and time)
+	IF ((SELECT EXTRACT(HOUR FROM CAST(startDateTime AS timestamp)) = 0) 
+		AND (SELECT EXTRACT(MINUTE FROM CAST(startDateTime AS timestamp)) = 0) 
+		AND (SELECT EXTRACT(SECOND FROM CAST(startDateTime AS timestamp)) = 0)) THEN
+		RAISE NOTICE 'Warning: Lending item  at midnight, are you sure you specified a date and time?';
+	
+end if;
+
 insert into t_item_transactions(it_inumkey, it_ialphakey, it_clientkey, it_clname_proprietor, it_ittype, it_itdatetime_start, it_itdatetime_returnby, it_clname_recipient, it_itgross)
 VALUES(
 numkey,
