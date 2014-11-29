@@ -1,27 +1,184 @@
 CREATE FUNCTION update_loc_on_outermove() RETURNS TRIGGER AS $loc_outer_move$
+DECLARE
+	current_owner clname;
 BEGIN
-IF(new.it_ittype = 'Sale') THEN
-INSERT INTO t_item_locations (ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end)
-VALUES (new.it_inumkey, new.it_ialphakey, (SELECT i_clientkey from t_items where (i_inumkey = new.it_inumkey and i_ialphakey = new.it_ialphakey)), 'Sold', 'Transactions', new.it_itdatetime_start, NULL);
-UPDATE t_items SET i_clientkey = new.it_clname_recipient WHERE i_inumkey = new.it_inumkey and i_ialphakey = new.it_ialphakey and i_clientkey = new.it_clientkey;
+
+	-- Get the current owner of the item
+	current_owner = NEW.it_clname_proprietor;
+
+	-----------------------------------
+	-- Sale
+	-----------------------------------
+	IF(new.it_ittype = 'Sale') THEN
+		-- Update the owner of the item to be the new owner
+        	UPDATE t_items SET i_clientkey = NEW.it_clname_recipient WHERE (i_numkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_proprietor);
+		
+		-- Remove from all future planned exhibitions
+		DELETE FROM t_exhibition_items
+        	WHERE
+	        (
+			exi_inumkey = NEW.it_inumkey
+			AND
+			exi_ialphakey = NEW.it_ialphakey
+			AND
+			exi_clientkey = NEW.it_clientkey
+			AND
+			exi_exidate_start > CAST(NEW.it_itdatetime_start AS exidate)
+		);
+
+        	-- Update the end date if the item is currently in an exhibition at the sale date
+        	UPDATE v_exhibition_items
+	        SET
+		exi_exidate_end = CAST(NEW.it_itdatetime_start AS exidate)
+		WHERE
+		(
+			exi_inumkey = NEW.it_inumkey 
+			AND
+			exi_ialphakey = NEW.it_ialphakey 
+			AND
+			(
+				exi_exidate_start < CAST(it_itdatetime_start AS exidate)
+				AND
+				(exi_exidate_end > CAST(it_itdatetime_start AS exidate) OR exi_exidate_end IS NULL)
+			)
+		);
+
+        	-- Remove from planned locations which the item is in after the sale date
+       		DELETE FROM t_item_locations
+        	WHERE
+        	(
+			ilo_inumkey = NEW.it_inumkey  
+			AND 
+			ilo_ialphakey = NEW.it_ialphakey 
+			AND 
+			ilo_ilodatetime_start > CAST(NEW.it_itdatetime_start AS ilodatetime)
+		);	
+
+		-- Move the item to the 'Sold' location
+		INSERT INTO t_item_locations 
+		(
+			ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end
+		)
+		VALUES 
+		(
+			new.it_inumkey, new.it_ialphakey, NEW.it_clname_recipient, 'Sold', 'Transactions', NEW.it_itdatetime_start, NULL
+		);
+
+	--------------------------------------
+	-- Purchase
+	--------------------------------------
+	ELSEIF(new.it_ittype = 'Purchase') THEN
+		-- Update the owner of the item to the recipient
+		UPDATE v_items SET i_clientkey = NEW.it_clname_recipient WHERE i_inumkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_recipient;				
+		-- Check if the item is not currently in a location
+        	IF NOT
+		(SELECT EXISTS 
+			(SELECT 1 FROM t_item_locations 
+				WHERE 
+				ilo_inumkey = NEW.it_inumkey 
+				AND 
+				ilo_ialphakey = NEW.it_ialphakey 
+				AND 
+				(
+					ilo_ilodatetime_start < CAST(purchase_date AS ilodatetime) 
+					AND
+					(
+						ilo_ilodatetime_end > CAST(purchase_date AS ilodatetime) 
+						OR 
+						ilo_ilodatetime_end IS NULL
+					)
+				)
+			)
+		) THEN
+	       		-- If it isn't in a location at the moment, add it to storage 	
+			INSERT INTO t_item_locations 
+				(ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start) 
+				VALUES
+				(NEW.it_inumkey, new.it_ialphakey, NEW.it_clname_recipient, 'Storage', NEW.it_clname_recipient, CAST(NEW.it_itdatetime_start AS ilodatetime));
+		END IF;
 
 
-ELSEIF(new.it_ittype = 'Purchase') THEN
-INSERT INTO t_item_locations (ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end)
-VALUES (new.it_inumkey, new.it_ialphakey, (SELECT i_clientkey from t_items where (i_inumkey = new.it_inumkey and i_ialphakey = new.it_ialphakey)), 'Storage', new.it_clname_recipient, new.it_itdatetime_start, NULL);
-UPDATE t_items SET i_iacquisitiondate = now(), i_clientkey = new.it_clname_proprietor WHERE i_inumkey = new.it_inumkey and i_ialphakey = new.it_ialphakey and i_clientkey = new.it_clientkey;
+	----------------------------------
+	-- Borrow
+	----------------------------------
+	ELSEIF(new.it_ittype = 'Borrow') THEN
+		-- Put the borrowed item into storage
+		INSERT INTO t_item_locations 
+			(ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end)
+		VALUES 
+			(new.it_inumkey, new.it_ialphakey, current_owner, 'Storage', new.it_clname_recipient, CAST(new.it_itdatetime_start AS ilodatetime), NULL);
 
-ELSEIF(new.it_ittype = 'Borrow') THEN
-INSERT INTO t_item_locations (ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end)
-VALUES (new.it_inumkey, new.it_ialphakey, (SELECT i_clientkey from t_items where (i_inumkey = new.it_inumkey and i_ialphakey = new.it_ialphakey)), 'Storage', new.it_clname_recipient, new.it_itdatetime_start, NULL);
+	----------------------------------
+	-- Loan
+	----------------------------------
+	ELSEIF(new.it_ittype = 'Loan') THEN
+		
+	        -- Remove from all future planned exhibitions
+                DELETE FROM t_exhibition_items 
+		WHERE
+		(
+			exi_inumkey = NEW.it_inumkey
+		       	AND
+		       	exi_ialphakey = NEW.it_ialphakey
+		       	AND
+		       	exi_clientkey = NEW.it_clientkey
+		       	AND
+		       	exi_exidate_start > CAST(NEW.it_itdatetime_start AS exidate)
+		);
 
+		-- Update the end date if the item is currently in an exhibition at the loan date
+		UPDATE v_exhibition_items
+		SET
+			exi_exidate_end = CAST(NEW.it_itdatetime_start AS exidate)
+		WHERE
+		(
+			exi_inumkey = NEW.it_inumkey
+			AND
+			exi_inumkey = NEW.it_ialphakey
+			AND
+			(				
+				exi_exidate_start < CAST(NEW.it_itdatetime_start AS exidate)
+				AND
+				(exi_exidate_end > CAST(NEW.it_itdatetime_start AS exidate) OR exi_exidate_end IS NULL) 
+			)
+		);
 
-ELSEIF(new.it_ittype = 'Loan') THEN
-INSERT INTO t_item_locations (ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end)
-VALUES (new.it_inumkey, new.it_ialphakey, (SELECT i_clientkey from t_items where (i_inumkey = new.it_inumkey and i_ialphakey = new.it_ialphakey)), 'Loan', 'Transactions', new.it_itdatetime_start, NULL);
+		-- Remove from future planned locations after the loan date
+		DELETE FROM t_item_locations
+		WHERE
+		(
+			ilo_inumkey = NEW.it_inumkey
+			AND
+			ilo_ialphakey = NEW.it_ialphakey 
+			AND
+			ilo_ilodatetime_start > CAST(NEW.it_itdatetime_start AS ilodatetime)
+		);
 
-END IF;
-RETURN NEW;
+		-- Update the end date of the location the item is currently in
+		UPDATE t_item_locations
+		SET
+		ilo_ilodatetime_end = CAST(NEW.it_itdatetime_start AS ilodatetime)
+		WHERE
+		(
+			ilo_inumkey = NEW.it_inumkey
+			AND
+			ilo_ialphakey = NEW.it_ialphakey
+			AND
+			(
+				ilo_ilodatetime_start < CAST(NEW.it_itdatetime_start AS ilodatetime)
+				AND
+				(ilo_ilodatetime_end > CAST(NEW.it_itdatetime_start AS ilodatetime) OR ilo_ilodatetime_end IS NULL)
+			)
+		);
+
+		-- Put the loaned item into the 'Loan' location
+                INSERT INTO t_item_locations
+			(ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end)
+			VALUES 
+			(new.it_inumkey, new.it_ialphakey, current_owner, 'Loan', 'Transactions', new.it_itdatetime_start, new.it_itdatetime_returnby);
+	END IF;
+
+	RETURN NEW;
 
 END;
 $loc_outer_move$ LANGUAGE plpgsql;
