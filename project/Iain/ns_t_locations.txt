@@ -1,4 +1,4 @@
-storage	Iain	Internal
+Storage	Iain	Internal
 lobby	Iain	Internal
 gallery a	Iain	Internal
 gallery b	Iain	Internal

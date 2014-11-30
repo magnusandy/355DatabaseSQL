@@ -22,7 +22,7 @@ WHERE
 
 -- Evans
 UPDATE t_item_transactions
-	SET it_clname_recipient = 'Evan Closson'
+	SET it_clname_recipient = 'Owner'
 WHERE
 (
 	(it_inumkey = 92619 AND it_ialphakey = 'armo')
@@ -107,7 +107,7 @@ WHERE
 );
 
 UPDATE t_item_transactions
-	SET it_clname_proprietor = 'Evan Closson'
+	SET it_clname_proprietor = 'Owner'
 WHERE
 (
 	(it_inumkey = 93131 AND it_ialphakey = 'disc')

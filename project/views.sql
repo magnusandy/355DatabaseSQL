@@ -712,7 +712,7 @@ CREATE VIEW v_sold_item_info AS SELECT
 ;
 	
 -- View for returning the names of our museums
-CREATE VIEW v_us AS 
+CREATE OR REPLACE VIEW v_us AS 
 SELECT 
 	cl_clname 
 FROM 
@@ -727,7 +727,7 @@ WHERE
 	OR 
 	cl_clname = 'Andrew Museum' 
 	OR 
-	cl_clname = 'Evan Closson'
+	cl_clname = 'Owner'
 );
 
 update t_item_locations  set ilo_locname = 'Gallery B' where ilo_ilodatetime_start >= cast('2015-01-26' as timestamp) and ilo_inumkey in (select exi_inumkey from t_exhibition_items where exi_ename = 'Masks and Jewlery');

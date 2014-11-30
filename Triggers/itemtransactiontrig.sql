@@ -69,7 +69,7 @@ BEGIN
 		
 		-- Update the owner of the item to be the new owner
                 UPDATE v_items SET i_clientkey = NEW.it_clname_recipient WHERE (i_inumkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_proprietor);
-
+		
 
 	--------------------------------------
 	-- Purchase
@@ -105,8 +105,8 @@ BEGIN
 				(NEW.it_inumkey, new.it_ialphakey, current_owner, 'Storage', NEW.it_clname_recipient, CAST(NEW.it_itdatetime_start AS ilodatetime));
 		END IF;
                 
-		-- Update the owner of the item to the recipient
-                UPDATE v_items SET i_clientkey = NEW.it_clname_recipient WHERE i_inumkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_recipient;
+		-- Update the owner of the item to the recipient and the acquisition date to be the sale date
+                UPDATE v_items SET i_clientkey = NEW.it_clname_recipient, i_iacquisitiondate = CAST(it_itdatetime_start AS iacquisitiondate) WHERE i_inumkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_recipient;
 
 	----------------------------------
 	-- Borrow
