@@ -730,3 +730,4 @@ WHERE
 	cl_clname = 'Evan Closson'
 );
 
+update t_item_locations  set ilo_locname = 'Gallery B' where ilo_ilodatetime_start >= cast('2015-01-26' as timestamp) and ilo_inumkey in (select exi_inumkey from t_exhibition_items where exi_ename = 'Masks and Jewlery');

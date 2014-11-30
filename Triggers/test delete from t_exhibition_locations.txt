@@ -11,4 +11,11 @@ select * from t_item_locations where ilo_inumkey in (select exi_inumkey from t_e
 select * from t_exhibition_locations where exl_ename= 'Masks and Jewlery';
 
 
+select * from t_exhibition_locations where exl_ename = 'Fabulous Furniture';
+select * from t_item_locations where ilo_inumkey in (select exi_inumkey from t_exhibition_items where exi_ename = 'Fabulous Furniture') and ilo_ilodatetime_start <= now() and (ilo_ilodatetime_end >= now() or ilo_ilodatetime_end is null);
+delete from t_exhibition_locations where exl_ename = 'Fabulous Furniture';
+
+select * from t_exhibition_locations where exl_ename = 'Fabulous Furniture';
+select * from t_item_locations where ilo_inumkey in (select exi_inumkey from t_exhibition_items where exi_ename = 'Fabulous Furniture') and ilo_ilodatetime_start <= now() and (ilo_ilodatetime_end >= now() or ilo_ilodatetime_end is null);
+
 --delete when it has occurred in the past.
