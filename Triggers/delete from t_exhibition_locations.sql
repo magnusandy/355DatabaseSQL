@@ -18,7 +18,7 @@ ELSEIF (OLD.exl_exldate_end > now()) then
  return OLD;  --perform the deletion now.
  
  ELSEIF (OLD.exl_exldate_start <= now() and OLD.exl_exldate_end >= now()) then
-	OLD.exl_exldate_end:= now();
+	OLD.exl_exldate_end:= null;
 	update t_item_locations set ilo_ilodatetime_end = now() where 
 	ilo_locname = OLD.exl_locname 
  --item location is between the two dates for this location.
@@ -26,7 +26,7 @@ ELSEIF (OLD.exl_exldate_end > now()) then
  --the item is actually part of that exhibition during those dates.
  and ilo_inumkey in (select exi_inumkey from t_exhibition_items where exi_ename = OLD.exl_ename and (OLD.exl_exldate_start, OLD.exl_exldate_end) OVERLAPS (exi_exidate_start, exi_exidate_end));
  
- RAISE NOTICE  'You have made gaps in the exhibitions planned locations and the items planned locations. Please be aware that you should insert the items and the exhibitions next locations now.';
+ RAISE NOTICE  'You have made gaps in the exhibitions planned locations and the items current locations have been set to null. These items should be scheduled to be moved immediately. Please be aware that you should insert the items and the exhibitions next locations now.';
  
  return null;
  
