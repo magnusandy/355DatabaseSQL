@@ -712,7 +712,7 @@ CREATE VIEW v_sold_item_info AS SELECT
 ;
 	
 -- View for returning the names of our museums
-CREATE VIEW v_us AS 
+CREATE OR REPLACE VIEW v_us AS 
 SELECT 
 	cl_clname 
 FROM 
@@ -727,6 +727,6 @@ WHERE
 	OR 
 	cl_clname = 'Andrew Museum' 
 	OR 
-	cl_clname = 'Evan Closson'
+	cl_clname = 'Owner'
 );
 
