@@ -28,8 +28,8 @@ VALUES(
 numkey, 
 alphakey, 
 (select i_clientkey from t_items where i_inumkey = numkey limit 1), 
+(select i_clientkey from t_items where i_inumkey = numkey limit 1),
 buyer, 
-(select i_clientkey from t_items where i_inumkey = numkey limit 1), 
 'Purchase', 
 now(), --default if time was not entered
 cost);
@@ -38,9 +38,9 @@ else
 insert into t_item_transactions(it_inumkey, it_ialphakey, it_clientkey, it_clname_proprietor, it_clname_recipient, it_ittype, it_itdatetime_start, it_itgross)
 VALUES(numkey, 
 alphakey, 
-(select i_clientkey from t_items where i_inumkey = numkey limit 1), 
-buyer, 
 (select i_clientkey from t_items where i_inumkey = numkey limit 1),
+(select i_clientkey from t_items where i_inumkey = numkey limit 1),
+buyer, 
 'Purchase', 
 timeOfTransaction, 
 cost);
