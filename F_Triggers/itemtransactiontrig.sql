@@ -79,7 +79,7 @@ BEGIN
 		-- Check if the item is not currently in a location
         	IF NOT
 		(SELECT EXISTS 
-			(SELECT 1 FROM t_item_locations 
+			(SELECT 1 FROM v_current_item_location 
 				WHERE 
 				ilo_inumkey = NEW.it_inumkey 
 				AND 
@@ -106,7 +106,7 @@ BEGIN
 		END IF;
                 
 		-- Update the owner of the item to the recipient and the acquisition date to be the sale date
-                UPDATE v_items SET i_clientkey = NEW.it_clname_recipient, i_iacquisitiondate = CAST(NEW.it_itdatetime_start AS iacquisitiondate) WHERE i_inumkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_recipient;
+                UPDATE v_items SET i_clientkey = NEW.it_clname_recipient, i_iacquisitiondate = CAST(NEW.it_itdatetime_start AS iacquisitiondate) WHERE i_inumkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_proprietor;
 
 	----------------------------------
 	-- Borrow
