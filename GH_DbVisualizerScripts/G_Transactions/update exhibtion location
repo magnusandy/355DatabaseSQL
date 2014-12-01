@@ -1,0 +1,12 @@
+UPDATE 
+    public.v_exhibition_locations
+    SET exl_locname = ${newloc||(null)||String}$,
+     exl_clientkey = ${newclkey||(null)||String}$,
+     exl_exldate_start = ${newstartdate||(null)||Date}$,
+     exl_exldate_end = ${newendate||(null)||Date}$
+WHERE
+exl_ename = ${ename||(null)||String}$ AND 
+exl_locname = ${locanme||(null)||String}$ AND 
+exl_clientkey = ${clientkeyLoc||(null)||String}$ AND 
+exl_exldate_start = ${exldatestart||(null)||Date}$ 
+; 
