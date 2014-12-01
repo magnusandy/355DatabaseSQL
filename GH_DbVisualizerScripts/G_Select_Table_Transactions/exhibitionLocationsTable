@@ -1,0 +1,10 @@
+SELECT
+    exl_ename,
+    exl_showdate_start,
+    exl_locname,
+    exl_clientkey,
+    exl_exldate_start,
+    exl_exldate_end,
+    exl_security
+FROM
+    public.v_exhibition_locations
