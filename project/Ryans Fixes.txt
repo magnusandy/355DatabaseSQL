@@ -1,0 +1,46 @@
+
+update t_item_locations  set ilo_locname = 'Gallery B' where ilo_ilodatetime_start >= cast('2015-01-26' as timestamp) and ilo_inumkey in (select exi_inumkey from t_exhibition_items where exi_ename = 'Masks and Jewlery');
+
+
+
+--Fixing andrews and my item conflicts. 
+ create function update() returns void as $$
+DECLARE
+numberOfNumkeys bigint;
+howFarWEAreInRecord bigint;
+numberOfSpecificKey bigint;
+firstRecordNumkey inumkey;
+firstRecordStart ilodatetime;
+firstRecordEnd ilodatetime;
+
+secondRecordNumkey inumkey;
+secondRecordStart ilodatetime;
+secondRecordEnd ilodatetime;
+
+begin
+numberOfNumkeys:= 1;
+howFarWeAreInRecord:= 0;
+while (numberOfNumkeys > 0) loop
+	firstRecordNumkey:= (select  numkey from v_item_conflicts order by numkey offset howFarWeAreInRecord limit 1);
+	firstRecordStart:= (select ic.start from v_item_conflicts ic where numkey = firstRecordNumkey order by numkey offset howFarWeAreInRecord limit 1);
+	firstRecordEnd:= (select ic.end from v_item_conflicts ic where numkey = firstRecordNumkey order by numkey offset howFarWeAreInRecord limit 1);
+	
+	secondRecordNumkey:= (select numkey from v_item_conflicts  order by numkey offset howFarWeAreInRecord + 1 limit 1);
+	secondRecordStart:= (select ic.start from v_item_conflicts ic where numkey = secondRecordNumkey order by numkey offset howFarWeAreInRecord + 1 limit 1);
+	secondRecordEnd:= (select ic.end from v_item_conflicts ic where numkey = secondRecordNumkey order by numkey offset howFarWeAreInRecord + 1 limit 1);
+	
+	if (secondRecordNumkey<> null) then
+		update v_item_conflicts ic set ic.end = secondRecordStart where numkey = firstRecordNumkey and ic.start = firstRecordStart and ic.end = firstRecordEnd;
+	ELSE
+		numberOfNumkeys:= 0;
+	END IF;
+	howFarWeAreInRecord:= howFarWeAreInRecord + 1;
+END LOOP;
+end;
+$$ language plpgsql;
+	
+
+
+select update();
+
+drop if exists function update() cascade;

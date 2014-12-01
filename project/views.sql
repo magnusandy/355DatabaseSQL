@@ -730,4 +730,47 @@ WHERE
 	cl_clname = 'Owner'
 );
 
-update t_item_locations  set ilo_locname = 'Gallery B' where ilo_ilodatetime_start >= cast('2015-01-26' as timestamp) and ilo_inumkey in (select exi_inumkey from t_exhibition_items where exi_ename = 'Masks and Jewlery');
+
+drop view if exists v_item_conflicts;
+drop view if exists v_exhibition_locations;
+--View to see all items that have time conflicts with themselves.------
+create view v_item_conflicts as
+select 
+l1.ilo_inumkey as numkey, 
+l1.ilo_ialphakey as alphakey, 
+l1.ilo_clientkey_item as item_owner,  
+l1.ilo_locname as location, 
+l1.ilo_clientkey_location as location_owner, 
+l1.ilo_ilodatetime_start as start, 
+l1.ilo_ilodatetime_end as end 
+from t_item_locations l1, t_item_locations l2 
+where 
+l1.ilo_inumkey = l2.ilo_inumkey 
+and l1.ilo_clientkey_item = l2.ilo_clientkey_item
+and (l1.ilo_ilodatetime_start, l1.ilo_ilodatetime_end) OVERLAPS  (l2.ilo_ilodatetime_start, l2.ilo_ilodatetime_end) 
+and l1.ilo_ilodatetime_start <> l2.ilo_ilodatetime_end 
+and l1.ilo_ilodatetime_end <> l2.ilo_ilodatetime_end 
+order by numkey, start;
+
+
+---View to see any conflict between exhibition locations.
+create view v_exhibition_location_conflicts as
+select 
+e1.exl_ename as exhibition,  
+e1.exl_locname as location, 
+e1.exl_clientkey as location_owner, 
+e1.exl_exldate_start as start, 
+e1.exl_exldate_end as end
+ from 
+ t_exhibition_locations e1, t_exhibition_locations e2 
+ where 
+ e1.exl_locname = e2.exl_locname 
+ and e1.exl_clientkey = e2.exl_clientkey 
+ and (e1.exl_exldate_start, e1.exl_exldate_end) OVERLAPS (e2.exl_exldate_start, e2.exl_exldate_end) 
+ and e1.exl_exldate_start <> e2.exl_exldate_end 
+ and e1.exl_exldate_end <> e2.exl_exldate_start 
+ and e1.exl_exldate_start <> e2.exl_exldate_start 
+ and e1.exl_exldate_end <> e2.exl_exldate_end 
+ order by e1.exl_locname, e1.exl_exldate_start;
+
+ 
