@@ -21,8 +21,13 @@ raise exception ' The owner of this item cannot borrow it';
 elseif (loan_datetime > due_datetime) then
 raise exception ' Cannot have a return date before the item was borrowed';
 
+	
 end if;
-
+----ensure item is not a borrowed work or on loan----------
+IF ((select count(*) from t_item_transactions where it_inumkey = numkey and it_ialphakey = alphakey and it_itdatetime_end is null and it_ittype in ('Borrow', 'Loan')) > 0) then
+		RAISE EXCEPTION 'That item is either currently lent out';
+	END IF;
+	
 -- Warn the user when an item is sold at midnight (they probably didn't specify a full date and time)
 	IF ((SELECT EXTRACT(HOUR FROM CAST(loan_datetime AS timestamp)) = 0) 
 		AND (SELECT EXTRACT(MINUTE FROM CAST(loan_datetime AS timestamp)) = 0) 

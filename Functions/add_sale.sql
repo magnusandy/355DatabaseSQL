@@ -57,6 +57,11 @@ BEGIN
 		RAISE NOTICE 'Warning: selling item % % at midnight, are you sure you specified a date and time?', item_number, item_code;
 	END IF;
 	
+	-------ensure the item is not loaned out or borrowed.------
+	IF ((select count(*) from t_item_transactions where it_inumkey = numkey and it_ialphakey = alphakey and it_itdatetime_end is null and it_ittype in ('Borrow', 'Loan')) > 0) then
+		RAISE EXCEPTION 'That item is either currently lent out or is a borrowed work.';
+	END IF;
+	
 	-- Add the sale transaction
 	INSERT INTO t_item_transactions
 	(

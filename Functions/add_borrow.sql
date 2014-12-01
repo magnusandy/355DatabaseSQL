@@ -12,6 +12,9 @@ raise exception 'Error: The item must be borrow by one of our museums: Iain, Rya
 elseif (select borrower in (select i_clientkey from t_items where i_inumkey = numkey)) then
 raise exception 'Error: An owner of the item cannot borrow from himself';
 
+elseif ((select count(*) from t_item_transactions where it_inumkey = numkey and it_ialphakey = alphakey and it_itdatetime_end is null and it_ittype in ('Borrow', 'Loan')) > 0) then
+RAISE EXCEPTION 'That item is either currently lent out or is already being borrowed.';
+
 end if;
 
 -- Warn the user when an item is sold at midnight (they probably didn't specify a full date and time)
@@ -37,3 +40,5 @@ borrower,
 
 end;
 $$ language plpgsql;
+
+ 

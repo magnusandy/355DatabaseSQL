@@ -1,0 +1,11 @@
+---test itemReturned;
+
+
+select itemReturned(5493, 'PA', null);-----mismatch numkey and alphakey
+select * from t_item_transactions where it_inumkey = 5439;
+select * from t_exhibition_items where exi_inumkey =5439;
+select itemReturned(5439, 'PA', null);-----------should succeed. 
+select * from t_item_transactions where it_inumkey = 5439;
+select * from t_item_locations where ilo_inumkey = 5439;
+select * from t_exhibition_items where exi_inumkey =5439;
+select itemReturned(5439, 'PA', cast('2015-01-12' as date)); ---should fail future date. 

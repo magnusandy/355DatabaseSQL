@@ -1,0 +1,1 @@
+select * from v_exhibition_location_conflicts;
