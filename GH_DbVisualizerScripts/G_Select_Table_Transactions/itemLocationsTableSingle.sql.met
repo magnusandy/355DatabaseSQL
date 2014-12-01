@@ -1,5 +1,5 @@
 #Extended file properties defined by DbVisualizer
-#Mon Dec 01 12:26:46 GMT-06:00 2014
+#Mon Dec 01 12:29:17 GMT-06:00 2014
 chart.type=result-set-chartviewer-area-chart-command
 chart.line_width=2
 exec.catalog=cmpt355_team01
@@ -37,5 +37,5 @@ chart.series_color_scheme=Scheme 1
 chart.yaxis_minor_grid_visible=false
 chart.font=Tahoma-plain-11
 chart.xaxis_rotate=45
-chart.xaxis_label_overlap=false
 chart.pie_type=Raised
+chart.xaxis_label_overlap=false

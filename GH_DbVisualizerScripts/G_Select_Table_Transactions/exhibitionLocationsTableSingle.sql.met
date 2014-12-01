@@ -1,5 +1,5 @@
 #Extended file properties defined by DbVisualizer
-#Mon Dec 01 12:26:46 GMT-06:00 2014
+#Mon Dec 01 12:07:17 GMT-06:00 2014
 chart.type=result-set-chartviewer-area-chart-command
 chart.line_width=2
 exec.catalog=cmpt355_team01
@@ -21,7 +21,7 @@ chart.xaxis_major_grid_visible=false
 chart.pie_label_type=Line Labels
 chart.bar_type=Raised
 exec.schema=public
-chart.category_column=i_ialphakey
+chart.category_column=cl_clname
 file.encoding=Cp1252
 chart.bg_top_color=\#ffffff
 chart.line_type=Straight
