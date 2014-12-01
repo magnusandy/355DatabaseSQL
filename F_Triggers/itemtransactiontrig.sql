@@ -88,10 +88,10 @@ BEGIN
 				ilo_clientkey_item = current_owner	
 				AND 
 				(
-					ilo_ilodatetime_start < CAST(purchase_date AS ilodatetime) 
+					ilo_ilodatetime_start < CAST(NEW.it_itdatetime_start AS ilodatetime) 
 					AND
 					(
-						ilo_ilodatetime_end > CAST(purchase_date AS ilodatetime) 
+						ilo_ilodatetime_end > CAST(NEW.it_itdatetime_start AS ilodatetime) 
 						OR 
 						ilo_ilodatetime_end IS NULL
 					)
@@ -102,11 +102,11 @@ BEGIN
 			INSERT INTO v_item_locations 
 				(ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start) 
 				VALUES
-				(NEW.it_inumkey, new.it_ialphakey, current_owner, 'Storage', NEW.it_clname_recipient, CAST(NEW.it_itdatetime_start AS ilodatetime));
+				(NEW.it_inumkey, new.it_ialphakey, new.it_clientkey, 'Storage', NEW.it_clname_recipient, CAST(NEW.it_itdatetime_start AS ilodatetime));
 		END IF;
                 
 		-- Update the owner of the item to the recipient and the acquisition date to be the sale date
-                UPDATE v_items SET i_clientkey = NEW.it_clname_recipient, i_iacquisitiondate = CAST(it_itdatetime_start AS iacquisitiondate) WHERE i_inumkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_recipient;
+                UPDATE v_items SET i_clientkey = NEW.it_clname_recipient, i_iacquisitiondate = CAST(NEW.it_itdatetime_start AS iacquisitiondate) WHERE i_inumkey = NEW.it_inumkey AND i_ialphakey = NEW.it_ialphakey AND i_clientkey = NEW.it_clname_recipient;
 
 	----------------------------------
 	-- Borrow
@@ -191,7 +191,7 @@ BEGIN
                 INSERT INTO v_item_locations
 			(ilo_inumkey, ilo_ialphakey, ilo_clientkey_item, ilo_locname, ilo_clientkey_location, ilo_ilodatetime_start, ilo_ilodatetime_end)
 			VALUES 
-			(new.it_inumkey, new.it_ialphakey, current_owner, 'Loan', 'Transactions', new.it_itdatetime_start, new.it_itdatetime_returnby);
+			(new.it_inumkey, new.it_ialphakey, current_owner, 'Loan', 'Transactions', new.it_itdatetime_start, NULL);
 	END IF;
 
 	RETURN NEW;

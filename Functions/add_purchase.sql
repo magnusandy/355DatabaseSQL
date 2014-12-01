@@ -12,7 +12,7 @@ raise Exception 'Error: The buyer must be one of our museums: Iain, Ryans Museum
 elseif (cost is null) then
 raise exception ' Error: You must have specified a cost for the transactions. If the transactions has a cost of 0, specify 0';
 
-elseif ((select count(*) from t_items where i_inumkey = numkey and i_ialphakey = alphakey) <= 0) then
+elseif NOT (select exists (select 1 FROM t_items WHERE i_inumkey = numkey AND i_ialphakey = alphakey)) then
 raise exception 'Error: The given keys do not map to an item in the database. Please insert the item first.';
 
 elseif (select buyer in (select i_clientkey from t_items where i_inumkey = numkey limit 1)) then
